@@ -1,0 +1,9 @@
+---
+buildpack: staticfile_buildpack
+memory: 128M
+instances: 1
+applications:
+  - name: observatory-dev
+    path: ./public
+---
+

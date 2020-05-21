@@ -1,0 +1,83 @@
+version: 2.1
+jobs:
+  build-and-test-front-end:
+    docker:
+      - image: circleci/node:12.16.2
+    working_directory: ~/observatory
+    steps:
+      - checkout:
+      - restore_cache:
+          name: Restore node_modules from cache
+          keys:
+            - v3-dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install dependencies
+          command: |
+            npm i
+            npm run pancake
+      - save_cache:
+          name: Save node_modules to cache
+          key: v3-dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules/
+      - run:
+          name: Set envs, test and build
+          command: |
+            . ./prebuild.sh
+            npm run lint
+            npm run build
+      - run:
+          name: Make deploy directory
+          command: |
+            mkdir front-end-deploy
+            mv public/ .deploy/ ./front-end-deploy
+      - persist_to_workspace:
+          root: ~/observatory
+          paths:
+            - front-end-deploy/
+
+  deploy-front-end-prod:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/observatory
+      - run:
+          name: Deploy to cloud.gov.au production
+          command: |
+            cd ~/observatory
+            cd front-end-deploy/
+            mv .deploy/manifest-prod.yml ./
+            cf login -a $CF_API_PROD -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_PROD
+            cf zero-downtime-push observatory -f manifest-prod.yml
+  deploy-front-end-staging:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/observatory
+      - run:
+          name: Deploy to cloud.gov.au development
+          command: |
+            cd ~/observatory
+            cd front-end-deploy
+            mv .deploy/manifest-staging.yml ./
+            cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
+            cf zero-downtime-push observatory-dev -f manifest-staging.yml
+workflows:
+  version: 2.1
+  build-and-deploy:
+    jobs:
+      - build-and-test-front-end
+      - deploy-front-end-staging:
+          requires:
+            - build-and-test-front-end
+          filters:
+            branches:
+              only: develop
+      - deploy-front-end-prod:
+          requires:
+            - build-and-test-front-end
+          filters:
+            branches:
+              only: master
