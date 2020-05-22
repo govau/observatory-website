@@ -5,5 +5,3 @@ instances: 1
 applications:
   - name: observatory
     path: ./public
-routes:
-  - route: observatory.service.gov.au
