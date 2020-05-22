@@ -5,7 +5,7 @@ jobs:
       - image: circleci/node:12.16.2
     working_directory: ~/observatory
     steps:
-      - checkout:
+      - checkout
       - restore_cache:
           name: Restore node_modules from cache
           keys:
