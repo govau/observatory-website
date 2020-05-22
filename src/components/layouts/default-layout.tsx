@@ -24,7 +24,7 @@ const DefaultLayout: React.FC<Props> = ({
 }) => {
   const {
     breadcrumb: { crumbs },
-  } = pageContext;
+  } = pageContext && pageContext;
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -45,7 +45,7 @@ const DefaultLayout: React.FC<Props> = ({
         {({ navigate, location }) => <MainNav path={location.pathname} />}
       </Location>
       <main>
-        {crumbs.length > 2 && (
+        {crumbs && crumbs.length > 2 && (
           <div className="container-fluid">
             <Breadcrumbs crumbs={crumbs} />
           </div>

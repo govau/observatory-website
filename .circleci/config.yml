@@ -23,7 +23,6 @@ jobs:
       - run:
           name: Set envs, test and build
           command: |
-            . ./prebuild.sh
             npm run lint
             npm run build
       - run:
