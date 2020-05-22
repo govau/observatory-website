@@ -8,12 +8,24 @@ import MainNav from "../navigation/main-nav";
 import SEO from "../seo";
 import { Location } from "@reach/router";
 import { AlphaHeader } from "../navigation/alpha-header";
+import Breadcrumbs from "../navigation/breadcrumb";
+import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 
 interface Props {
   children: React.ReactElement;
+  pageContext: any;
+  location: any;
 }
 
-const DefaultLayout: React.FC<Props> = ({ children }) => {
+const DefaultLayout: React.FC<Props> = ({
+  pageContext,
+  location,
+  children,
+}) => {
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext;
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -32,7 +44,14 @@ const DefaultLayout: React.FC<Props> = ({ children }) => {
       <Location>
         {({ navigate, location }) => <MainNav path={location.pathname} />}
       </Location>
-      <main>{children}</main>
+      <main>
+        {crumbs.length > 2 && (
+          <div className="container-fluid">
+            <Breadcrumbs crumbs={crumbs} />
+          </div>
+        )}
+        {children}
+      </main>
       <Footer />
     </>
   );

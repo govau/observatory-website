@@ -8,13 +8,14 @@ import AUcard, {
   AUcardTitle,
   AUcardLink,
 } from "../auds/react/card";
+import { PageContext } from "../components/helpers/types";
 
 const AuCard: any = AUcard;
 const AuCardInner: any = AUcardInner;
 const AuCardTitle: any = AUcardTitle;
 const AuCardLink: any = AUcardLink;
 
-const BlogsPage = () => {
+const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
@@ -37,7 +38,7 @@ const BlogsPage = () => {
   const BlogList = allMarkdownRemark.nodes;
 
   return (
-    <DefaultLayout>
+    <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
         <SEO title="Blogs" />
         <h1>Blogs</h1>

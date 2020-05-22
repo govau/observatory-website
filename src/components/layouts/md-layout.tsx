@@ -2,15 +2,20 @@ import React from "react";
 import { graphql } from "gatsby";
 import DefaultLayout from "./default-layout";
 import SEO from "../seo";
-
+import Breadcrumbs from "../navigation/breadcrumb";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface Props {}
+interface Props {
+  location: any;
+  data: any;
+  pageContext: any;
+}
 
-const PageLayout: React.FC<Props> = (props: any) => {
-  const { markdownRemark } = props.data; // data.markdownRemark holds your post data
+const PageLayout: React.FC<Props> = ({ pageContext, location, data }) => {
+  const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
+
   return (
-    <DefaultLayout>
+    <DefaultLayout pageContext={pageContext} location={location}>
       <>
         <SEO title={frontmatter.title} />
         <div
