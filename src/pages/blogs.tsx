@@ -28,6 +28,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
               path
               description
               date
+              imgUrl
             }
           }
         }
@@ -51,7 +52,11 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                   <AuCard className="au-body" clickable shadow>
                     <img
                       className="au-responsive-media-img"
-                      src="https://designsystem.gov.au/assets/img/placeholder/600X260.png"
+                      src={
+                        blog.frontmatter.imgUrl
+                          ? blog.frontmatter.imgUrl
+                          : "https://designsystem.gov.au/assets/img/placeholder/600X260.png"
+                      }
                       alt=""
                     />
                     <AuCardInner>

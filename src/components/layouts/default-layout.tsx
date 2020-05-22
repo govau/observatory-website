@@ -38,7 +38,7 @@ const DefaultLayout: React.FC<Props> = ({
 
   return (
     <>
-      <AlphaHeader />
+      {/* <AlphaHeader /> */}
       <Header siteTitle={data.site.siteMetadata.title} />
       <SEO title={data.site.siteMetadata.title} />
       <Location>

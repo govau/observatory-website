@@ -174,3 +174,19 @@ h1 {
 .au-header {
   @include AU-space(padding, 3unit 0 1.5unit 0);
 }
+
+.intro-text {
+  color: #636363;
+  @include AU-fontgrid(lg);
+  max-width: 42em !important;
+}
+
+.img-shadow {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  max-width: 42em !important;
+}
+
+.blog-heading {
+  @include AU-space(max-width, 42rem);
+}
