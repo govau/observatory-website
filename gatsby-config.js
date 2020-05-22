@@ -41,6 +41,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
+    `gatsby-plugin-breadcrumb`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

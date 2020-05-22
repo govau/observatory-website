@@ -1,12 +1,12 @@
 // Dark theme overrides
-// $AU-colordark-foreground-text: #ffffff;
-// $AU-colordark-foreground-action: #45c2f0;
-// $AU-colordark-foreground-focus: #e48ffc;
-// $AU-colordark-background: #3c4858;
+$AU-colordark-foreground-text: #ffffff;
+$AU-colordark-foreground-action: #45c2f0;
+$AU-colordark-foreground-focus: #e48ffc;
+$AU-colordark-background: #3c4858;
 
 // Light theme overrides
-// $AU-color-foreground-action: #3c4858;
-// $AU-color-foreground-focus: #e48ffc;
+$AU-color-foreground-action: #3c4858;
+$AU-color-foreground-focus: #e48ffc;
 //Main nav, set project specific breakpoint
 $AU-main-nav-breakpoint: sm;
 @import "../auds/sass/pancake.scss";
