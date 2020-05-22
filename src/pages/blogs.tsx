@@ -9,6 +9,7 @@ import AUcard, {
   AUcardLink,
 } from "../auds/react/card";
 import { PageContext } from "../components/helpers/types";
+import { FormatDate } from "../components/helpers/helper";
 
 const AuCard: any = AUcard;
 const AuCardInner: any = AUcardInner;
@@ -66,8 +67,8 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                           text={blog.frontmatter.title}
                         />
                       </AuCardTitle>
-                      <p>{blog.frontmatter.description}</p>
-                      <p>{blog.frontmatter.date}</p>
+                      <p>{blog.frontmatter.description.substring(0, 150)}...</p>
+                      <p>{FormatDate(blog.frontmatter.date)}</p>
                       <span className="au-card__icon" aria-hidden="true"></span>
                     </AuCardInner>
                   </AuCard>
