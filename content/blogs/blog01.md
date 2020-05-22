@@ -1,5 +1,5 @@
 ---
-path: /blogs/my-blog-1
+path: /blogs/agile-delivery
 title: Blog-1
 createPage: true
 type: blog

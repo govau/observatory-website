@@ -23,7 +23,6 @@ jobs:
       - run:
           name: Set envs, test and build
           command: |
-            . ./prebuild.sh
             npm run lint
             npm run build
       - run:
@@ -69,15 +68,15 @@ workflows:
   build-and-deploy:
     jobs:
       - build-and-test-front-end
-      # - deploy-front-end-staging:
-      #     requires:
-      #       - build-and-test-front-end
-      #     filters:
-      #       branches:
-      #         only: develop
-      # - deploy-front-end-prod:
-      #     requires:
-      #       - build-and-test-front-end
-      #     filters:
-      #       branches:
-      #         only: master
+      - deploy-front-end-staging:
+          requires:
+            - build-and-test-front-end
+          filters:
+            branches:
+              only: develop
+      - deploy-front-end-prod:
+          requires:
+            - build-and-test-front-end
+          filters:
+            branches:
+              only: master

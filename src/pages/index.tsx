@@ -5,8 +5,9 @@ import DefaultLayout from "../components/layouts/default-layout";
 import { useStaticQuery, graphql } from "gatsby";
 import Section from "../components/layouts/section";
 import Hero from "../components/layouts/hero";
+import { PageContext } from "../components/helpers/types";
 
-const IndexPage = () => {
+const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
   const { allMarkdownRemark } = useStaticQuery(
     graphql`
@@ -38,7 +39,7 @@ const IndexPage = () => {
   );
 
   return (
-    <DefaultLayout>
+    <DefaultLayout pageContext={pageContext} location={location}>
       <>
         <SEO title="Home" />
         <Hero
