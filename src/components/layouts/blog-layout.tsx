@@ -23,7 +23,7 @@ const BlogLayout: React.FC<Props> = ({ pageContext, location, data }) => {
         <div className="container-fluid au-body">
           <h1 className="blog-heading">{frontmatter.title}</h1>
           <p>
-            {date}- {timeToRead} mins read
+            {date} - {timeToRead} mins read
           </p>
           <p className="intro-text">{frontmatter.description}</p>
         </div>

@@ -7,14 +7,16 @@ import AUcard, {
   AUcardInner,
   AUcardTitle,
   AUcardLink,
+  AUcardFooter,
 } from "../auds/react/card";
 import { PageContext } from "../components/helpers/types";
-import { FormatDate } from "../components/helpers/helper";
+import { FormatDate, SortBlog } from "../components/helpers/helper";
 
 const AuCard: any = AUcard;
 const AuCardInner: any = AUcardInner;
 const AuCardTitle: any = AUcardTitle;
 const AuCardLink: any = AUcardLink;
+const AuCardFooter: any = AUcardFooter;
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -39,6 +41,8 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
 
   const BlogList = allMarkdownRemark.nodes;
 
+  const SortedBlogs: Array<any> = BlogList.sort(SortBlog);
+
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
@@ -47,9 +51,9 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
 
         <div className="row">
           <ul className="au-card-list au-card-list--matchheight">
-            {BlogList.map((blog: any, i: number) => {
+            {SortedBlogs.map((blog: any, i: number) => {
               return (
-                <li className="col-sm-4 col-xs-6" key={i}>
+                <li className="col-md-4 col-sm-6 col-xs-12" key={i}>
                   <AuCard className="au-body" clickable shadow>
                     <img
                       className="au-responsive-media-img"
@@ -68,7 +72,11 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                         />
                       </AuCardTitle>
                       <p>{blog.frontmatter.description.substring(0, 150)}...</p>
-                      <p>{FormatDate(blog.frontmatter.date)}</p>
+                      <div className="card-footer">
+                        <p className="card-footer__text">
+                          {FormatDate(blog.frontmatter.date)}
+                        </p>
+                      </div>
                       <span className="au-card__icon" aria-hidden="true"></span>
                     </AuCardInner>
                   </AuCard>

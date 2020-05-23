@@ -41,12 +41,14 @@ Blogs require the following frontmatter to sit at the top of the page.
 
 ```
 ---
-path: /blogs/my-blog-1
-title: Blog-1
+path: /blogs/start-smaller-to-build-better
+title: Start smaller to build better
 createPage: true
 type: blog
-description: Some random desc
-date: 01-01-2020
+description: In the world of agile product development, the metaphor that it is smarter to build a skateboard than it is to build a car is well-known.
+date: "2020-05-12"
+author: Observatory teams
+imgUrl: ../../skateboard-socials.png
 ---
 ```
 
