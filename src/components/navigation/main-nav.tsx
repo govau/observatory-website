@@ -1,16 +1,10 @@
 import React from "react";
 import AUmainNav, { AUmainNavContent } from "./ds/main-nav";
 import { useStaticQuery, graphql } from "gatsby";
+import { MenuItems, MenuItem } from "../helpers/types";
 
 interface Props {
   path: string;
-}
-
-interface MenuItems {
-  map(
-    arg0: (menuItem: any) => { text: any; link: any; active: boolean }
-  ): MenuItems;
-  items: Array<any>;
 }
 
 const Nav: any = AUmainNav;
@@ -32,7 +26,7 @@ const MainNav: React.FC<Props> = ({ path }) => {
   `);
 
   const Links: MenuItems = data.site.siteMetadata.menuLinks;
-  const mainNavItems: MenuItems = Links.map((menuItem: any) => ({
+  const mainNavItems: MenuItems = Links.map((menuItem: MenuItem) => ({
     text: menuItem.text,
     link: menuItem.link,
     active:

@@ -77,7 +77,8 @@ h1 {
 }
 
 .hero-image {
-  border: solid 2px lightgrey;
+  border-radius: $AU-border-radius;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   @include AU-space(margin-top, 1unit);
   @include AU-space(max-width, 500px);
   background: white;
@@ -88,25 +89,10 @@ h1 {
   }
 
   &__caption {
+    background: white;
     @include AU-space(margin-top, 0.5unit);
     @include AU-space(padding, 0.5unit);
     @include AU-fontgrid(xs);
-  }
-}
-
-#alpha-banner {
-  @include AU-space(padding, 0.5unit 0unit);
-  background: $AU-color-info;
-  color: $AU-color-foreground-text;
-  font-weight: bold;
-
-  .alpha-pill {
-    display: inline-block;
-    font-weight: 450;
-    @include AU-space(margin, 0 0.75unit 0 0);
-    border: solid 1px $AU-color-foreground-text;
-    border-radius: 16px;
-    @include AU-space(padding, 0 0.5unit);
   }
 }
 
@@ -121,15 +107,51 @@ h1 {
 .intro-text {
   color: #636363;
   @include AU-fontgrid(lg);
-  max-width: 42em !important;
+  max-width: 42rem !important;
 }
 
 .img-shadow {
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: $AU-border-radius;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 42em !important;
 }
 
 .blog-heading {
   @include AU-space(max-width, 42rem);
+}
+
+.au-main-nav--dark,
+.au-header {
+  background: transparent !important;
+}
+
+.au-main-nav__menu {
+  @include AU-media(sm) {
+    background: transparent !important;
+  }
+}
+
+.header-wrappers {
+  background: rgb(60, 72, 88);
+  background: linear-gradient(
+    31deg,
+    rgba(60, 72, 88, 1) 6%,
+    rgba(64, 84, 110, 1) 46%,
+    rgba(67, 98, 139, 1) 98%
+  );
+
+  .ie9 & {
+    background: $AU-colordark-background;
+  }
+}
+
+.hero {
+  position: relative;
+  background: rgb(251, 249, 249);
+  background: linear-gradient(
+    43deg,
+    rgba(251, 249, 249, 1) 6%,
+    rgba(245, 241, 241, 1) 55%,
+    rgba(224, 226, 220, 1) 95%
+  );
 }

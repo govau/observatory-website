@@ -29,7 +29,11 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
           <div className="row">
             <div className="col-md-9">
               <Brand
-                title={siteTitle}
+                title={
+                  <>
+                    {siteTitle} <span className="header__badge"> alpha</span>
+                  </>
+                }
                 subline="Some place holder text"
                 link="/"
                 brandImage={data.placeholderImage.childImageSharp.fluid.src}

@@ -74,3 +74,10 @@
     @include AU-space(bottom, 1unit);
   }
 }
+
+.au-card--clickable__link {
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: underline !important;
+  }
+}

@@ -39,11 +39,13 @@ const DefaultLayout: React.FC<Props> = ({
   return (
     <>
       {/* <AlphaHeader /> */}
-      <Header siteTitle={data.site.siteMetadata.title} />
       <SEO title={data.site.siteMetadata.title} />
-      <Location>
-        {({ navigate, location }) => <MainNav path={location.pathname} />}
-      </Location>
+      <div className="header-wrappers">
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Location>
+          {({ navigate, location }) => <MainNav path={location.pathname} />}
+        </Location>
+      </div>
       <main>
         {crumbs && crumbs.length > 2 && (
           <div className="container-fluid">
