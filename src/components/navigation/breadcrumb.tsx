@@ -1,5 +1,6 @@
 import React from "react";
 import AUbreadcrumbs from "../../auds/react/breadcrumbs";
+import { CapitiliseAndRemoveDash } from "../helpers/helper";
 
 interface Crumb {
   length: number;
@@ -23,14 +24,15 @@ const Breadcrumbs: React.FC<Props> = ({ crumbs }) => {
   const breadcrumbItems: Array<CrumbItems> = [];
 
   crumbs.forEach((crumb: Crumb, i: number) => {
+    const { pathname, crumbLabel } = crumb;
     if (i < crumbs.length - 1) {
       breadcrumbItems.push({
-        link: crumb.pathname,
-        text: crumb.crumbLabel.replace("-", " "),
+        link: pathname,
+        text: CapitiliseAndRemoveDash(crumbLabel),
       });
     } else {
       breadcrumbItems.push({
-        text: crumb.crumbLabel.replace("-", " "),
+        text: CapitiliseAndRemoveDash(crumbLabel),
       });
     }
   });

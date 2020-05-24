@@ -32,7 +32,7 @@ const Footer: React.FC<Props> = () => {
   const Links: FooterLinks = data.site.siteMetadata.footerLinks;
 
   return (
-    <>
+    <div className="footer-wrapper">
       <div className="au-body au-body--dark">
         <AuFooter dark>
           <div className="container-fluid">
@@ -69,7 +69,7 @@ const Footer: React.FC<Props> = () => {
           </div>
         </AuFooter>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -9,6 +9,7 @@ import AUcard, {
   AUcardLink,
 } from "../auds/react/card";
 import { PageContext } from "../components/helpers/types";
+import { FormatDate, SortContent } from "../components/helpers/helper";
 
 const AuCard: any = AUcard;
 const AuCardInner: any = AUcardInner;
@@ -28,6 +29,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
               path
               description
               date
+              imgUrl
             }
           }
         }
@@ -37,6 +39,8 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
 
   const BlogList = allMarkdownRemark.nodes;
 
+  const SortedBlogs: Array<any> = BlogList.sort(SortContent);
+
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
@@ -45,24 +49,35 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
 
         <div className="row">
           <ul className="au-card-list au-card-list--matchheight">
-            {BlogList.map((blog: any, i: number) => {
+            {SortedBlogs.map((blog: any, i: number) => {
+              const {
+                imgUrl,
+                path,
+                title,
+                description,
+                date,
+              } = blog.frontmatter;
+
               return (
-                <li className="col-sm-4 col-xs-6" key={i}>
+                <li className="col-md-4 col-sm-6 col-xs-12" key={i}>
                   <AuCard className="au-body" clickable shadow>
                     <img
                       className="au-responsive-media-img"
-                      src="https://designsystem.gov.au/assets/img/placeholder/600X260.png"
+                      src={
+                        imgUrl
+                          ? imgUrl
+                          : "https://designsystem.gov.au/assets/img/placeholder/600X260.png"
+                      }
                       alt=""
                     />
                     <AuCardInner>
                       <AuCardTitle level="3" className="au-display-md">
-                        <AuCardLink
-                          link={blog.frontmatter.path}
-                          text={blog.frontmatter.title}
-                        />
+                        <AuCardLink link={path} text={title} />
                       </AuCardTitle>
-                      <p>{blog.frontmatter.description}</p>
-                      <p>{blog.frontmatter.date}</p>
+                      <p>{description.substring(0, 150)}</p>
+                      <div className="card-footer">
+                        <p className="card-footer__text">{FormatDate(date)}</p>
+                      </div>
                       <span className="au-card__icon" aria-hidden="true"></span>
                     </AuCardInner>
                   </AuCard>
