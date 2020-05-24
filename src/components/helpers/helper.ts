@@ -27,4 +27,9 @@ const SortContent = (PageOne: any, PageTwo: any) => {
   );
 };
 
-export { FormatDate, SortContent };
+const CapitiliseAndRemoveDash: (word: string) => string = (word) => {
+  const capitialised = word.charAt(0).toUpperCase() + word.slice(1);
+  return capitialised.replace(/-/g, " ");
+};
+
+export { FormatDate, SortContent, CapitiliseAndRemoveDash };

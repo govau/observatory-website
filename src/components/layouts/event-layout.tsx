@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import DefaultLayout from "./default-layout";
 import SEO from "../seo";
-import Breadcrumbs from "../navigation/breadcrumb";
 import { FormatDate } from "../helpers/helper";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Props {

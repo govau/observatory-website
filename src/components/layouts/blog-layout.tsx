@@ -2,7 +2,6 @@ import React from "react";
 import { graphql } from "gatsby";
 import DefaultLayout from "./default-layout";
 import SEO from "../seo";
-import Breadcrumbs from "../navigation/breadcrumb";
 import { FormatDate } from "../helpers/helper";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Props {
@@ -22,9 +21,7 @@ const BlogLayout: React.FC<Props> = ({ pageContext, location, data }) => {
         <SEO title={frontmatter.title} />
         <div className="container-fluid au-body">
           <h1 className="blog-heading">{frontmatter.title}</h1>
-          <p>
-            {date} - {timeToRead} mins read
-          </p>
+          <p>{date}</p>
           <p className="intro-text">{frontmatter.description}</p>
         </div>
         <div

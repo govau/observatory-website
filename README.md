@@ -23,7 +23,7 @@ New pages can be with markdown files. For example to create a contact page, foll
 ---
 path: /contact
 title: Contact Us
-createPage: true
+type: standard
 ---
 
 # Contact the team
@@ -37,7 +37,7 @@ The `path` attribute is the URL and the `title` attribute is for the [title](htt
 
 In the blogs folder create a new markdown file as before.
 
-Blogs require the following frontmatter to sit at the top of the page.
+Blogs require frontmatter to sit at the top of the page. Below is an example.
 
 ```
 ---
@@ -50,6 +50,29 @@ date: "2020-05-12"
 author: Observatory teams
 imgUrl: ../../skateboard-socials.png
 ---
+
+This is the blog text
+```
+
+### Create a new event
+
+This process is very similar to creating a new blog.
+Firstly create a new markdown file in the `content/events` folder.
+
+Then add frontmatter to the top of this newly created file. Something like below.
+
+```
+---
+path: /events/drop-in-clinic
+title: August drop in clinic
+type: event
+description: Join us for the drop in clinic
+date: "2020-05-10"
+imgUrl: ../../observatory-blog-hero.png
+---
+
+This is the event text
+
 ```
 
 #### Add page to main navigation/footer navivation
