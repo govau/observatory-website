@@ -37,6 +37,20 @@ const pageData = [
     }`,
     layout: "src/components/layouts/content-layout.tsx",
   },
+  {
+    query: `{
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "event"}}}) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }`,
+    layout: "src/components/layouts/event-layout.tsx",
+  },
 ];
 exports.createPages = async ({ actions, graphql, reporter }) => {
   for (const page of pageData) {

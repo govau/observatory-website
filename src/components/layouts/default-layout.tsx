@@ -40,7 +40,7 @@ const DefaultLayout: React.FC<Props> = ({
     <>
       {/* <AlphaHeader /> */}
       <SEO title={data.site.siteMetadata.title} />
-      <div className="header-wrappers">
+      <div className="header-wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
         <Location>
           {({ navigate, location }) => <MainNav path={location.pathname} />}

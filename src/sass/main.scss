@@ -1,22 +1,24 @@
 // Dark theme overrides
-$AU-colordark-foreground-text: #ffffff;
-$AU-colordark-foreground-action: #45c2f0;
-$AU-colordark-foreground-focus: #e48ffc;
-$AU-colordark-background: #3c4858;
+// $AU-colordark-foreground-text: #ffffff;
+// $AU-colordark-foreground-action: #45c2f0;
+// $AU-colordark-foreground-focus: #e48ffc;
+// $AU-colordark-background: #3c4858;
+
+// Light theme overrides
+// $AU-color-foreground-action: #3c4858;
+// $AU-color-foreground-focus: #e48ffc;
+//Main nav, set project specific breakpoint
+
 $AU-media-xs: 0px;
 $AU-media-sm: 576px;
 $AU-media-md: 768px;
 $AU-media-lg: 992px;
 $AU-media-xl: 1200px;
-
-// Light theme overrides
-$AU-color-foreground-action: #3c4858;
-$AU-color-foreground-focus: #e48ffc;
-//Main nav, set project specific breakpoint
 $AU-main-nav-breakpoint: sm;
 @import "../auds/sass/pancake.scss";
 @import "card";
 @import "grid";
+@import "event";
 
 // Reset the body
 body {
@@ -121,7 +123,9 @@ h1 {
 }
 
 .au-main-nav--dark,
-.au-header {
+.au-header,
+.au-footer,
+.footer-wrapper .au-body.au-body--dark {
   background: transparent !important;
 }
 
@@ -131,15 +135,15 @@ h1 {
   }
 }
 
-.header-wrappers {
-  background: rgb(60, 72, 88);
+.header-wrapper,
+.footer-wrapper {
+  background: rgb(19, 94, 112);
   background: linear-gradient(
-    31deg,
-    rgba(60, 72, 88, 1) 6%,
-    rgba(64, 84, 110, 1) 46%,
-    rgba(67, 98, 139, 1) 98%
+    43deg,
+    rgba(19, 94, 112, 1) 6%,
+    rgba(20, 100, 120, 1) 55%,
+    rgba(34, 130, 153, 1) 95%
   );
-
   .ie9 & {
     background: $AU-colordark-background;
   }

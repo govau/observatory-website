@@ -1,7 +1,6 @@
 ---
 path: /privacy
 title: Privacy policy
-createPage: true
 type: standard
 ---
 

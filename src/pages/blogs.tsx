@@ -9,7 +9,7 @@ import AUcard, {
   AUcardLink,
 } from "../auds/react/card";
 import { PageContext } from "../components/helpers/types";
-import { FormatDate, SortBlog } from "../components/helpers/helper";
+import { FormatDate, SortContent } from "../components/helpers/helper";
 
 const AuCard: any = AUcard;
 const AuCardInner: any = AUcardInner;
@@ -39,7 +39,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
 
   const BlogList = allMarkdownRemark.nodes;
 
-  const SortedBlogs: Array<any> = BlogList.sort(SortBlog);
+  const SortedBlogs: Array<any> = BlogList.sort(SortContent);
 
   return (
     <DefaultLayout pageContext={pageContext} location={location}>

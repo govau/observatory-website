@@ -20,11 +20,11 @@ const FormatDate: (date: string) => string = (date) => {
   return `${date_obj.getDate()} ${months[month]} ${year}`;
 };
 
-const SortBlog = (blogA: any, blogB: any) => {
+const SortContent = (PageOne: any, PageTwo: any) => {
   return (
-    new Date(blogB.frontmatter.date).getTime() -
-    new Date(blogA.frontmatter.date).getTime()
+    new Date(PageTwo.frontmatter.date).getTime() -
+    new Date(PageOne.frontmatter.date).getTime()
   );
 };
 
-export { FormatDate, SortBlog };
+export { FormatDate, SortContent };
