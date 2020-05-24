@@ -7,12 +7,25 @@
 // You can delete this file if you're not using it
 
 const path = require(`path`);
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions;
-  const MDtemplate = path.resolve(`src/components/layouts/md-layout.tsx`);
-  const result = await graphql(`
-    {
-      allMarkdownRemark(filter: { frontmatter: { createPage: { eq: true } } }) {
+
+const pageData = [
+  {
+    query: `  {
+    allMarkdownRemark(filter: {frontmatter: {type: {eq: "blog"}}}) {
+      edges {
+        node {
+          frontmatter {
+            path
+          }
+        }
+      }
+    }
+  }`,
+    layout: "src/components/layouts/blog-layout.tsx",
+  },
+  {
+    query: `{
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "standard"}}}) {
         edges {
           node {
             frontmatter {
@@ -21,18 +34,40 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           }
         }
       }
+    }`,
+    layout: "src/components/layouts/content-layout.tsx",
+  },
+  {
+    query: `{
+      allMarkdownRemark(filter: {frontmatter: {type: {eq: "event"}}}) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
+          }
+        }
+      }
+    }`,
+    layout: "src/components/layouts/event-layout.tsx",
+  },
+];
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  for (const page of pageData) {
+    const { createPage } = actions;
+    const MDtemplate = path.resolve(page.layout);
+    const result = await graphql(page.query);
+    // Handle errors
+    if (result.errors) {
+      reporter.panicOnBuild(`Error while running GraphQL query.`);
+      return;
     }
-  `);
-  // Handle errors
-  if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
-    return;
-  }
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: node.frontmatter.path,
-      component: MDtemplate,
-      context: {}, // additional data can be passed via context
+    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      createPage({
+        path: node.frontmatter.path,
+        component: MDtemplate,
+        context: {}, // additional data can be passed via context
+      });
     });
-  });
+  }
 };

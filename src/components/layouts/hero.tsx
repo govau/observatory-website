@@ -16,7 +16,7 @@ const Hero: React.FC<Props> = ({
   alt = false,
 }) => {
   return (
-    <div className={`au-body ${alt ? "au-body--alt" : ""}`}>
+    <div className={`au-body hero`}>
       <section className="container-fluid">
         <div className="row">
           <div className="col-sm-6 col-xs-12">

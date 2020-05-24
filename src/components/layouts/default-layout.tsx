@@ -7,7 +7,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import MainNav from "../navigation/main-nav";
 import SEO from "../seo";
 import { Location } from "@reach/router";
-import { AlphaHeader } from "../navigation/alpha-header";
 import Breadcrumbs from "../navigation/breadcrumb";
 import { Breadcrumb } from "gatsby-plugin-breadcrumb";
 
@@ -38,12 +37,14 @@ const DefaultLayout: React.FC<Props> = ({
 
   return (
     <>
-      <AlphaHeader />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      {/* <AlphaHeader /> */}
       <SEO title={data.site.siteMetadata.title} />
-      <Location>
-        {({ navigate, location }) => <MainNav path={location.pathname} />}
-      </Location>
+      <div className="header-wrapper">
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <Location>
+          {({ navigate, location }) => <MainNav path={location.pathname} />}
+        </Location>
+      </div>
       <main>
         {crumbs && crumbs.length > 2 && (
           <div className="container-fluid">
