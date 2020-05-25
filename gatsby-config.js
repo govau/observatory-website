@@ -24,15 +24,23 @@ module.exports = {
         text: "Events",
         link: "/events",
       },
+      {
+        text: "Contact us",
+        link: "/contact-us",
+      },
     ],
     footerLinks: [
       {
         text: "Github for this site",
-        link: "https://github.com/govau/ursa-major",
+        link: "https://github.com/govau/observatory-website",
       },
       {
         text: "Github for our projects",
         link: "https://github.com/govau/galileo",
+      },
+      {
+        text: "Privacy Policy",
+        link: "/privacy",
       },
     ],
   },
