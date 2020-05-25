@@ -17,8 +17,8 @@ module.exports = {
         link: "/blogs",
       },
       {
-        text: "Pricing",
-        link: "/pricing",
+        text: "Terms of Service",
+        link: "/terms-of-service",
       },
       {
         text: "Events",
