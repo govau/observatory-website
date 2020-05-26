@@ -13,5 +13,5 @@ The data we use is anonymous and privacy-preserving. It is collated from:
 <h3 class = "au-display-xl mt-hero" > 29 </h3>
 participating agencies
 
-<h3 class = "au-display-xl mt-hero"> 508 </h3>  
+<h3 class = "au-display-xl mt-hero"> 509 </h3>  
 <a href = "#tracking-info"> gov.au digital services* </a>
