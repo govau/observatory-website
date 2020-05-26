@@ -7,6 +7,22 @@ module.exports = {
     title: `Observatory`,
     description: `The Observatory’s goal is to measure how people interact with government services. It empowers and supports teams to provide better services and outcomes for everyone.`,
     author: `Digital Transformation Agency`,
+    dtaBlogs: [
+      {
+        text: "gov.au Observatory: Digital Constellations from user journeys",
+        link:
+          "https://www.dta.gov.au/blogs/govau-observatory-digital-constellations-user-journeys",
+      },
+      {
+        text: "Seen but not clicked – lowering rankings to improve search",
+        link:
+          "https://www.dta.gov.au/blogs/seen-not-clicked-lowering-rankings-improve-search",
+      },
+      {
+        text: "Start smaller to build better",
+        link: "https://www.dta.gov.au/blogs/start-smaller-build-better",
+      },
+    ],
     menuLinks: [
       {
         text: "Home",

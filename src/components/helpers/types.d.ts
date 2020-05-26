@@ -14,3 +14,8 @@ interface MenuItem {
   link: string;
   text: string;
 }
+
+interface DtaBlogType {
+  link: string;
+  text: string;
+}
