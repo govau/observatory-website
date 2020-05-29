@@ -16,8 +16,11 @@ interface Props {
 }
 
 const GAform: React.FC<Props> = () => {
-  const [state, setState] = useState({ isErrors: false, submitted: false });
-  const [apiError, setApiError] = useState({ message: "" });
+  const [state, setState] = useState({
+    isErrors: false,
+    submitted: false,
+    apiMessage: "",
+  });
 
   const postToMailChimp = async (FormData: FormData) => {
     const { email } = FormData;
@@ -29,8 +32,8 @@ const GAform: React.FC<Props> = () => {
     });
 
     if (mailChimpResult.result === "error") {
-      const message = mailChimpResult.msg;
-      setApiError({ message });
+      const apiMessage = mailChimpResult.msg;
+      setState((currentState) => ({ ...currentState, apiMessage }));
       return;
     }
     // console.log(result);
@@ -42,7 +45,7 @@ const GAform: React.FC<Props> = () => {
       initialValues={InitialValues}
       onSubmit={(data, errors) => {
         postToMailChimp(data);
-        setState({ isErrors: false, submitted: true });
+        setState({ isErrors: false, submitted: true, apiMessage: "" });
       }}
       validationSchema={SignUpSchema}
     >
@@ -51,7 +54,7 @@ const GAform: React.FC<Props> = () => {
           onSubmit={(e) => {
             handleSubmit(e);
             if (Object.keys(errors).length < 1) return;
-            setState({ isErrors: true, submitted: false });
+            setState({ isErrors: true, submitted: false, apiMessage: "" });
             if (state.isErrors) document.title = "Errors | Sign up form";
             const timeout = setTimeout(() => {
               const errorSum = document.getElementById("error-heading") as any;
@@ -66,7 +69,14 @@ const GAform: React.FC<Props> = () => {
             }, 500);
           }}
         >
-          {apiError && apiError.message && <p>{apiError.message}</p>}
+          {state && state.apiMessage && (
+            <PageAlert type="error" className="max-42">
+              <>
+                <h3>There was an error</h3>
+                <p dangerouslySetInnerHTML={{ __html: state.apiMessage }}></p>
+              </>
+            </PageAlert>
+          )}
           {state.isErrors && (
             <PageAlert type="error" className="max-42">
               <>
