@@ -11,7 +11,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
-        <SEO title="Home" />
+        <SEO title="Sign up | observatory" />
         <h1>DTA Terms of Service - Google Analytics 360</h1>
         <AuHintText
           text={`This subscription only extends to Public Governance, Performance and

@@ -1,73 +1,48 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 
-import * as Yup from "yup";
 import TextField from "./text-field";
-import { ABNValidation } from "../helpers/helper";
 import SelectField from "./drop-down";
 import CheckBoxField from "./checkbox";
 import { Aubtn, AuFormGroup } from "../helpers/auds";
 import PageAlert from "../blocks/page-alert";
+import addToMailchimp from "gatsby-plugin-mailchimp";
+import { navigate } from "@reach/router";
+import { InitialValues, SignUpSchema, FormData } from "./ga360-meta";
 
 interface Props {
   a?: string;
 }
 
-const SignUpSchema = Yup.object().shape({
-  email: Yup.string()
-    .email(
-      "Enter an email address in the correct format, like name@agency.gov.au"
-    )
-    .required("Email is a required field")
-    .matches(
-      /.*gov.au$/i,
-      "A government email is required to sign up, like name@agency.gov.au"
-    ),
-  preferredName: Yup.string().required("Enter your preferred name"),
-  agencyName: Yup.string().required("Enter your agency"),
-  abn: Yup.string().required().length(11, "Please enter a valid ABN"),
-  accounts: Yup.string().required("Enter a UAID").min(10, "Enter a valid UAID"),
-  tier: Yup.string()
-    .oneOf(["tier1", "tier2", "tier3", "tier4", "tier5", "free"])
-    .required("Select a tier"),
-  cbagree: Yup.boolean()
-    .test(
-      "consented",
-      "You must agree to the terms and conditions",
-      (v) => v === true
-    )
-    .required(),
-  cbdelegation: Yup.boolean()
-    .test("del", "You must have delegation to spend", (v) => v === true)
-    .required(),
-  cbauthority: Yup.boolean()
-    .test(
-      "auth",
-      "You must have the authority to make this agreement",
-      (v) => v === true
-    )
-    .required(),
-});
-
 const GAform: React.FC<Props> = () => {
-  const initialValues = { isErrors: false };
-  const [state, setState] = useState(initialValues);
+  const [state, setState] = useState({ isErrors: false, submitted: false });
+  const [apiError, setApiError] = useState({ message: "" });
+
+  const postToMailChimp = async (FormData: FormData) => {
+    const { email } = FormData;
+    const mailChimpResult = await addToMailchimp(email, {
+      NAME: FormData.preferredName,
+      AUTHORITY: FormData.cbauthority,
+      AGENCY: FormData.agencyName,
+      "group[67090][1]": FormData.cbauthority,
+    });
+
+    if (mailChimpResult.result === "error") {
+      const message = mailChimpResult.msg;
+      setApiError({ message });
+      return;
+    }
+    // console.log(result);
+    navigate(`/submitted`, { replace: true });
+  };
+
   return (
     <Formik
-      initialValues={{
-        email: "abc@dsd.gov.au",
-        preferredName: "asdfsadf",
-        abn: "11111111111",
-        agencyName: "11111sdf",
-        accounts: "1212121212121212",
-        tier: "",
-        cbauthority: false,
-        cbdelegation: false,
-        cbagree: false,
-      }}
+      initialValues={InitialValues}
       onSubmit={(data, errors) => {
-        console.log("hello");
+        postToMailChimp(data);
+        setState({ isErrors: false, submitted: true });
       }}
       validationSchema={SignUpSchema}
     >
@@ -76,7 +51,7 @@ const GAform: React.FC<Props> = () => {
           onSubmit={(e) => {
             handleSubmit(e);
             if (Object.keys(errors).length < 1) return;
-            setState({ isErrors: true });
+            setState({ isErrors: true, submitted: false });
             if (state.isErrors) document.title = "Errors | Sign up form";
             const timeout = setTimeout(() => {
               const errorSum = document.getElementById("error-heading") as any;
@@ -91,6 +66,7 @@ const GAform: React.FC<Props> = () => {
             }, 500);
           }}
         >
+          {apiError && apiError.message && <p>{apiError.message}</p>}
           {state.isErrors && (
             <PageAlert type="error" className="max-42">
               <>
