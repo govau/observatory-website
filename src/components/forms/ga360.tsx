@@ -77,7 +77,7 @@ const GAform: React.FC<Props> = () => {
               </>
             </PageAlert>
           )}
-          {state.isErrors && (
+          {state.isErrors && Object.keys(errors).length > 0 ? (
             <PageAlert type="error" className="max-42">
               <>
                 <h3 tabIndex={0} id="error-heading">
@@ -92,6 +92,8 @@ const GAform: React.FC<Props> = () => {
                 </ul>
               </>
             </PageAlert>
+          ) : (
+            ""
           )}
 
           <TextField id="email" label="Email" width="lg" />
