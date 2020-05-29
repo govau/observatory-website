@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState } from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Form } from "formik";
 
 import * as Yup from "yup";
 import TextField from "./text-field";
@@ -9,7 +9,6 @@ import SelectField from "./drop-down";
 import CheckBoxField from "./checkbox";
 import { Aubtn, AuFormGroup } from "../helpers/auds";
 import PageAlert from "../blocks/page-alert";
-import { object } from "prop-types";
 
 interface Props {
   a?: string;
@@ -29,11 +28,23 @@ const SignUpSchema = Yup.object().shape({
   agencyName: Yup.string().required("Enter your agency"),
   abn: Yup.string().required().length(11, "Please enter a valid ABN"),
   accounts: Yup.string().required("Enter a UAID").min(10, "Enter a valid UAID"),
-  tier: Yup.string().required("Select a tier"),
+  tier: Yup.string()
+    .oneOf(["tier1", "tier2", "tier3", "tier4", "tier5", "free"])
+    .required("Select a tier"),
   cbagree: Yup.boolean()
     .test(
       "consented",
       "You must agree to the terms and conditions",
+      (v) => v === true
+    )
+    .required(),
+  cbdelegation: Yup.boolean()
+    .test("del", "You must have delegation to spend", (v) => v === true)
+    .required(),
+  cbauthority: Yup.boolean()
+    .test(
+      "auth",
+      "You must have the authority to make this agreement",
       (v) => v === true
     )
     .required(),
@@ -45,11 +56,14 @@ const GAform: React.FC<Props> = () => {
   return (
     <Formik
       initialValues={{
-        email: "",
-        preferredName: "",
-        abn: "",
-        agencyName: "",
-        accounts: "",
+        email: "abc@dsd.gov.au",
+        preferredName: "asdfsadf",
+        abn: "11111111111",
+        agencyName: "11111sdf",
+        accounts: "1212121212121212",
+        tier: "",
+        cbauthority: false,
+        cbdelegation: false,
         cbagree: false,
       }}
       onSubmit={(data, errors) => {
@@ -63,6 +77,7 @@ const GAform: React.FC<Props> = () => {
             handleSubmit(e);
             if (Object.keys(errors).length < 1) return;
             setState({ isErrors: true });
+            if (state.isErrors) document.title = "Errors | Sign up form";
             const timeout = setTimeout(() => {
               const errorSum = document.getElementById("error-heading") as any;
               if (errorSum && errorSum.focus()) {
@@ -113,6 +128,7 @@ const GAform: React.FC<Props> = () => {
             label="Estimated billable hits per month"
             hint="Please note, this would be the total hits expected for all of your accounts listed above."
             options={[
+              { value: "", text: "Choose one" },
               { value: "tier1", text: "1 - 10 million" },
               { value: "tier2", text: "10 - 100 million" },
               { value: "tier3", text: " 100 - 500 million" },
@@ -120,6 +136,16 @@ const GAform: React.FC<Props> = () => {
               { value: "tier5", text: "Over 1 billion" },
               { value: "Free", text: "0 - 1 million (free)" },
             ]}
+          />
+          <CheckBoxField
+            legend="Do you have authority to make this agreement with the DTA using the Terms of Service?"
+            label="Yes"
+            id="cbauthority"
+          />
+          <CheckBoxField
+            legend="Do you have financial delegation to spend the amount required for this subscription?"
+            label="Yes"
+            id="cbdelegation"
           />
           <CheckBoxField
             id="cbagree"
