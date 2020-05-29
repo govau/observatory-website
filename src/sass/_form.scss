@@ -2,6 +2,11 @@
   @include AU-space(max-width, 42em);
 }
 
-.au-form-group + .au-form-group {
+.au-form-group,
+.au-page-alerts {
   @include AU-space(margin-top, 2unit);
+}
+
+.max-42 {
+  @include AU-space(max-width, 42rem);
 }

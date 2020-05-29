@@ -20,7 +20,6 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
           email once your information has been checked and your accounts
           connected.`}
         ></AuHintText>
-        <br /> <br></br>
         <GAform></GAform>
       </div>
     </DefaultLayout>

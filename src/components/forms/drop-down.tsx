@@ -31,7 +31,11 @@ const SelectField: React.FC<SelectFieldProps> = (props: SelectFieldProps) => {
       <AuLabel htmlFor={props.id} text={props.label} />
       {error && <AuErrorText text={meta.error} id={`${props.id}--error`} />}
       {props.hint && <AuHintText text={props.hint} />}
-      <AuSelect {...props} {...field} />
+      <AuSelect
+        {...props}
+        {...field}
+        aria-describedby={error && `${props.id}--error`}
+      />
     </AuFormGroup>
   );
 };

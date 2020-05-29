@@ -27,7 +27,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = (
   const [field, meta] = useField({ name: props.id, ...props });
   const error = meta.error && meta.touched ? true : false;
   return (
-    <AuFormGroup>
+    <AuFormGroup status={error ? "invalid" : "valid"}>
       <AuFieldset>
         <AuLegend>
           <AuLabel htmlFor={props.id} text={props.legend} />

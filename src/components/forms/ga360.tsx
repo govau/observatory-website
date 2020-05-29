@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 
@@ -8,21 +9,11 @@ import SelectField from "./drop-down";
 import CheckBoxField from "./checkbox";
 import { Aubtn, AuFormGroup } from "../helpers/auds";
 import PageAlert from "../blocks/page-alert";
+import { object } from "prop-types";
 
 interface Props {
   a?: string;
 }
-
-Yup.addMethod<Yup.StringSchema>(Yup.string, "validateABN", function (
-  this: any,
-  args
-) {
-  console.log(this);
-  console.log(args);
-  return this.test("test-name", "bla", function (value: any) {
-    return true;
-  });
-});
 
 const SignUpSchema = Yup.object().shape({
   email: Yup.string()
@@ -49,18 +40,20 @@ const SignUpSchema = Yup.object().shape({
 });
 
 const GAform: React.FC<Props> = () => {
+  const initialValues = { isErrors: false };
+  const [state, setState] = useState(initialValues);
   return (
     <Formik
       initialValues={{
-        email: "agency@afd.gov.au",
+        email: "",
         preferredName: "",
-        abn: "22222222222",
-        agencyName: "adsfdsf",
-        accounts: "234324234322",
+        abn: "",
+        agencyName: "",
+        accounts: "",
         cbagree: false,
       }}
       onSubmit={(data, errors) => {
-        console.log(errors);
+        console.log("hello");
       }}
       validationSchema={SignUpSchema}
     >
@@ -68,23 +61,38 @@ const GAform: React.FC<Props> = () => {
         <Form
           onSubmit={(e) => {
             handleSubmit(e);
+            if (Object.keys(errors).length < 1) return;
+            setState({ isErrors: true });
             const timeout = setTimeout(() => {
-              const el = document.querySelector(
-                'input[class*="--invalid"]'
-              ) as any;
-              if (el && el.scrollIntoView) {
-                el.scrollIntoView({
+              const errorSum = document.getElementById("error-heading") as any;
+              if (errorSum && errorSum.focus()) {
+                errorSum.scrollIntoView({
                   behavior: "smooth",
                   block: "start",
                 });
               }
-              if (el && el.focus) {
-                el.focus();
-              }
+
               clearTimeout(timeout);
             }, 500);
           }}
         >
+          {state.isErrors && (
+            <PageAlert type="error" className="max-42">
+              <>
+                <h3 tabIndex={0} id="error-heading">
+                  There has been an error
+                </h3>
+                <ul>
+                  {Object.keys(errors).map((error, i: number) => (
+                    <li key={i}>
+                      <a href={`#${error}`}>{errors[error]}</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            </PageAlert>
+          )}
+
           <TextField id="email" label="Email" width="lg" />
           <TextField id="preferredName" label="Preferred name" width="lg" />
           <TextField id="agencyName" label="Agency name" width="xl" />
@@ -105,7 +113,6 @@ const GAform: React.FC<Props> = () => {
             label="Estimated billable hits per month"
             hint="Please note, this would be the total hits expected for all of your accounts listed above."
             options={[
-              { value: "", text: "Choose" },
               { value: "tier1", text: "1 - 10 million" },
               { value: "tier2", text: "10 - 100 million" },
               { value: "tier3", text: " 100 - 500 million" },
@@ -126,7 +133,6 @@ const GAform: React.FC<Props> = () => {
             A member of the DTA&apos;s analytics team will contact you within 5
             business days with confirmation of your subscription.
           </p>
-          <br />
           <AuFormGroup>
             <Aubtn type="submit">Submit</Aubtn>
           </AuFormGroup>
