@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form, Field } from "formik";
 
 import * as Yup from "yup";
@@ -7,6 +7,7 @@ import { ABNValidation } from "../helpers/helper";
 import SelectField from "./drop-down";
 import CheckBoxField from "./checkbox";
 import { Aubtn, AuFormGroup } from "../helpers/auds";
+import PageAlert from "../blocks/page-alert";
 
 interface Props {
   a?: string;
@@ -38,26 +39,52 @@ const SignUpSchema = Yup.object().shape({
   abn: Yup.string().required().length(11, "Please enter a valid ABN"),
   accounts: Yup.string().required("Enter a UAID").min(10, "Enter a valid UAID"),
   tier: Yup.string().required("Select a tier"),
-  cbagree: Yup.boolean().oneOf([true], "Field must be checked"),
+  cbagree: Yup.boolean()
+    .test(
+      "consented",
+      "You must agree to the terms and conditions",
+      (v) => v === true
+    )
+    .required(),
 });
 
 const GAform: React.FC<Props> = () => {
   return (
     <Formik
       initialValues={{
-        email: "",
-        password: "",
+        email: "agency@afd.gov.au",
         preferredName: "",
-        abn: "",
-        agencyName: "",
-        accounts: "",
+        abn: "22222222222",
+        agencyName: "adsfdsf",
+        accounts: "234324234322",
         cbagree: false,
       }}
-      onSubmit={(data) => console.log(data)}
+      onSubmit={(data, errors) => {
+        console.log(errors);
+      }}
       validationSchema={SignUpSchema}
     >
-      {({ values, errors, touched }) => (
-        <Form>
+      {({ values, errors, touched, handleSubmit }) => (
+        <Form
+          onSubmit={(e) => {
+            handleSubmit(e);
+            const timeout = setTimeout(() => {
+              const el = document.querySelector(
+                'input[class*="--invalid"]'
+              ) as any;
+              if (el && el.scrollIntoView) {
+                el.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+              if (el && el.focus) {
+                el.focus();
+              }
+              clearTimeout(timeout);
+            }, 500);
+          }}
+        >
           <TextField id="email" label="Email" width="lg" />
           <TextField id="preferredName" label="Preferred name" width="lg" />
           <TextField id="agencyName" label="Agency name" width="xl" />
@@ -92,6 +119,14 @@ const GAform: React.FC<Props> = () => {
             label="I agree"
             legend="I agree to the Terms of Service"
           />
+          <h3 className="au-display-md">
+            When you submit this form, your details will be recorded.
+          </h3>
+          <p>
+            A member of the DTA&apos;s analytics team will contact you within 5
+            business days with confirmation of your subscription.
+          </p>
+          <br />
           <AuFormGroup>
             <Aubtn type="submit">Submit</Aubtn>
           </AuFormGroup>

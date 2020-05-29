@@ -25,7 +25,7 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = (
   props: CheckBoxFieldProps
 ) => {
   const [field, meta] = useField({ name: props.id, ...props });
-  const error = meta.error ? true : false;
+  const error = meta.error && meta.touched ? true : false;
   return (
     <AuFormGroup>
       <AuFieldset>

@@ -26,11 +26,15 @@ const TextField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
   const error = meta.touched && meta.error ? meta.error : "";
 
   return (
-    <AuFormGroup status={error && "invalid"}>
+    <AuFormGroup status={error ? "invalid" : "valid"}>
       <AuLabel htmlFor={props.id} text={props.label} />
       {error && <AuErrorText text={meta.error} id={`${props.id}--error`} />}
       {props.hint && <AuHintText text={props.hint} />}
-      <AuTextInput {...field} {...props} />
+      <AuTextInput
+        {...field}
+        {...props}
+        className={error ? "au-text-input--invalid" : ""}
+      />
     </AuFormGroup>
   );
 };
