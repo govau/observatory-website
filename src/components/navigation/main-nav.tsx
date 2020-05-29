@@ -1,14 +1,11 @@
 import React from "react";
-import AUmainNav, { AUmainNavContent } from "./ds/main-nav";
 import { useStaticQuery, graphql } from "gatsby";
 import { MenuItems, MenuItem } from "../helpers/types";
+import { Nav, NavContent } from "../helpers/auds";
 
 interface Props {
   path: string;
 }
-
-const Nav: any = AUmainNav;
-const NavContent: any = AUmainNavContent;
 
 const MainNav: React.FC<Props> = ({ path }) => {
   const data = useStaticQuery(graphql`

@@ -3,21 +3,17 @@ import React from "react";
 import SEO from "../components/seo";
 import DefaultLayout from "../components/layouts/default-layout";
 import { useStaticQuery, graphql } from "gatsby";
-import AUcard, {
-  AUcardInner,
-  AUcardTitle,
-  AUcardLink,
-} from "../auds/react/card";
+
 import { PageContext, DtaBlogType } from "../components/helpers/types";
 import { FormatDate, SortContent } from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
-import AUlinkList from "../auds/react/link-list";
-
-const AuCard: any = AUcard;
-const AuCardInner: any = AUcardInner;
-const AuCardTitle: any = AUcardTitle;
-const AuCardLink: any = AUcardLink;
-const AuLinkList: any = AUlinkList;
+import {
+  AuCard,
+  AuCardInner,
+  AuCardTitle,
+  AuCardLink,
+  AuLinkList,
+} from "../components/helpers/auds";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content

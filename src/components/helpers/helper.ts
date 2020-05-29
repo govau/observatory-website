@@ -32,4 +32,20 @@ const CapitiliseAndRemoveDash: (word: string) => string = (word) => {
   return capitialised.replace(/-/g, " ");
 };
 
-export { FormatDate, SortContent, CapitiliseAndRemoveDash };
+const ABNValidation: (abn: string) => boolean = (abn) => {
+  const weights: Array<number> = [10, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+  if (abn.length !== 11) return false;
+
+  const abnNum: number = parseInt(abn);
+
+  if (isNaN(abnNum)) return false;
+
+  let sum = 0;
+  weights.forEach((weight: number, position: number) => {
+    const digit: any = abnNum[position] - (position !== 0 ? 0 : 1);
+    sum += weight * digit;
+  });
+  return sum % 89 == 0;
+};
+
+export { FormatDate, SortContent, CapitiliseAndRemoveDash, ABNValidation };

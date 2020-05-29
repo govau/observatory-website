@@ -7,3 +7,7 @@ date: "2020-05-12"
 author: Observatory teams
 imgUrl: ../../skateboard-socials.png
 ---
+
+# Some heading
+
+lorem ipsum bla

@@ -1,13 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import AUheader, { AUheaderBrand } from "../../auds/react/header";
+import { AUHeader, Brand } from "../helpers/auds";
 
 interface Props {
   siteTitle: string;
 }
-
-const AUHeader: any = AUheader;
-const Brand: any = AUheaderBrand;
 
 const Header: React.FC<Props> = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`

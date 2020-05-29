@@ -1,0 +1,7 @@
+.au-hint-text {
+  @include AU-space(max-width, 42em);
+}
+
+.au-form-group + .au-form-group {
+  @include AU-space(margin-top, 2unit);
+}
