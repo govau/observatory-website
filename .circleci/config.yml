@@ -63,6 +63,21 @@ jobs:
             mv .deploy/manifest-staging.yml ./
             cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
             cf zero-downtime-push observatory-dev -f manifest-staging.yml
+
+  deploy-test:
+    docker:
+      - image: govau/cf-cli
+    steps:
+      - attach_workspace:
+          at: ~/observatory
+      - run:
+          name: Deploy to cloud.gov.au development
+          command: |
+            cd ~/observatory
+            cd front-end-deploy
+            mv .deploy/manifest-test.yml ./
+            cf login -a $CF_API_STAGING -o $CF_ORG -s $CF_SPACE -u $CF_USERNAME -p $CF_PASSWORD_STAGING
+            cf zero-downtime-push obs-$CIRCLE_BRANCH -f manifest-test.yml
 workflows:
   version: 2.1
   build-and-deploy:
@@ -80,3 +95,9 @@ workflows:
           filters:
             branches:
               only: master
+      - deploy-test: # run deploy staging
+          requires:
+            - build-and-test-front-end
+          filters:
+            branches:
+              only: /.*-test/ # and only on the `master` branch
