@@ -130,7 +130,7 @@ const GAform: React.FC<Props> = () => {
           <AuFormGroup>
             <Aubtn type="submit">Submit</Aubtn>
           </AuFormGroup>
-          <pre>{JSON.stringify(values)}</pre>
+          <pre>{JSON.stringify(values, null, 2)}</pre>
           <pre>{JSON.stringify(errors, null, 2)}</pre>
         </Form>
       )}
