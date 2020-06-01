@@ -98,12 +98,12 @@ const GAform: React.FC<Props> = () => {
 
           <TextField id="email" label="Email" width="lg" />
           <TextField id="preferredName" label="Preferred name" width="lg" />
-          <TextField id="agencyName" label="Agency name" width="xl" />
           <TextField
             id="abn"
             label="Agency Australian Business Number (ABN)"
-            width="xl"
+            width="lg"
           />
+          <TextField id="agencyName" label="Agency name" width="xl" />
           <TextField
             id="accounts"
             label="Your accounts"
