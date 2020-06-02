@@ -2,7 +2,7 @@ import React from "react";
 import SEO from "../components/seo";
 import DefaultLayout from "../components/layouts/default-layout";
 import { PageContext } from "../components/helpers/types";
-import GAform from "../components/forms/ga360";
+import GAform from "../components/forms/ga-signup/ga360";
 import { AuHintText } from "../components/helpers/auds";
 
 const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {

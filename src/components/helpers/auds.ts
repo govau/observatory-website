@@ -20,6 +20,7 @@ import AUcard, {
 } from "../../auds/react/card";
 import AUfooter, { AUfooterEnd, AUfooterNav } from "../../auds/react/footer";
 import AUbutton from "../../auds/react/buttons";
+import AUsearchbox from "../../auds/react/searchbox";
 
 export const AuFormGroup: any = AUformGroup;
 export const AuLabel: any = AUlabel;
@@ -44,3 +45,4 @@ export const AuFooter: any = AUfooter;
 export const FooterNav: any = AUfooterNav;
 export const FooterEnd: any = AUfooterEnd;
 export const Aubtn: any = AUbutton;
+export const AuSearchBox: any = AUsearchbox;

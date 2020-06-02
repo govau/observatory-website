@@ -1,12 +1,12 @@
 import * as Yup from "yup";
 
 export const InitialValues: FormData = {
-  email: "abasdc@dsd.gov.au",
-  preferredName: "asdfsadf",
-  abn: "11111111111",
-  agencyName: "11111sdf",
+  email: "",
+  preferredName: "",
+  abn: "",
+  agencyName: "",
   sharedEmail: "",
-  accounts: "1212121212121212",
+  accounts: "",
   tier: "",
   cbauthority: false,
   cbdelegation: false,

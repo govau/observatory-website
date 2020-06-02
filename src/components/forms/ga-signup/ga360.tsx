@@ -2,33 +2,29 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Form } from "formik";
 
-import TextField from "./text-field";
-import SelectField from "./drop-down";
-import CheckBoxField from "./checkbox";
-import { Aubtn, AuFormGroup } from "../helpers/auds";
-import PageAlert from "../blocks/page-alert";
+import TextField from "../text-field";
+import SelectField from "../drop-down";
+import CheckBoxField from "../checkbox";
+import { Aubtn, AuFormGroup } from "../../helpers/auds";
+import PageAlert from "../../blocks/page-alert";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { navigate } from "@reach/router";
 import { InitialValues, SignUpSchema, FormData } from "./ga360-meta";
 
-interface Props {
-  a?: string;
-}
-
-const GAform: React.FC<Props> = () => {
+const GAform: React.FC = () => {
   const [state, setState] = useState({
     isErrors: false,
     submitted: false,
     apiMessage: "",
   });
 
-  const postToMailChimp = async (FormData: FormData) => {
-    const { email } = FormData;
+  const postToMailChimp = async (formData: FormData) => {
+    const { email } = formData;
     const mailChimpResult = await addToMailchimp(email, {
-      NAME: FormData.preferredName,
-      AUTHORITY: FormData.cbauthority,
-      AGENCY: FormData.agencyName,
-      "group[67090][1]": FormData.cbauthority,
+      NAME: formData.preferredName,
+      AUTHORITY: formData.cbauthority,
+      AGENCY: formData.agencyName,
+      "group[67090][1]": formData.cbauthority,
     });
 
     if (mailChimpResult.result === "error") {
@@ -156,8 +152,8 @@ const GAform: React.FC<Props> = () => {
           <AuFormGroup>
             <Aubtn type="submit">Submit</Aubtn>
           </AuFormGroup>
-          <pre>{JSON.stringify(values, null, 2)}</pre>
-          <pre>{JSON.stringify(errors, null, 2)}</pre>
+          {/* <pre>{JSON.stringify(values, null, 2)}</pre>
+          <pre>{JSON.stringify(errors, null, 2)}</pre> */}
         </Form>
       )}
     </Formik>

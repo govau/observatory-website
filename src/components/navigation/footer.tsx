@@ -1,6 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { AuFooter, FooterNav, FooterEnd } from "../helpers/auds";
+import SubscribeNewsletterForm from "../forms/newsletter/subscribe-newsletter";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Props {}
@@ -42,6 +43,11 @@ const Footer: React.FC<Props> = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-6">
+                  <SubscribeNewsletterForm />
                 </div>
               </div>
             </FooterNav>
