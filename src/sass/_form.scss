@@ -11,3 +11,11 @@
 .max-42 {
   @include AU-space(max-width, 42rem);
 }
+
+#newsletter-form {
+  position: relative;
+  label {
+    position: absolute;
+    top: -30px;
+  }
+}

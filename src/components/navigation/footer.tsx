@@ -45,11 +45,6 @@ const Footer: React.FC<Props> = () => {
                   </ul>
                 </div>
               </div>
-              <div className="row">
-                <div className="col-md-6">
-                  <SubscribeNewsletterForm />
-                </div>
-              </div>
             </FooterNav>
             <div className="row">
               <div className="col-sm-12">

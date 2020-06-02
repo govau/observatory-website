@@ -14,6 +14,7 @@ import {
   AuCardLink,
   AuLinkList,
 } from "../components/helpers/auds";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -113,6 +114,11 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
         )}
         <h3>Blogs on the DTA website</h3>
         <AuLinkList items={DtaBlogList} />
+        <div className="row">
+          <div className="col-md-6">
+            <SubscribeNewsletterForm />
+          </div>
+        </div>
       </div>
     </DefaultLayout>
   );

@@ -12,7 +12,11 @@ import {
 } from "./newsletter-meta";
 import SubscribeField from "./susbscribe-field";
 
-const SubscribeNewsletterForm: React.FC = () => {
+interface Props {
+  dark?: boolean;
+}
+
+const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
   const [state, setState] = useState({
     isErrors: false,
     submitted: false,
@@ -20,16 +24,14 @@ const SubscribeNewsletterForm: React.FC = () => {
   });
 
   const postToMailChimp = async (FormData: NewsletterSubscribe) => {
-    const { email } = FormData;
-    const mailChimpResult = await addToMailchimp(email);
-
-    if (mailChimpResult.result === "error") {
-      const apiMessage = mailChimpResult.msg;
-      setState((currentState) => ({ ...currentState, apiMessage }));
-      return;
-    }
+    // const { email } = FormData;
+    // const mailChimpResult = await addToMailchimp(email);
+    // if (mailChimpResult.result === "error") {
+    //   const apiMessage = mailChimpResult.msg;
+    //   setState((currentState) => ({ ...currentState, apiMessage }));
+    //   return;
+    // }
     // console.log(result);
-    navigate(`/submitted`, { replace: true });
   };
 
   return (
@@ -60,17 +62,20 @@ const SubscribeNewsletterForm: React.FC = () => {
               clearTimeout(timeout);
             }, 500);
           }}
+          id="newsletter-form"
         >
           {state && state.apiMessage && <p>error</p>}
-          <SubscribeField
-            btnText="Subscribe"
-            aria_label="Subscribe to observatory newsletter"
-            id="subscribe-email"
-            label="Email"
-            width="lg"
-            dark={true}
-            wrapper="div"
-          />
+          <div className="au-search au-search--dark au-form-group">
+            <SubscribeField
+              id="newsletter_email"
+              type="search"
+              label="Subscribe"
+              dark={dark}
+            />
+            <div className="au-search__btn">
+              <Aubtn dark={dark}>Subscribe</Aubtn>
+            </div>
+          </div>
         </Form>
       )}
     </Formik>

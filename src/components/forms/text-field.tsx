@@ -19,6 +19,8 @@ interface TextFieldProps {
   width?: string;
   as?: string;
   className?: string;
+  type?: string;
+  dark?: boolean;
 }
 
 const TextField: React.FC<TextFieldProps> = (props: TextFieldProps) => {

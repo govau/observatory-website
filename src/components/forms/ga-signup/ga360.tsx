@@ -18,7 +18,10 @@ const GAform: React.FC = () => {
     apiMessage: "",
   });
 
+  const [saving, setSaving] = useState<boolean>(false);
+
   const postToMailChimp = async (formData: FormData) => {
+    setSaving(true);
     const { email } = formData;
     const mailChimpResult = await addToMailchimp(email, {
       NAME: formData.preferredName,
@@ -27,9 +30,18 @@ const GAform: React.FC = () => {
       "group[67090][1]": formData.cbauthority,
     });
 
+    setSaving(false);
     if (mailChimpResult.result === "error") {
       const apiMessage = mailChimpResult.msg;
       setState((currentState) => ({ ...currentState, apiMessage }));
+      document.title = "Error | Sign up form";
+      const container = document.querySelector("main") as any;
+      container &&
+        container.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
       return;
     }
     // console.log(result);
@@ -50,8 +62,9 @@ const GAform: React.FC = () => {
           onSubmit={(e) => {
             handleSubmit(e);
             if (Object.keys(errors).length < 1) return;
+
             setState({ isErrors: true, submitted: false, apiMessage: "" });
-            if (state.isErrors) document.title = "Errors | Sign up form";
+            document.title = "Errors | Sign up form";
             const timeout = setTimeout(() => {
               const errorSum = document.getElementById("error-heading") as any;
               if (errorSum && errorSum.focus()) {
@@ -60,7 +73,6 @@ const GAform: React.FC = () => {
                   block: "start",
                 });
               }
-
               clearTimeout(timeout);
             }, 500);
           }}
@@ -68,7 +80,7 @@ const GAform: React.FC = () => {
           {state && state.apiMessage && (
             <PageAlert type="error" className="max-42">
               <>
-                <h3>There was an error</h3>
+                <h3 id="api-error-heading">There was an error</h3>
                 <p dangerouslySetInnerHTML={{ __html: state.apiMessage }}></p>
               </>
             </PageAlert>
@@ -150,10 +162,10 @@ const GAform: React.FC = () => {
             business days with confirmation of your subscription.
           </p>
           <AuFormGroup>
-            <Aubtn type="submit">Submit</Aubtn>
+            <Aubtn type="submit" disabled={saving}>
+              {saving ? "Submitting" : "Submit"}
+            </Aubtn>
           </AuFormGroup>
-          {/* <pre>{JSON.stringify(values, null, 2)}</pre>
-          <pre>{JSON.stringify(errors, null, 2)}</pre> */}
         </Form>
       )}
     </Formik>
