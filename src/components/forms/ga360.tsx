@@ -105,6 +105,12 @@ const GAform: React.FC<Props> = () => {
           />
           <TextField id="agencyName" label="Agency name" width="xl" />
           <TextField
+            id="sharedEmail"
+            hint="If a general or shared email address is available, please include this along with your work email address. Shared email addresses allow your agency to be contacted regardless of possible staff changes."
+            label="Shared email"
+            width="lg"
+          />
+          <TextField
             id="accounts"
             label="Your accounts"
             hint="Tell us which of your existing analytics accounts you would like to link to our subscription, and upgrade to Google Analytics 360 (e.g. UA-XXXXXXXX). If you do not have an existing Google Analytics account, please contact our team at analytics@digital.gov.au. "

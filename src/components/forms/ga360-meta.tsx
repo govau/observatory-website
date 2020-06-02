@@ -5,6 +5,7 @@ export const InitialValues: FormData = {
   preferredName: "asdfsadf",
   abn: "11111111111",
   agencyName: "11111sdf",
+  sharedEmail: "",
   accounts: "1212121212121212",
   tier: "",
   cbauthority: false,
@@ -24,7 +25,7 @@ export const SignUpSchema = Yup.object().shape({
     ),
   preferredName: Yup.string().required("Enter your preferred name"),
   agencyName: Yup.string().required("Enter your agency"),
-  abn: Yup.string().required().length(11, "Please enter a valid ABN"),
+  abn: Yup.string().required().min(11, "Please enter a valid ABN"),
   accounts: Yup.string().required("Enter a UAID").min(10, "Enter a valid UAID"),
   tier: Yup.string()
     .oneOf(["tier1", "tier2", "tier3", "tier4", "tier5", "free"])
@@ -46,6 +47,15 @@ export const SignUpSchema = Yup.object().shape({
       (v) => v === true
     )
     .required(),
+  sharedEmail: Yup.string()
+    .email(
+      "Enter an email address in the correct format, like name@agency.gov.au"
+    )
+    .required("Email is a required field")
+    .matches(
+      /.*gov.au$/i,
+      "A government email is required to sign up, like name@agency.gov.au"
+    ),
 });
 
 export interface FormData {
@@ -55,6 +65,7 @@ export interface FormData {
   agencyName: string;
   accounts: string;
   tier: string;
+  sharedEmail: string;
   cbauthority: boolean;
   cbdelegation: boolean;
   cbagree: boolean;
