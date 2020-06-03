@@ -17,11 +17,7 @@ export const SignUpSchema = Yup.object().shape({
     .email(
       "Enter an email address in the correct format, like name@agency.gov.au"
     )
-    .required("Email is a required field")
-    .matches(
-      /.*gov.au$/i,
-      "A government email is required to sign up, like name@agency.gov.au"
-    ),
+    .required("Email is a required field"),
   preferredName: Yup.string().required("Enter your preferred name"),
   agencyName: Yup.string().required("Enter your agency"),
   abn: Yup.string().required().min(11, "Please enter a valid ABN"),
