@@ -11,6 +11,7 @@ import {
   NewsletterSubscribe,
 } from "./newsletter-meta";
 import SubscribeField from "./susbscribe-field";
+import PageAlert from "../../../components/blocks/page-alert";
 
 interface Props {
   dark?: boolean;
@@ -19,66 +20,87 @@ interface Props {
 const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
   const [state, setState] = useState({
     isErrors: false,
+    isSubmitting: false,
     submitted: false,
     apiMessage: "",
   });
 
   const postToMailChimp = async (FormData: NewsletterSubscribe) => {
-    // const { email } = FormData;
-    // const mailChimpResult = await addToMailchimp(email);
-    // if (mailChimpResult.result === "error") {
-    //   const apiMessage = mailChimpResult.msg;
-    //   setState((currentState) => ({ ...currentState, apiMessage }));
-    //   return;
-    // }
-    // console.log(result);
+    setState((currentState) => ({ ...currentState, isSubmitting: true }));
+    const { email } = FormData;
+    const mailChimpResult = await addToMailchimp(
+      email,
+      {},
+      "https://dta.us12.list-manage.com/subscribe/post?u=81bbb1d15242b2224ee11e3fe&amp;id=b0e8de9c9a"
+    );
+
+    console.log(mailChimpResult);
+    if (mailChimpResult.result === "error") {
+      const apiMessage = mailChimpResult.msg;
+      setState((currentState) => ({
+        ...currentState,
+        isErrors: true,
+        apiMessage,
+      }));
+      return;
+    }
+
+    setState((currentState) => ({
+      ...currentState,
+      isErrors: false,
+      isSubmitting: false,
+      submitted: true,
+      apiMessage: "",
+    }));
   };
 
   return (
-    <Formik
-      initialValues={NewsletterInitialValues}
-      onSubmit={(data, errors) => {
-        postToMailChimp(data);
-        setState({ isErrors: false, submitted: true, apiMessage: "" });
-      }}
-      validationSchema={NewsletterSchema}
-    >
-      {({ values, errors, touched, handleSubmit }) => (
-        <Form
-          onSubmit={(e) => {
-            handleSubmit(e);
-            if (Object.keys(errors).length < 1) return;
-            setState({ isErrors: true, submitted: false, apiMessage: "" });
-            if (state.isErrors) document.title = "Errors | Sign up form";
-            const timeout = setTimeout(() => {
-              const errorSum = document.getElementById("error-heading") as any;
-              if (errorSum && errorSum.focus()) {
-                errorSum.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              }
-
-              clearTimeout(timeout);
-            }, 500);
+    <>
+      {state.submitted && !state.isSubmitting ? (
+        <PageAlert type="success" className="max-42">
+          <>
+            <h3>Success</h3>
+            <p>
+              You have been subscribed to the Observatory mailing list. Please
+              check your email to confirm your subscription
+            </p>
+          </>
+        </PageAlert>
+      ) : (
+        <Formik
+          initialValues={NewsletterInitialValues}
+          onSubmit={(data) => {
+            postToMailChimp(data);
           }}
-          id="newsletter-form"
+          validationSchema={NewsletterSchema}
         >
-          {state && state.apiMessage && <p>error</p>}
-          <div className="au-search au-search--dark au-form-group">
-            <SubscribeField
-              id="newsletter_email"
-              type="search"
-              label="Subscribe"
-              dark={dark}
-            />
-            <div className="au-search__btn">
-              <Aubtn dark={dark}>Subscribe</Aubtn>
-            </div>
-          </div>
-        </Form>
+          {() => (
+            <Form id="newsletter-form" className="max-42">
+              <div className="au-search au-search--dark au-form-group max-30">
+                <SubscribeField
+                  id="email"
+                  type="search"
+                  label="Enter email"
+                  dark={dark}
+                />
+                <div className="au-search__btn">
+                  <Aubtn
+                    dark={dark}
+                    type="submit"
+                    disabled={state.isSubmitting}
+                  >
+                    {state.isSubmitting ? "Submitting" : "Submit"}
+                  </Aubtn>
+                </div>
+              </div>
+              {state.isErrors && (
+                <p className="au-error-text mt-0">{state.apiMessage}</p>
+              )}
+            </Form>
+          )}
+        </Formik>
       )}
-    </Formik>
+    </>
   );
 };
 

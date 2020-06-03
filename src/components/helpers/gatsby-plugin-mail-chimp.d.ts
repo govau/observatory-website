@@ -14,7 +14,8 @@ declare module "gatsby-plugin-mailchimp" {
 
   function addToMailchimp(
     email: string,
-    listFields?: MailchimpFields
+    listFields?: MailchimpFields,
+    endpointOverride?: string
   ): Promise<MailchimpResponse>;
   export default addToMailchimp;
 }

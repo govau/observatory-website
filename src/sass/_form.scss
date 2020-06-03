@@ -8,14 +8,30 @@
   @include AU-space(margin-top, 2unit);
 }
 
-.max-42 {
-  @include AU-space(max-width, 42rem);
+.max-42,
+.au-label,
+.au-hint-text {
+  @include AU-space(max-width, 42unit);
+}
+
+.max-30 {
+  @include AU-space(max-width, 30unit);
 }
 
 #newsletter-form {
+  @include AU-space(margin-top, 3unit);
+
   position: relative;
   label {
     position: absolute;
     top: -30px;
   }
+}
+
+.form-submitted {
+  color: $AU-color-success;
+}
+
+.au-search.au-search--dark .au-search__btn {
+  border: none !important;
 }

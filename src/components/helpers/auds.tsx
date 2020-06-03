@@ -1,8 +1,7 @@
+import React from "react";
 import {
   AUformGroup,
-  AUlabel,
   AUerrorText,
-  AUhintText,
   AUfieldset,
   AUlegend,
 } from "../../auds/react/form";
@@ -23,9 +22,7 @@ import AUbutton from "../../auds/react/buttons";
 import AUsearchbox from "../../auds/react/searchbox";
 
 export const AuFormGroup: any = AUformGroup;
-export const AuLabel: any = AUlabel;
 export const AuErrorText: any = AUerrorText;
-export const AuHintText: any = AUhintText;
 export const AuFieldset: any = AUfieldset;
 export const AuLegend: any = AUlegend;
 export const AuCheckbox: any = AUcheckbox;
@@ -46,3 +43,57 @@ export const FooterNav: any = AUfooterNav;
 export const FooterEnd: any = AUfooterEnd;
 export const Aubtn: any = AUbutton;
 export const AuSearchBox: any = AUsearchbox;
+
+interface LabelProps {
+  text?: string;
+  dark?: string;
+  inline?: boolean;
+  className?: string;
+  [x: string]: any;
+}
+
+export const AuLabel: React.FC<LabelProps> = ({
+  text,
+  dark,
+  inline,
+  className,
+  ...attributeOptions
+}) => (
+  <label
+    className={
+      `au-label ${className}` +
+      `${dark ? " au-label--dark" : ""}` +
+      `${inline ? " au-label--inline" : ""}`
+    }
+    {...attributeOptions}
+  >
+    {text}
+  </label>
+);
+
+interface HintTextProps {
+  text?: string;
+  dark?: string;
+  inline?: boolean;
+  className?: string;
+  [x: string]: any;
+}
+
+export const AuHintText: React.FC<HintTextProps> = ({
+  text,
+  dark,
+  alt,
+  className,
+  ...attributeOptions
+}) => (
+  <span
+    className={
+      `au-hint-text ${className}` +
+      `${alt ? " au-hint-text--alt" : ""}` +
+      `${dark ? " au-hint-text--dark" : ""}`
+    }
+    {...attributeOptions}
+  >
+    {text}
+  </span>
+);

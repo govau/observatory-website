@@ -102,7 +102,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             </ul>
           </div>
         ) : (
-          <PageAlert type="info">
+          <PageAlert type="info" className="max-42">
             <>
               <h3>No new blogs</h3>
               <p>
@@ -113,12 +113,17 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
           </PageAlert>
         )}
         <h3>Blogs on the DTA website</h3>
-        <AuLinkList items={DtaBlogList} />
         <div className="row">
-          <div className="col-md-6">
-            <SubscribeNewsletterForm />
+          <div className="col-md-12">
+            <AuLinkList items={DtaBlogList} />
           </div>
         </div>
+        <h3>Subscribe to our newsletter</h3>
+        <p>
+          Subscribe to stay in touch with the latest product updates and blog
+          posts from the observatory team
+        </p>
+        <SubscribeNewsletterForm />
       </div>
     </DefaultLayout>
   );

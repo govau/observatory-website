@@ -1,6 +1,6 @@
 import React from "react";
 import { useField } from "formik";
-import { AuTextInput } from "../../helpers/auds";
+import { AuTextInput, AuErrorText } from "../../helpers/auds";
 
 interface TextFieldProps {
   label: string;
@@ -19,7 +19,7 @@ interface TextFieldProps {
 const SubscribeField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
   const [field, meta] = useField({ name: props.id, ...props });
   const error = meta.touched && meta.error ? meta.error : "";
-
+  const describedByError: string = error && `${props.id}--error`;
   return (
     <>
       <label
@@ -29,6 +29,7 @@ const SubscribeField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
         {props.label}
       </label>
       <AuTextInput {...props} {...field} />
+      {error && <AuErrorText text={meta.error} id={`${props.id}--error`} />}
     </>
   );
 };

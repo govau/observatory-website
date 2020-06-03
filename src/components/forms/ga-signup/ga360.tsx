@@ -20,31 +20,59 @@ const GAform: React.FC = () => {
 
   const [saving, setSaving] = useState<boolean>(false);
 
+  const handleAPIerror = (apiMessage: string) => {
+    setState((currentState) => ({ ...currentState, apiMessage }));
+
+    document.title = "Error | Sign up form";
+    const container = document.querySelector("main") as any;
+    container &&
+      container.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+  };
+
   const postToMailChimp = async (formData: FormData) => {
     setSaving(true);
+    console.log(formData);
     const { email } = formData;
-    const mailChimpResult = await addToMailchimp(email, {
+
+    const subscribeGAresult = await addToMailchimp(email, {
       NAME: formData.preferredName,
-      AUTHORITY: formData.cbauthority,
       AGENCY: formData.agencyName,
-      "group[67090][1]": formData.cbauthority,
+      ACC_IDS: formData.accounts,
+      EMAIL_SHAR: formData.sharedEmail,
+      ABN: formData.abn,
+      EST_HITS: formData.tier,
+      "group[67090][1]": formData.cbagree,
     });
+    console.log(subscribeGAresult);
 
-    setSaving(false);
-    if (mailChimpResult.result === "error") {
-      const apiMessage = mailChimpResult.msg;
-      setState((currentState) => ({ ...currentState, apiMessage }));
-      document.title = "Error | Sign up form";
-      const container = document.querySelector("main") as any;
-      container &&
-        container.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-
+    if (subscribeGAresult.result === "error") {
+      const apiMessage = subscribeGAresult.msg;
+      handleAPIerror(apiMessage);
+      setSaving(false);
       return;
     }
-    // console.log(result);
+
+    // Add to newsletter subscribe audience if selected
+    if (formData.cbnewsletter) {
+      const newsletterSubscribeResult = await addToMailchimp(
+        email,
+        {},
+        "https://dta.us12.list-manage.com/subscribe/post?u=81bbb1d15242b2224ee11e3fe&amp;id=b0e8de9c9a"
+      );
+
+      if (newsletterSubscribeResult.result === "error") {
+        const apiMessage = newsletterSubscribeResult.msg;
+        handleAPIerror(apiMessage);
+        setSaving(false);
+
+        return;
+      }
+    }
+
+    setSaving(false);
     navigate(`/submitted`, { replace: true });
   };
 
@@ -104,8 +132,8 @@ const GAform: React.FC = () => {
             ""
           )}
 
-          <TextField id="email" label="Email" width="lg" />
-          <TextField id="preferredName" label="Preferred name" width="lg" />
+          <TextField id="preferredName" label="Your name" width="lg" />
+          <TextField id="email" label="Your email" width="lg" />
           <TextField
             id="abn"
             label="Agency Australian Business Number (ABN)"
@@ -131,28 +159,23 @@ const GAform: React.FC = () => {
             hint="Please note, this would be the total hits expected for all of your accounts listed above."
             options={[
               { value: "", text: "Choose one" },
-              { value: "tier1", text: "1 - 10 million" },
-              { value: "tier2", text: "10 - 100 million" },
-              { value: "tier3", text: " 100 - 500 million" },
-              { value: "tier4", text: "500 million to 1 billion" },
-              { value: "tier5", text: "Over 1 billion" },
-              { value: "Free", text: "0 - 1 million (free)" },
+              { value: "0 - 1 million", text: "0 - 1 million (free)" },
+              { value: "1m - 10 million", text: "1 - 10 million" },
+              { value: "10m - 100 million", text: "10 - 100 million" },
+              { value: "100m - 500 million", text: " 100 - 500 million" },
+              { value: "500m - 1 billion", text: "500 million to 1 billion" },
+              { value: "Over 1 billion", text: "Over 1 billion" },
             ]}
-          />
-          <CheckBoxField
-            legend="Do you have authority to make this agreement with the DTA using the Terms of Service?"
-            label="Yes"
-            id="cbauthority"
-          />
-          <CheckBoxField
-            legend="Do you have financial delegation to spend the amount required for this subscription?"
-            label="Yes"
-            id="cbdelegation"
           />
           <CheckBoxField
             id="cbagree"
             label="I agree"
-            legend="I agree to the Terms of Service"
+            legend={`I agree to the <a href="/terms-of-service">Terms of Service</a> and have the financial delegation to spend the required amount for this subscription`}
+          />
+          <CheckBoxField
+            id="cbnewsletter"
+            label="Yes"
+            legend="I would like to receive product updates from the Observatory team"
           />
           <h3 className="au-display-md">
             When you submit this form, your details will be recorded.

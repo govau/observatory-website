@@ -1,5 +1,5 @@
 import { useField } from "formik";
-import * as React from "react";
+import React from "react";
 import {
   AuFormGroup,
   AuFieldset,
@@ -30,7 +30,10 @@ const CheckBoxField: React.FC<CheckBoxFieldProps> = (
     <AuFormGroup status={error ? "invalid" : "valid"}>
       <AuFieldset>
         <AuLegend>
-          <AuLabel htmlFor={props.id} text={props.legend} />
+          <AuLabel
+            htmlFor={props.id}
+            dangerouslySetInnerHTML={{ __html: props.legend }}
+          ></AuLabel>
           {props.hint && <AuHintText text={props.hint} />}
           {error && <AuErrorText text={meta.error} id={`${props.id}--error`} />}
         </AuLegend>
