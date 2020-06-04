@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
     // }
 
     const email =
-      location.state && location.state.email ? location.state.email : "false";
+      location.state && location.state.email ? location.state.email : "---";
 
     return (
       <DefaultLayout pageContext={pageContext} location={location}>
@@ -26,7 +26,8 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
             <>
               <h3>Sign up submitted</h3>
               <p>
-                An email has been sent to {email} with further instructions.
+                An email has been sent to <strong>{email}</strong> with further
+                instructions.
               </p>
             </>
           </PageAlert>
