@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Section from "../components/layouts/section";
 import Hero from "../components/layouts/hero";
 import { PageContext } from "../components/helpers/types";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
 const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -58,6 +59,14 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
             dangerouslySetInnerHTML={{ __html: tech.html }}
           />
         </Section>
+        <div className="container-fluid au-body">
+          <h3>Subscribe to our newsletter</h3>
+          <p>
+            Subscribe to stay in touch with the latest product updates and blog
+            posts from the observatory team
+          </p>
+          <SubscribeNewsletterForm />
+        </div>
       </>
     </DefaultLayout>
   );

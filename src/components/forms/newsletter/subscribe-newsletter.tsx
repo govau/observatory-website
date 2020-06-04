@@ -22,6 +22,7 @@ const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
     isSubmitting: false,
     submitted: false,
     apiMessage: "",
+    email: "",
   });
 
   const postToMailChimp = async (FormData: NewsletterSubscribe) => {
@@ -48,6 +49,7 @@ const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
       isErrors: false,
       isSubmitting: false,
       submitted: true,
+      email,
       apiMessage: "",
     }));
   };
@@ -59,8 +61,9 @@ const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
           <>
             <h3>Success</h3>
             <p>
-              You have been subscribed to the Observatory mailing list. Please
-              check your email to confirm your subscription
+              Thank you for subscribing! We have sent an email to{" "}
+              <strong>{state.email}</strong> with details on how to confirm your
+              subscription.
             </p>
           </>
         </PageAlert>
@@ -87,7 +90,7 @@ const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
                     type="submit"
                     disabled={state.isSubmitting}
                   >
-                    {state.isSubmitting ? "Submitting" : "Submit"}
+                    {state.isSubmitting ? "Submitting" : "Subscribe"}
                   </Aubtn>
                 </div>
               </div>

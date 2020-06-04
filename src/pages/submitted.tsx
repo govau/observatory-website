@@ -27,7 +27,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
               <h3>Sign up submitted</h3>
               <p>
                 An email has been sent to <strong>{email}</strong> with further
-                instructions.
+                instructions. Return to <a href="/">home</a>.
               </p>
             </>
           </PageAlert>
