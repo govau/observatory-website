@@ -14,7 +14,9 @@ export const InitialValues: FormData = {
 
 export const SignUpSchema = Yup.object().shape({
   agencyName: Yup.string().required("Enter your agency"),
-  abn: Yup.string().required().min(11, "Please enter a valid ABN"),
+  abn: Yup.string()
+    .required("ABN is required")
+    .min(11, "Please enter a valid ABN"),
   accounts: Yup.string().required("Enter a UAID").min(10, "Enter a valid UAID"),
   cbagree: Yup.boolean()
     .test(
@@ -27,12 +29,12 @@ export const SignUpSchema = Yup.object().shape({
     .email(
       "Enter an email address in the correct format, like name@agency.gov.au"
     )
-    .required("Email is a required field"),
+    .required("Enter an email"),
   financeEmail: Yup.string()
     .email(
       "Enter an email address in the correct format, like name@agency.gov.au"
     )
-    .required("Email is a required field"),
+    .required("Enter an email"),
   preferredName: Yup.string().required("Enter your preferred name"),
   tier: Yup.string()
     .oneOf([

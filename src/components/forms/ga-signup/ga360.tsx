@@ -133,8 +133,9 @@ const GAform: React.FC = () => {
           <TextField id="preferredName" label="Your name" width="lg" />
           <TextField
             id="email"
-            hint="Shared email addresses allow your agency to be contacted regardless of possible staff changes."
-            label="Team email"
+            hint={`Shared email addresses are preferred, since they
+             allow your agency to be contacted regardless of possible staff changes.`}
+            label="Contact email"
             width="lg"
             required
           />
