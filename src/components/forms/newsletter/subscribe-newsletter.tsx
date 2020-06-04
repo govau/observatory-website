@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 import { Formik, Form } from "formik";
 
-import { Aubtn, AuFormGroup } from "../../helpers/auds";
+import { Aubtn } from "../../helpers/auds";
 import addToMailchimp from "gatsby-plugin-mailchimp";
-import { navigate } from "@reach/router";
 import {
   NewsletterInitialValues,
   NewsletterSchema,
@@ -34,7 +33,6 @@ const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
       "https://dta.us12.list-manage.com/subscribe/post?u=81bbb1d15242b2224ee11e3fe&amp;id=b0e8de9c9a"
     );
 
-    console.log(mailChimpResult);
     if (mailChimpResult.result === "error") {
       const apiMessage = mailChimpResult.msg;
       setState((currentState) => ({

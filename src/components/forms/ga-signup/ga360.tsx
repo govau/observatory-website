@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 
 import TextField from "../text-field";
@@ -34,19 +34,17 @@ const GAform: React.FC = () => {
 
   const postToMailChimp = async (formData: FormData) => {
     setSaving(true);
-    console.log(formData);
     const { email } = formData;
 
     const subscribeGAresult = await addToMailchimp(email, {
       NAME: formData.preferredName,
       AGENCY: formData.agencyName,
       ACC_IDS: formData.accounts,
-      EMAIL_SHAR: formData.sharedEmail,
       ABN: formData.abn,
       EST_HITS: formData.tier,
+      INV_EMAIL: formData.financeEmail,
       "group[67090][1]": formData.cbagree,
     });
-    console.log(subscribeGAresult);
 
     if (subscribeGAresult.result === "error") {
       const apiMessage = subscribeGAresult.msg;
@@ -73,7 +71,7 @@ const GAform: React.FC = () => {
     }
 
     setSaving(false);
-    navigate(`/submitted`, { replace: true });
+    navigate(`/submitted`, { replace: true, state: { email } });
   };
 
   return (
@@ -133,18 +131,12 @@ const GAform: React.FC = () => {
           )}
 
           <TextField id="preferredName" label="Your name" width="lg" />
-          <TextField id="email" label="Your email" width="lg" />
           <TextField
-            id="abn"
-            label="Agency Australian Business Number (ABN)"
+            id="email"
+            hint="Shared email addresses allow your agency to be contacted regardless of possible staff changes."
+            label="Team email"
             width="lg"
-          />
-          <TextField id="agencyName" label="Agency name" width="xl" />
-          <TextField
-            id="sharedEmail"
-            hint="If a general or shared email address is available, please include this along with your work email address. Shared email addresses allow your agency to be contacted regardless of possible staff changes."
-            label="Shared email"
-            width="lg"
+            required
           />
           <TextField
             id="accounts"
@@ -152,6 +144,7 @@ const GAform: React.FC = () => {
             hint="Tell us which of your existing analytics accounts you would like to link to our subscription, and upgrade to Google Analytics 360 (e.g. UA-XXXXXXXX). If you do not have an existing Google Analytics account, please contact our team at analytics@digital.gov.au. "
             width="xl"
             as="textarea"
+            required
           />
           <SelectField
             id="tier"
@@ -167,6 +160,21 @@ const GAform: React.FC = () => {
               { value: "Over 1 billion", text: "Over 1 billion" },
             ]}
           />
+          <TextField id="agencyName" label="Agency name" required width="xl" />
+          <TextField
+            id="abn"
+            label="Agency Australian Business Number (ABN)"
+            width="lg"
+            required
+          />
+          <TextField
+            id="financeEmail"
+            label="Accounts payable email"
+            hint="So we know who to invoice (if required)"
+            required
+            width="lg"
+          />
+
           <CheckBoxField
             id="cbagree"
             label="I agree"
