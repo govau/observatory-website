@@ -19,7 +19,7 @@ Whether you are just getting started with Google Analytics, or you are starting 
 
 By signing up for the Observatory mailing list, you will:
 
-- Be the first to know about new training and other events,
-- Help us design and build new tools for analysts like you,
-- Learn how to promote analytics as a user-centred design tool in your organisation,
+- Be the first to know about new training and other events
+- Help us design and build new tools for analysts like you
+- Learn how to promote analytics as a user-centred design tool in your organisation
 - Connect with data analysts across government
