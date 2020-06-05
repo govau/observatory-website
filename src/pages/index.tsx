@@ -55,12 +55,6 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
           <Section alt={tech.frontmatter.alt}>
             <div dangerouslySetInnerHTML={{ __html: tech.html }} />
           </Section>
-          <br />
-          <h3>Subscribe to our newsletter</h3>
-          <p>
-            Stay in touch with the latest product updates from the observatory
-            team.
-          </p>
           <SubscribeNewsletterForm />
         </div>
       </>
