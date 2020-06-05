@@ -62,8 +62,8 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
         <div className="container-fluid au-body">
           <h3>Subscribe to our newsletter</h3>
           <p>
-            Subscribe to stay in touch with the latest product updates and blog
-            posts from the observatory team
+            Stay in touch with the latest product updates from the observatory
+            team.
           </p>
           <SubscribeNewsletterForm />
         </div>
