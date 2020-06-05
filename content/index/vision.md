@@ -3,8 +3,6 @@
 id: tech
 ---
 
-The gov.au Observatory exists to empower data practitioners to improve government services.
-
 ## Who are we?
 
 The gov.au Observatory, a team from the Digital Transformation Agency.
