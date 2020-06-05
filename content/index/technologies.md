@@ -3,8 +3,6 @@
 id: tech
 ---
 
-<p id="tracking-info">*A note on analysis: We do not track unique users across multiple .gov.au sites. The data shown may reflect multiple website visits by individual users.</p>
-
 ## Who are we?
 
 The gov.au Observatory, a team from the Digital Transformation Agency. We use data science to learn how people interact with government.
