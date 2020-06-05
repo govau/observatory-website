@@ -49,17 +49,13 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
           imgUrl={hero.frontmatter.imgUrl}
           imgCaption={hero.frontmatter.imgCaption}
         >
-          <>
-            <div dangerouslySetInnerHTML={{ __html: hero.html! }} />
-          </>
+          <div dangerouslySetInnerHTML={{ __html: hero.html! }} />
         </Hero>
-        <Section alt={tech.frontmatter.alt}>
-          <div
-            className="container-fluid"
-            dangerouslySetInnerHTML={{ __html: tech.html }}
-          />
-        </Section>
         <div className="container-fluid au-body">
+          <Section alt={tech.frontmatter.alt}>
+            <div dangerouslySetInnerHTML={{ __html: tech.html }} />
+          </Section>
+          <br />
           <h3>Subscribe to our newsletter</h3>
           <p>
             Stay in touch with the latest product updates from the observatory
