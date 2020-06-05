@@ -31,7 +31,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
                     {siteTitle} <span className="header__badge"> alpha</span>
                   </>
                 }
-                subline="Quantifying interactions with government services to support delivery teams to improve their own products and services"
+                subline="Empowering data practitioners to improve government services"
                 link="/"
                 brandImage={data.placeholderImage.childImageSharp.fluid.src}
                 brandImageAlt="The Australian Government Coat of Arms"
