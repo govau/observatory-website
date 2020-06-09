@@ -6,12 +6,4 @@ imgAlt: A network graph of 38 nodes showing the connections of government web si
 imgCaption: "The Jelly Fish: Graphic visualisation of two weeks of user traffic across 38 gov.au websites from May 2019."
 ---
 
-## We’re helping make data transparent to improve government digital services
-
-The data we use is anonymous and privacy-preserving. It is collated from:
-
-<h3 class = "au-display-xl mt-hero" > 29 </h3>
-participating agencies
-
-<h3 class = "au-display-xl mt-hero"> 509 </h3>  
-gov.au digital services
+<p class = "au-display-lg">The gov.au Observatory provides a range of data products, tools and resources, and practitioner community events to help bring informed, evidence-based decision making to the heart of APS agencies.</p>
