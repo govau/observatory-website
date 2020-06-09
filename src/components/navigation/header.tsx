@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
       <AUHeader dark>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-12">
               <Brand
                 title={
                   <>
