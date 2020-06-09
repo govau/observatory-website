@@ -5,16 +5,9 @@ interface Props {
   alt?: boolean;
   imgUrl: string;
   imgAlt: string;
-  imgCaption: string;
 }
 
-const Hero: React.FC<Props> = ({
-  children,
-  imgUrl,
-  imgAlt,
-  imgCaption,
-  alt = false,
-}) => {
+const Hero: React.FC<Props> = ({ children, imgUrl, imgAlt, alt = false }) => {
   return (
     <div className={`au-body hero`}>
       <section className="container-fluid">
@@ -30,9 +23,6 @@ const Hero: React.FC<Props> = ({
                 src={imgUrl}
                 alt={imgAlt}
               />
-              <figcaption className="hero-image__caption">
-                {imgCaption}
-              </figcaption>
             </figure>
           </div>
         </div>

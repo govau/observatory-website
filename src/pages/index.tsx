@@ -23,7 +23,6 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
               alt
               imgUrl
               imgAlt
-              imgCaption
             }
           }
         }
@@ -39,6 +38,10 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
     (page: any) => page.frontmatter.id === "hero"
   );
 
+  const subscribe = allMarkdownRemark.nodes.find(
+    (page: any) => page.frontmatter.id === "join"
+  );
+
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
@@ -47,13 +50,19 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
           alt={hero.frontmatter.alt}
           imgAlt={hero.frontmatter.imgAlt}
           imgUrl={hero.frontmatter.imgUrl}
-          imgCaption={hero.frontmatter.imgCaption}
         >
           <div dangerouslySetInnerHTML={{ __html: hero.html! }} />
         </Hero>
+        <div className="au-body au-body--alt">
+          <div className="container-fluid">
+            <Section alt={tech.frontmatter.alt}>
+              <div dangerouslySetInnerHTML={{ __html: tech.html }} />
+            </Section>
+          </div>
+        </div>
         <div className="container-fluid au-body">
-          <Section alt={tech.frontmatter.alt}>
-            <div dangerouslySetInnerHTML={{ __html: tech.html }} />
+          <Section alt={subscribe.frontmatter.alt}>
+            <div dangerouslySetInnerHTML={{ __html: subscribe.html }} />
           </Section>
           <SubscribeNewsletterForm />
         </div>

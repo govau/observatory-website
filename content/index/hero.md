@@ -1,9 +1,8 @@
 ---
 id: hero
 alt: true
-imgUrl: ../../hero-jellyfish--white.png
+imgUrl: ../../hero.svg
 imgAlt: A network graph of 38 nodes showing the connections of government web sites and services.
-imgCaption: "The Jelly Fish: Graphic visualisation of two weeks of user traffic across 38 gov.au websites from May 2019."
 ---
 
 ## We’re helping make data transparent to improve government digital services

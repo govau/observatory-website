@@ -14,9 +14,13 @@ import PageAlert from "../../../components/blocks/page-alert";
 
 interface Props {
   dark?: boolean;
+  alt?: boolean;
 }
 
-const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
+const SubscribeNewsletterForm: React.FC<Props> = ({
+  dark = false,
+  alt = false,
+}) => {
   const [state, setState] = useState({
     isErrors: false,
     isSubmitting: false,
@@ -83,6 +87,7 @@ const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
                   type="search"
                   label="Enter email"
                   dark={dark}
+                  alt={alt}
                 />
                 <div className="au-search__btn">
                   <Aubtn
