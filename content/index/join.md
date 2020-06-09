@@ -3,6 +3,7 @@
 id: join
 ---
 
+
 ## Join the gov.au Observatory mailing list
 
 Whether you are just getting started with Google Analytics, or you are starting to experiment, or you use it every day to discover deep insights, the gov.au Observatory can help.
