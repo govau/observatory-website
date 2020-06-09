@@ -7,6 +7,22 @@ module.exports = {
     title: `Observatory`,
     description: `The Observatory’s goal is to measure how people interact with government services. It empowers and supports teams to provide better services and outcomes for everyone.`,
     author: `Digital Transformation Agency`,
+    dtaBlogs: [
+      {
+        text: "gov.au Observatory: Digital Constellations from user journeys",
+        link:
+          "https://www.dta.gov.au/blogs/govau-observatory-digital-constellations-user-journeys",
+      },
+      {
+        text: "Seen but not clicked – lowering rankings to improve search",
+        link:
+          "https://www.dta.gov.au/blogs/seen-not-clicked-lowering-rankings-improve-search",
+      },
+      {
+        text: "Start smaller to build better",
+        link: "https://www.dta.gov.au/blogs/start-smaller-build-better",
+      },
+    ],
     menuLinks: [
       {
         text: "Home",
@@ -17,22 +33,30 @@ module.exports = {
         link: "/blogs",
       },
       {
-        text: "Pricing",
-        link: "/pricing",
+        text: "Terms of Service",
+        link: "/terms-of-service",
       },
       {
         text: "Events",
         link: "/events",
       },
+      {
+        text: "Contact us",
+        link: "/contact-us",
+      },
     ],
     footerLinks: [
       {
         text: "Github for this site",
-        link: "https://github.com/govau/ursa-major",
+        link: "https://github.com/govau/observatory-website",
       },
       {
         text: "Github for our projects",
         link: "https://github.com/govau/galileo",
+      },
+      {
+        text: "Privacy Policy",
+        link: "/privacy",
       },
     ],
   },
@@ -69,6 +93,14 @@ module.exports = {
       options: {
         name: `content`,
         path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://dta.us12.list-manage.com/subscribe/post?u=81bbb1d15242b2224ee11e3fe&amp;id=c4764336ba",
+        timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
     `gatsby-transformer-remark`,

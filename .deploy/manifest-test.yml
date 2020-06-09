@@ -2,9 +2,8 @@
 buildpack: staticfile_buildpack
 memory: 128M
 instances: 1
-
 applications:
-  - name: observatory
+  - name: observatory-test
     path: ./public
-routes:
-  - route: observatory.service.gov.au
+---
+

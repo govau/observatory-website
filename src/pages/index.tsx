@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import Section from "../components/layouts/section";
 import Hero from "../components/layouts/hero";
 import { PageContext } from "../components/helpers/types";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
 const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -48,16 +49,14 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
           imgUrl={hero.frontmatter.imgUrl}
           imgCaption={hero.frontmatter.imgCaption}
         >
-          <>
-            <div dangerouslySetInnerHTML={{ __html: hero.html! }} />
-          </>
+          <div dangerouslySetInnerHTML={{ __html: hero.html! }} />
         </Hero>
-        <Section alt={tech.frontmatter.alt}>
-          <div
-            className="container-fluid"
-            dangerouslySetInnerHTML={{ __html: tech.html }}
-          />
-        </Section>
+        <div className="container-fluid au-body">
+          <Section alt={tech.frontmatter.alt}>
+            <div dangerouslySetInnerHTML={{ __html: tech.html }} />
+          </Section>
+          <SubscribeNewsletterForm />
+        </div>
       </>
     </DefaultLayout>
   );
