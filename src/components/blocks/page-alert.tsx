@@ -6,9 +6,14 @@ const AuPageAlert: any = AUpageAlert;
 interface Props {
   type: string;
   children: React.ReactElement;
+  className?: string;
 }
-const PageAlert: React.FC<Props> = ({ type, children }) => {
-  return <AuPageAlert as={type}>{children}</AuPageAlert>;
+const PageAlert: React.FC<Props> = ({ type, children, className }) => {
+  return (
+    <AuPageAlert as={type} className={className}>
+      {children}
+    </AuPageAlert>
+  );
 };
 
 export default PageAlert;

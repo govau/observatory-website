@@ -1,6 +1,7 @@
 import React from "react";
-import AUfooter, { AUfooterNav, AUfooterEnd } from "../../auds/react/footer";
 import { useStaticQuery, graphql } from "gatsby";
+import { AuFooter, FooterNav, FooterEnd } from "../helpers/auds";
+import SubscribeNewsletterForm from "../forms/newsletter/subscribe-newsletter";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface Props {}
@@ -9,10 +10,6 @@ interface FooterLinks {
   map(arg0: (item: any, i: number) => JSX.Element): React.ReactNode;
   items: Array<any>;
 }
-
-const AuFooter: any = AUfooter;
-const FooterNav: any = AUfooterNav;
-const FooterEnd: any = AUfooterEnd;
 
 const Footer: React.FC<Props> = () => {
   const data = useStaticQuery(graphql`

@@ -1,6 +1,6 @@
 import React from "react";
-import AUbreadcrumbs from "../../auds/react/breadcrumbs";
 import { CapitiliseAndRemoveDash } from "../helpers/helper";
+import { AuBreadcrumbs } from "../helpers/auds";
 
 interface Crumb {
   length: number;
@@ -17,8 +17,6 @@ interface CrumbItems {
   text: string;
   link?: string;
 }
-
-const AuBreadcrumbs: any = AUbreadcrumbs;
 
 const Breadcrumbs: React.FC<Props> = ({ crumbs }) => {
   const breadcrumbItems: Array<CrumbItems> = [];

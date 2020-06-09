@@ -3,21 +3,18 @@ import React from "react";
 import SEO from "../components/seo";
 import DefaultLayout from "../components/layouts/default-layout";
 import { useStaticQuery, graphql } from "gatsby";
-import AUcard, {
-  AUcardInner,
-  AUcardTitle,
-  AUcardLink,
-} from "../auds/react/card";
+
 import { PageContext, DtaBlogType } from "../components/helpers/types";
 import { FormatDate, SortContent } from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
-import AUlinkList from "../auds/react/link-list";
-
-const AuCard: any = AUcard;
-const AuCardInner: any = AUcardInner;
-const AuCardTitle: any = AUcardTitle;
-const AuCardLink: any = AUcardLink;
-const AuLinkList: any = AUlinkList;
+import {
+  AuCard,
+  AuCardInner,
+  AuCardTitle,
+  AuCardLink,
+  AuLinkList,
+} from "../components/helpers/auds";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -105,7 +102,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             </ul>
           </div>
         ) : (
-          <PageAlert type="info">
+          <PageAlert type="info" className="max-42">
             <>
               <h3>No new blogs</h3>
               <p>
@@ -116,7 +113,17 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
           </PageAlert>
         )}
         <h3>Blogs on the DTA website</h3>
-        <AuLinkList items={DtaBlogList} />
+        <div className="row">
+          <div className="col-md-12">
+            <AuLinkList items={DtaBlogList} />
+          </div>
+        </div>
+        <h3>Subscribe to our newsletter</h3>
+        <p>
+          Subscribe to stay in touch with the latest product updates and blog
+          posts from the observatory team
+        </p>
+        <SubscribeNewsletterForm />
       </div>
     </DefaultLayout>
   );

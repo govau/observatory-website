@@ -1,13 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import AUheader, { AUheaderBrand } from "../../auds/react/header";
+import { AUHeader, Brand } from "../helpers/auds";
 
 interface Props {
   siteTitle: string;
 }
-
-const AUHeader: any = AUheader;
-const Brand: any = AUheaderBrand;
 
 const Header: React.FC<Props> = ({ siteTitle }) => {
   const data = useStaticQuery(graphql`
@@ -34,7 +31,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
                     {siteTitle} <span className="header__badge"> alpha</span>
                   </>
                 }
-                subline="Quantifying interactions with government services to support delivery teams to improve their own products and services"
+                subline="Empowering data practitioners to improve government services"
                 link="/"
                 brandImage={data.placeholderImage.childImageSharp.fluid.src}
                 brandImageAlt="The Australian Government Coat of Arms"

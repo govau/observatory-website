@@ -1,0 +1,47 @@
+.au-hint-text {
+  @include AU-space(max-width, 42em);
+}
+
+.au-form-group,
+.au-form-group + .au-form-group,
+.au-page-alerts {
+  @include AU-space(margin-top, 2unit);
+}
+
+.max-42,
+.au-label,
+.au-hint-text {
+  @include AU-space(max-width, 42unit);
+}
+
+.max-30 {
+  @include AU-space(max-width, 30unit);
+}
+
+#newsletter-form {
+  @include AU-space(margin-top, 3unit);
+
+  position: relative;
+  label {
+    position: absolute;
+    top: -30px;
+  }
+}
+
+.form-submitted {
+  color: $AU-color-success;
+}
+
+.au-search.au-search--dark .au-search__btn {
+  border: none !important;
+}
+
+.au-text-input.au-text-input--dark:invalid,
+.au-text-input:invalid {
+  border: 3px solid gray !important;
+  border-top-color: gray !important;
+  border-right-color: gray !important;
+  border-bottom-color: gray !important;
+  border-left-color: gray !important;
+  background-color: #ffffff !important;
+}
