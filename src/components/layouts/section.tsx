@@ -9,7 +9,7 @@ const Section: React.FC<Props> = ({ children, alt = false }) => {
   return (
     <>
       <section className={`au-body ${alt ? "au-body--alt" : ""}`}>
-        {children}
+        <div className="container-fluid">{children}</div>
       </section>
     </>
   );
