@@ -92,7 +92,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md,scss}\"",
-    "start": "npm run develop",
+    "watch": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "pancake": "pancake",

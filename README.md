@@ -4,7 +4,7 @@ Run the following commands:
 
 ```
 $ npm i
-$ npm run start
+$ npm run watch
 ```
 
 ### Edit content
