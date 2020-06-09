@@ -81,22 +81,12 @@ h1 {
 
 .hero-image {
   border-radius: $AU-border-radius;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  @include AU-space(padding, 1unit);
   @include AU-space(margin-top, 1unit);
   @include AU-space(max-width, 500px);
   background: white;
-  text-align: center;
-  @include AU-media(md) {
-    margin-top: 0;
-    @include AU-space(max-width, 100%);
-  }
-
-  &__caption {
-    background: white;
-    @include AU-space(margin-top, 0.5unit);
-    @include AU-space(padding, 0.5unit);
-    @include AU-fontgrid(xs);
-  }
 }
 
 .au-breadcrumbs {
@@ -150,13 +140,17 @@ h1 {
   }
 }
 
-.hero {
+.au-body--alt {
   position: relative;
-  background: rgb(251, 249, 249);
+  background: rgb(251, 249, 249) !important;
   background: linear-gradient(
     43deg,
     rgba(251, 249, 249, 1) 6%,
     rgba(245, 241, 241, 1) 55%,
     rgba(224, 226, 220, 1) 95%
-  );
+  ) !important;
+}
+
+.inherit-bg {
+  background: inherit !important;
 }

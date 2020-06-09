@@ -1,6 +1,7 @@
 ---
 # Don't change this ID
 id: tech
+alt: true
 ---
 
 
