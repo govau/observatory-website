@@ -55,13 +55,13 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
         </Hero>
         <div className="au-body au-body--alt">
           <div className="container-fluid">
-            <Section alt={tech.frontmatter.alt}>
+            <Section>
               <div dangerouslySetInnerHTML={{ __html: tech.html }} />
             </Section>
           </div>
         </div>
         <div className="container-fluid au-body">
-          <Section alt={subscribe.frontmatter.alt}>
+          <Section>
             <div dangerouslySetInnerHTML={{ __html: subscribe.html }} />
           </Section>
           <SubscribeNewsletterForm />
