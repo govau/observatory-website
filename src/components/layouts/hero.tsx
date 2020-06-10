@@ -12,7 +12,7 @@ const Hero: React.FC<Props> = ({ children, imgUrl, imgAlt, alt = false }) => {
     <div className={`au-body hero`}>
       <section className="container-fluid">
         <div className="row">
-          <div className="col-md-5 col-xs-12">
+          <div className="col-md-6 col-xs-12">
             <div className="content">{children}</div>
           </div>
 
