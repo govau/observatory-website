@@ -2,7 +2,7 @@
 id: hero
 alt: true
 imgUrl: ../../hero.svg
-imgAlt: A young lady connecting the dots of a line graph, akin to the Observatory product which aims to create meaning from analytics data.
+imgAlt: A young lady connecting the dots of a line graph.
 ---
 
 ## Welcome!
