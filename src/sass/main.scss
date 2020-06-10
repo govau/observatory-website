@@ -85,6 +85,9 @@ h1 {
   margin: 0;
   @include AU-space(padding, 1unit);
   @include AU-space(margin-top, 1unit);
+  @include AU-media(xs) {
+    margin: 0;
+  }
   @include AU-space(max-width, 500px);
   background: white;
 }
