@@ -16,7 +16,7 @@ All content can be found in the `/content` folder. It is contained in markdown f
 New pages can be with markdown files. For example to create a contact page, follow these steps:
 
 1. In the `content` folder, create a new folder called `contact-us`.
-2. In the `content/contact-us` folder, create a new file named contact.md
+2. In the `content/contact-us` folder, create a new file named `contact.md`
 3. Add the following content to the page
 
 ```

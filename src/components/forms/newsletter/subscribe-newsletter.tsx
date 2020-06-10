@@ -43,6 +43,7 @@ const SubscribeNewsletterForm: React.FC<Props> = ({
       setState((currentState) => ({
         ...currentState,
         isErrors: true,
+        isSubmitting: false,
         apiMessage,
       }));
       return;
@@ -100,7 +101,10 @@ const SubscribeNewsletterForm: React.FC<Props> = ({
                 </div>
               </div>
               {state.isErrors && (
-                <p className="au-error-text mt-0">{state.apiMessage}</p>
+                <p
+                  className="au-error-text mt-0"
+                  dangerouslySetInnerHTML={{ __html: state.apiMessage }}
+                ></p>
               )}
             </Form>
           )}
