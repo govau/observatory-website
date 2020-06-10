@@ -2,7 +2,7 @@
 id: hero
 alt: true
 imgUrl: ../../hero.svg
-imgAlt: A network graph of 38 nodes showing the connections of government web sites and services.
+imgAlt: A young lady connecting the dots of a line graph, akin to the Observatory product which aims to create meaning from analytics data.
 ---
 
 ## Welcome!

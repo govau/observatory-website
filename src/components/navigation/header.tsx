@@ -7,18 +7,6 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "header-logo-agov.png" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <>
       <AUHeader dark>
