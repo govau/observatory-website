@@ -7,24 +7,12 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ siteTitle }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "header-logo-agov.png" }) {
-        childImageSharp {
-          fluid {
-            src
-          }
-        }
-      }
-    }
-  `);
-
   return (
     <>
       <AUHeader dark>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-9">
+            <div className="col-md-12">
               <Brand
                 title={
                   <>
@@ -33,7 +21,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
                 }
                 subline="Empowering data practitioners to improve government services"
                 link="/"
-                brandImage={data.placeholderImage.childImageSharp.fluid.src}
+                brandImage={"../../coat-of-arms.svg"}
                 brandImageAlt="The Australian Government Coat of Arms"
               />
             </div>

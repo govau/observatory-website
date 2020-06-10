@@ -12,6 +12,7 @@ interface TextFieldProps {
   defaultValue?: string;
   width?: string;
   dark?: boolean;
+  alt?: boolean;
   wrapper?: string;
   type?: string;
 }
@@ -20,11 +21,14 @@ const SubscribeField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
   const [field, meta] = useField({ name: props.id, ...props });
   const error = meta.touched && meta.error ? meta.error : "";
   const describedByError: string = error && `${props.id}--error`;
+
   return (
     <>
       <label
         htmlFor={props.id}
-        className={`au-body ${props.dark ? "au-body--dark" : ""}`}
+        className={`inherit-bg au-body ${props.dark ? "au-body--dark" : ""} ${
+          props.alt ? "au-body--alt" : ""
+        }`}
       >
         {props.label}
       </label>

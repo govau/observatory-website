@@ -16,7 +16,7 @@ All content can be found in the `/content` folder. It is contained in markdown f
 New pages can be with markdown files. For example to create a contact page, follow these steps:
 
 1. In the `content` folder, create a new folder called `contact-us`.
-2. In the `content/contact-us` folder, create a new file named contact.md
+2. In the `content/contact-us` folder, create a new file named `contact.md`
 3. Add the following content to the page
 
 ```
@@ -43,7 +43,6 @@ Blogs require frontmatter to sit at the top of the page. Below is an example.
 ---
 path: /blogs/start-smaller-to-build-better
 title: Start smaller to build better
-createPage: true
 type: blog
 description: In the world of agile product development, the metaphor that it is smarter to build a skateboard than it is to build a car is well-known.
 date: "2020-05-12"

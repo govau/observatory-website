@@ -47,16 +47,16 @@ module.exports = {
     ],
     footerLinks: [
       {
+        text: "Privacy Policy",
+        link: "/privacy",
+      },
+      {
         text: "Github for this site",
         link: "https://github.com/govau/observatory-website",
       },
       {
         text: "Github for our projects",
         link: "https://github.com/govau/galileo",
-      },
-      {
-        text: "Privacy Policy",
-        link: "/privacy",
       },
     ],
   },
