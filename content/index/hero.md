@@ -1,17 +1,14 @@
 ---
 id: hero
 alt: true
-imgUrl: ../../hero-jellyfish--white.png
-imgAlt: A network graph of 38 nodes showing the connections of government web sites and services.
-imgCaption: "The Jelly Fish: Graphic visualisation of two weeks of user traffic across 38 gov.au websites from May 2019."
+imgUrl: ../../hero.svg
+imgAlt: A young lady connecting the dots of a line graph.
 ---
 
-## We’re helping make data transparent to improve government digital services
+## Welcome!
 
-The data we use is anonymous and privacy-preserving. It is collated from:
+<p class = "intro">The gov.au Observatory provides a range of data products, tools, resources and practitioner community events to help bring informed, evidence-based decision making to the heart of APS agencies.</p>
 
-<h3 class = "au-display-xl mt-hero" > 29 </h3>
-participating agencies
+We use data science to learn how people interact with government services. We create and share insights from a unified view of government services. We provide training, tools and advice to help analysts make sense of how people use their services.
 
-<h3 class = "au-display-xl mt-hero"> 509 </h3>  
-gov.au digital services
+We do all of this without identifying people, or creating identifiable information about people.
