@@ -42,7 +42,10 @@ body {
 }
 
 main > .au-body {
-  @include AU-space(padding, 5unit 0);
+  @include AU-space(padding, 2unit 0);
+  @include AU-media(md) {
+    @include AU-space(padding, 5unit 0);
+  }
 }
 
 // Increase spacing between inline list items in footer
