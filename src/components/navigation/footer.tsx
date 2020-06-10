@@ -35,7 +35,8 @@ const Footer: React.FC<Props> = () => {
           <div className="container-fluid">
             <FooterNav>
               <div className="row">
-                <div className="col-md-12">
+                <div className="col-md-offset-1 col-md-8 col-md-push-3">
+                  <h4>Community</h4>
                   <ul className="au-link-list au-link-list--inline">
                     {Links.map((item: any, i: number) => (
                       <li key={i}>
@@ -43,26 +44,36 @@ const Footer: React.FC<Props> = () => {
                       </li>
                     ))}
                   </ul>
+                  <FooterEnd>
+                    <p>
+                      <small>
+                        &copy; Commonwealth of Australia,{" "}
+                        <a
+                          href="https://github.com/govau/ursa-major/blob/master/LICENSE"
+                          rel="external license"
+                        >
+                          MIT licensed
+                        </a>
+                      </small>
+                    </p>
+                  </FooterEnd>
+                </div>
+                <div className="col-md-3 col-md-pull-9">
+                  <p className="footer__affiliate">
+                    <span>An initiative of the </span>
+                    <span>Digital Transformation Agency </span>
+                    <span className="footer__affiliate-link">
+                      <a
+                        className="au-cta-link  au-cta-link--dark"
+                        href="https://www.dta.gov.au/our-projects"
+                      >
+                        More projects
+                      </a>
+                    </span>
+                  </p>
                 </div>
               </div>
             </FooterNav>
-            <div className="row">
-              <div className="col-sm-12">
-                <FooterEnd>
-                  <p>
-                    <small>
-                      &copy; Commonwealth of Australia,{" "}
-                      <a
-                        href="https://github.com/govau/ursa-major/blob/master/LICENSE"
-                        rel="external license"
-                      >
-                        MIT licensed
-                      </a>
-                    </small>
-                  </p>
-                </FooterEnd>
-              </div>
-            </div>
           </div>
         </AuFooter>
       </div>

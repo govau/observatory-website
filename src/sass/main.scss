@@ -20,6 +20,7 @@ $AU-main-nav-breakpoint: sm;
 @import "grid";
 @import "event";
 @import "form";
+@import "footer";
 
 // Reset the body
 body {
@@ -145,13 +146,6 @@ h1 {
 
 .au-body--alt {
   position: relative;
-  background: rgb(251, 249, 249) !important;
-  background: linear-gradient(
-    43deg,
-    rgba(251, 249, 249, 1) 6%,
-    rgba(245, 241, 241, 1) 55%,
-    rgba(224, 226, 220, 1) 95%
-  ) !important;
 }
 
 .inherit-bg {
@@ -159,19 +153,18 @@ h1 {
 }
 
 .intro {
-	font-size: 1.25rem;
-	line-height: 1.6;
+  @include AU-fontgrid(md);
+  line-height: 1.6;
 }
 
 .stats {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-	> li > div {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-		border-bottom: 4px solid #e0e0e0;
-		border-bottom: 0.25rem solid #e0e0e0;
-	}
+  > li > div {
+    @include AU-space(padding, 2unit 0);
+    border-bottom: 4px solid #e0e0e0;
+    border-bottom: 0.25rem solid #e0e0e0;
+  }
 }
