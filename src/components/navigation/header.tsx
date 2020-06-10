@@ -33,7 +33,7 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
                 }
                 subline="Empowering data practitioners to improve government services"
                 link="/"
-                brandImage={data.placeholderImage.childImageSharp.fluid.src}
+                brandImage={"../../coat-of-armss.svg"}
                 brandImageAlt="The Australian Government Coat of Arms"
               />
             </div>
