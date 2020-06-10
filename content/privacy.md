@@ -8,7 +8,7 @@ type: standard
 
 ## What this policy applies to
 
-This policy applies to the https://observatory.gov.au/ website, managed by the Digital Transformation Agency.
+This policy applies to the https://observatory.gov.au/ website, managed by the (DTA) Digital Transformation Agency.
 
 ## How we collect and use your information
 
