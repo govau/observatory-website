@@ -8,4 +8,4 @@ author: Observatory teams
 imgUrl: ../../skateboard-socials.png
 ---
 
-#
+<!-- insert blog text here -->

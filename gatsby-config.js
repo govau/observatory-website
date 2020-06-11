@@ -51,6 +51,10 @@ module.exports = {
         link: "/privacy",
       },
       {
+        text: "Blogs",
+        link: "/blogs",
+      },
+      {
         text: "Github for this site",
         link: "https://github.com/govau/observatory-website",
       },
