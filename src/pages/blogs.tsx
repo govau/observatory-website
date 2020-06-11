@@ -106,8 +106,9 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             <>
               <h3>No new blogs</h3>
               <p>
-                We&apos;re working on it! See our blogs on the DTA website as
-                below
+                We&apos;re working on it!{" "}
+                <a href="#email">Subscribe to our mailing list</a> and
+                we&apos;ll keep you up to date.
               </p>
             </>
           </PageAlert>
