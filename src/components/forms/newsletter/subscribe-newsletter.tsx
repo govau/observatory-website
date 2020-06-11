@@ -79,6 +79,8 @@ const SubscribeNewsletterForm: React.FC<Props> = ({
             postToMailChimp(data);
           }}
           validationSchema={NewsletterSchema}
+          validateOnBlur={false}
+          validateOnChange={false}
         >
           {() => (
             <Form id="newsletter-form" className="max-42">
