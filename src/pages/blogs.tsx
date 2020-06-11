@@ -119,10 +119,10 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             <AuLinkList items={DtaBlogList} />
           </div>
         </div>
-        <h3>Subscribe to our newsletter</h3>
+        <h3>Want the latest?</h3>
         <p>
-          Subscribe to stay in touch with the latest product updates and blog
-          posts from the observatory team
+          We regularly share what we are working on and things we learn in our
+          journey. Subscribe so you don&apos;t miss out our updates!
         </p>
         <SubscribeNewsletterForm />
       </div>
