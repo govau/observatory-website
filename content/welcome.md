@@ -6,9 +6,7 @@ type: standard
 
 ## Thank you for confirming your subscription to the gov.au Observatory mailing list
 
-Check out the [Web Analytics for Agile guide](https://www.dta.gov.au/our-projects/google-analytics-government/web-analytics-agile).
-
-This guide helps teams like yours develop their web analytics capability. You will learn how to preserve privacy while still being able to measure success for your service, among many other tips and tricks.
+Check out the [Web Analytics for Agile guide](https://www.dta.gov.au/our-projects/google-analytics-government/web-analytics-agile). This guide helps teams like yours develop their web analytics capability. You will learn how to preserve privacy while still being able to measure success for your service, among many other tips and tricks.
 
 Because you have signed up for the gov.au Observatory mailing list, you will also:
 
