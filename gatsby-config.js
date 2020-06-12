@@ -55,12 +55,8 @@ module.exports = {
         link: "/blogs",
       },
       {
-        text: "Github for this site",
-        link: "https://github.com/govau/observatory-website",
-      },
-      {
-        text: "Github for our projects",
-        link: "https://github.com/govau/galileo",
+        text: "Our code",
+        link: "/tools",
       },
     ],
   },
