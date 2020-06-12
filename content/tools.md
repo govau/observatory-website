@@ -4,7 +4,7 @@ title: Tools
 type: standard
 ---
 
-# Resources
+# Source code
 
 The source code for our work is hosted on GitHub and is open by default. Feel free to use this for any of your projects.
 
