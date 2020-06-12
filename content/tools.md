@@ -6,7 +6,7 @@ type: standard
 
 # Resources
 
-The source code for our work is hosted on GitHub and is open by default. Feel free to use for any of your projects.
+The source code for our work is hosted on GitHub and is open by default. Feel free to use this for any of your projects.
 
 ## [Galileo](https://github.com/govau/GAlileo)
 
@@ -24,15 +24,14 @@ This repository contains our scripts that we run for our data, including on <a h
 
 <h2 class="mt-0"><a href="https://github.com/govau/ursa-major">Ursa Major</a></h2>
 
-Currently in Alpha, this is the source code behind <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>. Here you will find logic for creating visualisations as well as fetching data from google cloud storage
-Tags:
+Currently in Alpha, this is the source code behind <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>. Here you will find logic for creating visualisations as well as fetching data from google cloud storage.
 
 <p class="inline">Tags:</p>
 
 <ul class="au-tag-list au-tag-list--inline">
-  <li><span class="au-tag">GraphQL</span></li>
   <li><span class="au-tag">BigQuery</span></li>
   <li><span class="au-tag">Google cloud storage</span></li>
+  <li><span class="au-tag">GraphQL</span></li>
   <li><span class="au-tag">GatsbyJS</span></li>
   <li><span class="au-tag">NodeJS</span></li>
 </ul>
