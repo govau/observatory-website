@@ -56,7 +56,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
         <SEO title="Blogs" />
         <h1>Blogs</h1>
 
-        {SortedBlogs.length > 0 ? (
+        {SortedBlogs.length > 0 && (
           <div className="row">
             <ul className="au-card-list au-card-list--matchheight">
               {SortedBlogs.map((blog: any, i: number) => {
@@ -101,19 +101,9 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
               })}
             </ul>
           </div>
-        ) : (
-          <PageAlert type="info" className="max-42">
-            <>
-              <h3>No new blogs</h3>
-              <p>
-                We&apos;re working on it! In the mean time check out our blogs
-                on the DTA website below.
-              </p>
-            </>
-          </PageAlert>
         )}
-        <h3>Blogs on the DTA website</h3>
-        <div className="row">
+
+        <div className="row mt-1">
           <div className="col-md-12">
             <AuLinkList items={DtaBlogList} />
           </div>
