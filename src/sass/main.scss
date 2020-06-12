@@ -171,3 +171,16 @@ h1 {
     border-bottom: 0.25rem solid #e0e0e0;
   }
 }
+
+.inline,
+.au-tag-list--inline {
+  display: inline-block;
+}
+
+.divider {
+  margin: 1.5rem 0 2rem 0 !important;
+  color: $AU-color-background-alt;
+  background-color: $AU-color-background-alt;
+  border: none !important;
+  height: 2px !important;
+}
