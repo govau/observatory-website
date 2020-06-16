@@ -4,21 +4,19 @@ import SEO from "../components/seo";
 import DefaultLayout from "../components/layouts/default-layout";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { PageContext, DtaBlogType } from "../components/helpers/types";
+import { PageContext } from "../components/helpers/types";
 import { FormatDate, SortContent } from "../components/helpers/helper";
-import PageAlert from "../components/blocks/page-alert";
 import {
   AuCard,
   AuCardInner,
   AuCardTitle,
   AuCardLink,
-  AuLinkList,
 } from "../components/helpers/auds";
 import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
-  const { allMarkdownRemark, site } = useStaticQuery(
+  const { allMarkdownRemark } = useStaticQuery(
     graphql`
       query Blogs {
         allMarkdownRemark(filter: { frontmatter: { type: { eq: "blog" } } }) {
