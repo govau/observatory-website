@@ -60,6 +60,6 @@ I want to:
 - [Sign up for the monthly newsletter](#signup-news)
 - [Get access to Big Query data exports](/signup)
 
-<p id="signup-news">To subscribe to our newsletter please enter your email to join our mailing list and be notified when we have training</p>
+<p id="signup-news">Wherever you are in your analytics journey, the monthly Observatory newsletter can help you make the most out of your service analytics</p>
 
 <!-- add subscribe here -->
