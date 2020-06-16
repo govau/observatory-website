@@ -33,20 +33,11 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             }
           }
         }
-        site {
-          siteMetadata {
-            dtaBlogs {
-              text
-              link
-            }
-          }
-        }
       }
     `
   );
 
   const BlogList = allMarkdownRemark.nodes;
-  const DtaBlogList: Array<DtaBlogType> = site.siteMetadata.dtaBlogs;
 
   const SortedBlogs: Array<any> = BlogList.sort(SortContent);
 
