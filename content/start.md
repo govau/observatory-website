@@ -1,5 +1,5 @@
 ---
-path: /start
+path: /get-started
 title: Getting Started
 type: standard
 ---
