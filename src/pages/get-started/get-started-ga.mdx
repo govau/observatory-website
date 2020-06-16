@@ -1,11 +1,11 @@
-import SEO from "../components/seo";
-import DefaultLayout from "../components/layouts/default-layout";
+import SEO from "../../components/seo";
+import DefaultLayout from "../../components/layouts/default-layout";
 import { Link } from "gatsby";
 
 <!-- This default export overrides the default layout ensuring -->
 <!--  that the FAQ component isn't wrapped by other elements -->
 
-# Get started with GA 360
+# Google Analytics 360
 
 ## Sign up
 
@@ -39,7 +39,7 @@ export default function Layout({ children, pageContext, location }) {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
-        <SEO title="Submitted" />
+        <SEO title="Google Analytics 360" />
         <div className="container-fluid au-body">{children}</div>
       </>
     </DefaultLayout>

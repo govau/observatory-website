@@ -13,6 +13,10 @@ module.exports = {
         link: "/",
       },
       {
+        text: "Get started",
+        link: "/get-started",
+      },
+      {
         text: "Blogs",
         link: "/blogs",
       },
