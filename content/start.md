@@ -21,7 +21,7 @@ I want to:
 
 ### How to achieve this
 
-- [Sign up for the monthly newsletter](/signup-news)
+- [Sign up for the monthly newsletter](#signup-news)
 - [Read the Web Analytics Guide](https://www.dta.gov.au/our-projects/google-analytics-government/web-analytics-agile)
 - [Attend Analytics 101 training](/events)
 
@@ -40,7 +40,7 @@ I want to:
 
 ### How to achieve this
 
-- [Sign up for the monthly newsletter](/signup-news)
+- [Sign up for the monthly newsletter](#signup-news)
 - [Get access to Google Analytics 360](/signup)
 
 ## Excel
@@ -57,13 +57,9 @@ I want to:
 
 ### How to achieve this
 
-- [Sign up for the monthly newsletter](/signup-news)
+- [Sign up for the monthly newsletter](#signup-news)
 - [Get access to Big Query data exports](/signup)
 
-<div class="au-search au-search--dark au-form-group max-30">
-   <label for="email" class="inherit-bg au-body  ">Enter email</label>
-   <input class="au-text-input " type="search" id="email" label="Enter email" name="email" value="">
-   <div class="au-search__btn">
-      <button type="submit" class="au-btn  ">Subscribe</button>
-   </div>
-</div>
+<p id="signup-news">To subscribe to our newsletter please enter your email to join our mailing list and be notified when we have training</p>
+
+<!-- add subscribe here -->
