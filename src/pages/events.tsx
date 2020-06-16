@@ -7,6 +7,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { PageContext } from "../components/helpers/types";
 import { SortContent, FormatDate } from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -62,13 +63,18 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             <>
               <h3>No upcoming events</h3>
               <p>
-                There are no upcoming events scheduled. Please try again later.
+                Due to COVID-19 we are rethinking how we can deliver training,
+                please signup to our mailing list to be notified of when
+                training recommences.
               </p>
             </>
           </PageAlert>
         )}
-
-        <div className="row"></div>
+        <p>
+          To subscribe to our newsletter please enter your email to join our
+          mailing list and be notified when we have training{" "}
+        </p>
+        <SubscribeNewsletterForm />
       </div>
     </DefaultLayout>
   );
