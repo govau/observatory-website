@@ -42,6 +42,10 @@ module.exports = {
         text: "Our code",
         link: "/tools",
       },
+      {
+        text: "Events",
+        link: "/events",
+      },
     ],
   },
   plugins: [
