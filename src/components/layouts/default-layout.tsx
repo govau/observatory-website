@@ -41,9 +41,9 @@ const DefaultLayout: React.FC<Props> = ({
       <SEO title={data.site.siteMetadata.title} />
       <div className="header-wrapper">
         <Header siteTitle={data.site.siteMetadata.title} />
-        {/* <Location>
+        <Location>
           {({ navigate, location }) => <MainNav path={location.pathname} />}
-        </Location> */}
+        </Location>
       </div>
       <main>
         {crumbs && crumbs.length > 2 && (

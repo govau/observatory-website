@@ -17,16 +17,16 @@ module.exports = {
         link: "/blogs",
       },
       {
-        text: "Terms of Service",
-        link: "/terms-of-service",
-      },
-      {
         text: "Events",
         link: "/events",
       },
       {
         text: "Contact us",
         link: "/contact-us",
+      },
+      {
+        text: "Source code",
+        link: "/tools",
       },
     ],
     footerLinks: [
@@ -53,6 +53,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {

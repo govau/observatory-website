@@ -1,0 +1,47 @@
+import SEO from "../components/seo";
+import DefaultLayout from "../components/layouts/default-layout";
+import { Link } from "gatsby";
+
+<!-- This default export overrides the default layout ensuring -->
+<!--  that the FAQ component isn't wrapped by other elements -->
+
+# Get started with GA 360
+
+## Sign up
+
+**To sign up you will need**
+
+- Enim aute velit cillum do.
+- Labore reprehenderit ut irure incididunt eiusmod excepteur incididunt ut ut quis ullamco deserunt Lorem velit.
+- Labore dolore incididunt magna ut dolore.
+
+## Steps
+
+### 1. Complete form
+
+Mollit fugiat cupidatat labore ex id officia incididunt voluptate mollit incididunt.
+
+<div className="mt-1">
+  <Link to="/sign-up" className="au-cta-link">
+    Sign up for GA-360
+  </Link>
+</div>
+
+### 2. We'll respond
+
+Non aliquip do duis tempor commodo esse aliquip fugiat incididunt eu. Mollit laboris duis eiusmod proident quis. Reprehenderit ea cupidatat nisi anim deserunt elit ad anim ex ea amet reprehenderit deserunt sunt. Sint est aliqua adipisicing fugiat magna.
+
+### 3. Connected
+
+Et occaecat tempor elit eiusmod do fugiat labore incididunt nulla ullamco aliqua pariatur. Do ea cillum consequat amet fugiat laboris voluptate nisi cillum minim. Cupidatat nisi laborum mollit aliqua excepteur consectetur sit consequat anim mollit laborum mollit eiusmod.
+
+export default function Layout({ children, pageContext, location }) {
+  return (
+    <DefaultLayout pageContext={pageContext} location={location}>
+      <>
+        <SEO title="Submitted" />
+        <div className="container-fluid au-body">{children}</div>
+      </>
+    </DefaultLayout>
+  );
+}
