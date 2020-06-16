@@ -44,7 +44,7 @@ body {
 main > .au-body {
   @include AU-space(padding, 2unit 0);
   @include AU-media(md) {
-    @include AU-space(padding, 5unit 0);
+    @include AU-space(padding, 3unit 0);
   }
 }
 
@@ -55,6 +55,10 @@ main > .au-body {
 
 h1 {
   word-wrap: break-word;
+}
+
+.au-body h2 {
+  @include AU-space(font-size, 1.75unit);
 }
 
 @media only screen and (max-width: $AU-media-xs) {
@@ -113,7 +117,7 @@ h1 {
 .img-shadow {
   border-radius: $AU-border-radius;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 42em !important;
+  width: 42em !important;
 }
 
 .blog-heading {
@@ -170,4 +174,25 @@ h1 {
     border-bottom: 4px solid #e0e0e0;
     border-bottom: 0.25rem solid #e0e0e0;
   }
+}
+
+.inline,
+.au-tag-list--inline {
+  display: inline-block;
+}
+
+.divider {
+  margin: 1.5rem 0 2rem 0 !important;
+  color: $AU-color-background-alt;
+  background-color: $AU-color-background-alt;
+  border: none !important;
+  height: 2px !important;
+}
+
+.au-tag {
+  border-color: #bbb;
+}
+
+.au-responsive-media {
+  @include AU-space(margin-top, 1unit);
 }
