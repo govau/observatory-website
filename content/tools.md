@@ -12,6 +12,12 @@ The source code for our work is hosted on GitHub and is open by default. Feel fr
 
 This repository contains our scripts that we run for our data, including on <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>. We’ve created a [data dictionary](https://github.com/govau/GAlileo/wiki/gov.au-Observatory-Data-Dictionary) for more detailed information around our scripts/queries.
 
+[Customise scripts](https://github.com/govau/GAlileo/tree/master/dags/bq_scripts_doi)
+
+[COVID-19 scripts - Services Australia](https://github.com/govau/GAlileo/tree/master/dags/bq_scripts_covid19_servicesaus)
+
+[Covid-19 scripts - Ausgov](https://github.com/govau/GAlileo/tree/master/dags/bq_scripts_covid19_ausgov)
+
 <p class="inline">Tags:</p>
 
 <ul class="au-tag-list au-tag-list--inline">

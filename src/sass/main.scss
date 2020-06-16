@@ -192,3 +192,7 @@ h1 {
 .au-tag {
   border-color: #bbb;
 }
+
+.au-responsive-media {
+  @include AU-space(margin-top, 1unit);
+}

@@ -103,11 +103,6 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
           </div>
         )}
 
-        <div className="row mt-1">
-          <div className="col-md-12">
-            <AuLinkList items={DtaBlogList} />
-          </div>
-        </div>
         <h3>Want the latest?</h3>
         <p>
           We regularly share what we are working on and things we learn in our
