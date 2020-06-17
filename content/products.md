@@ -1,5 +1,5 @@
 ---
-path: /get-started/google-analytics-360/features
+path: /google-analytics-360/features
 title: Products
 type: standard
 ---

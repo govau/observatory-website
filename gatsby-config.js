@@ -17,16 +17,16 @@ module.exports = {
         link: "/get-started",
       },
       {
+        text: "Google Analytics 360",
+        link: "/google-analytics-360",
+      },
+      {
         text: "Blogs",
         link: "/blogs",
       },
       {
         text: "Events",
         link: "/events",
-      },
-      {
-        text: "Contact us",
-        link: "/contact-us",
       },
       {
         text: "Source code",
@@ -49,6 +49,10 @@ module.exports = {
       {
         text: "Events",
         link: "/events",
+      },
+      {
+        text: "Contact us",
+        link: "/contact-us",
       },
     ],
   },
