@@ -30,7 +30,7 @@ This repository contains our scripts that we run for our data, including on <a h
 
 <h2 class="mt-0"><a href="https://github.com/govau/ursa-major">Ursa Major</a></h2>
 
-Currently in Alpha, this is the source code behind <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>. Here you will find logic for creating visualisations as well as fetching data from google cloud storage.
+This is the source code behind <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>, currently in Alpha. Here you will find logic for creating visualisations as well as fetching data from google cloud storage.
 
 <p class="inline">Tags:</p>
 
@@ -46,7 +46,7 @@ Currently in Alpha, this is the source code behind <a href="https://analytics.se
 
 <h2 class="mt-0"><a href="https://github.com/govau/observatory-website">Observatory website</a></h2>
 
-The repository for this current website
+The repository for this current website.
 
 <p class="inline">Tags:</p>
 
