@@ -6,7 +6,7 @@ import { PageContext } from "../components/helpers/types";
 
 const NotFoundPage: React.FC<PageContext> = ({ pageContext, location }) => {
   return (
-    <DefaultLayout pageContext={pageContext} location={location}>
+    <DefaultLayout location={location}>
       <div className="au-body container-fluid">
         <SEO title="404: Not found" />
         <h1>NOT FOUND</h1>

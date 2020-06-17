@@ -47,7 +47,6 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
       <>
         <SEO title="Home" />
         <Hero
-          alt={hero.frontmatter.alt}
           imgAlt={hero.frontmatter.imgAlt}
           imgUrl={hero.frontmatter.imgUrl}
         >

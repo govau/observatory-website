@@ -6,6 +6,6 @@ applications:
   - name: observatory-test
     path: ./public
 status_codes:
-  404: /error
+  404: /404.html
 ---
 
