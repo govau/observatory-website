@@ -21,8 +21,8 @@ alt: true
 	</li>
 	<li class = "col-md-4">
 		<div>
-			<span class = "au-display-xl mt-hero"> 4.1 billion </span>
-			monthly interactions
+			<span class = "au-display-xl mt-hero"> 1.76 million </span>
+			daily active users
 		</div>
 	</li>
 </ul>
