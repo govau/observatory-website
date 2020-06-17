@@ -1,5 +1,5 @@
 ---
-path: /terms-of-service
+path: /get-started/google-analytics-360/terms-of-service
 title: Subscription Terms of Service
 type: standard
 ---

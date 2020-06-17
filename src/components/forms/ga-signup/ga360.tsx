@@ -179,7 +179,7 @@ const GAform: React.FC = () => {
           <CheckBoxField
             id="cbagree"
             label="I agree"
-            legend={`I agree to the <a href="/terms-of-service">Terms of Service</a> and have the financial delegation to spend the required amount for this subscription`}
+            legend={`I agree to the <a href="/get-started/google-analytics-360/terms-of-service">Terms of Service</a> and have the financial delegation to spend the required amount for this subscription`}
           />
           <CheckBoxField
             id="cbnewsletter"
