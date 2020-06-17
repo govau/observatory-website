@@ -1,5 +1,5 @@
 ---
-path: /products
+path: /get-started/google-analytics-360/features
 title: Products
 type: standard
 ---
@@ -134,4 +134,6 @@ Our contract fees are calculated on a cost recovery basis, based on the number o
 
 Notes: A hit is an interaction that results in data being sent to Google Analytics, such as page view, event, e-Commerce or social interaction tracking hits. [Billable Hits as defined by Google](https://support.google.com/analytics/answer/6086082?hl=en), and we use the Billable Hit Volume listed in an agency’s existing Google Suite Administration (if available) to estimate the appropriate pricing tier.
 
-More information about our invoicing and payment arrangements can be found in our [Terms of Service](terms-of-service).
+More information about our invoicing and payment arrangements can be found in our [Terms of Service](/get-started/google-analytics-360/terms-of-service).
+
+<a href="/get-started/google-analytics-360/sign-up" class="au-btn">Get Google Analytics 360 now</a>
