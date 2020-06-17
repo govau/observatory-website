@@ -63,11 +63,11 @@ h1 {
 
 @media only screen and (max-width: $AU-media-xs) {
   .au-body h1 {
-    @include AU-space(font-size, 2.25unit);
+    @include AU-space(font-size, 2.45unit);
   }
 
   .au-body h2 {
-    @include AU-space(font-size, 1.75unit);
+    @include AU-space(font-size, 2unit);
   }
 }
 

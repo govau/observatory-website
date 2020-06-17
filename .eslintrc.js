@@ -26,5 +26,6 @@ module.exports = {
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react/display-name": "off",
+    "mdx/no-unused-expressions": "off"
   },
 };
