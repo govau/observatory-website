@@ -5,5 +5,7 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "bracketSpacing": true,
-  "plugins": ["preset-lint-markdown-style-guide"]
+  "plugins": ["preset-lint-markdown-style-guide"],
+  "printWidth": 80,
+  "proseWrap": "always"
 }
