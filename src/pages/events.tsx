@@ -71,8 +71,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
           </PageAlert>
         )}
         <p>
-          To subscribe to our newsletter please enter your email to join our
-          mailing list and be notified when we have training{" "}
+          To be notified about upcoming training, subscribe to our newsletter{" "}
         </p>
         <SubscribeNewsletterForm />
       </div>
