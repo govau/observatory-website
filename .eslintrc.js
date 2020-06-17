@@ -6,6 +6,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:jsx-a11y/recommended",
+    "plugin:mdx/recommended",
     "prettier",
   ],
   settings: {

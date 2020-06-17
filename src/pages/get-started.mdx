@@ -1,0 +1,96 @@
+import SEO from "../components/seo";
+import DefaultLayout from "../components/layouts/default-layout";
+import { Link } from "gatsby";
+import { AuCallout } from "../components/helpers/auds";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
+
+
+<!-- This default export overrides the default layout ensuring -->
+<!--  that the FAQ component isn't wrapped by other elements -->
+
+<p class="intro">
+  We are all at different stages of our analytics journey. Check below to find
+  out how the Observatory can help you, wherever you are now.
+</p>
+
+## Learn
+
+<AuCallout className="max-42">
+  <p>
+    How might I setup and use analytics to understand what's happening on my
+    website?
+  </p>
+</AuCallout>
+
+I want to:
+
+- Learn more about how to use Google Analytics
+- Find creative ways to report and share insights with stakeholders
+- Start a discussion about user centred design in my organisation
+- Better understand how people interact with my website, and what that means for service delivery
+
+### How to achieve this
+
+- [Sign up for the monthly newsletter](#email)
+- [Read the Web Analytics Guide](https://www.dta.gov.au/our-projects/google-analytics-government/web-analytics-agile)
+- [Attend Analytics 101 training](/events)
+
+## Expand
+
+<AuCallout className="max-42">
+  <p>
+    How might I use Google Analytics to better tell the story of how people use
+    my website?
+  </p>
+</AuCallout>
+
+I want to:
+
+- Find more time for deep analysis to explore and find insights
+- Promote data-based decision making within my organisation
+- Create and share interactive reports
+- Better understand my users, with additional data and tools
+
+### How to achieve this
+
+- [Sign up for the monthly newsletter](#email)
+- [Get access to Google Analytics 360](/get-started/google-analytics-360)
+
+## Excel
+
+<AuCallout className="max-42">
+  <p>
+    How might I change the way my service works, so that my users have a better
+    experience?
+  </p>
+</AuCallout>
+
+I want to:
+
+- Learn how to create actionable insights to help improve my services
+- Learn how to test changes to my service with parts of my audience
+- Import my Google Analytics data into advanced reporting tools
+
+### How to achieve this
+
+- [Sign up for the monthly newsletter](#email)
+- [Get access to Big Query data exports](/signup)
+
+<p id="signup-news">
+  Wherever you are in your analytics journey, the monthly Observatory newsletter
+  can help you make the most out of your service analytics
+</p>
+
+<SubscribeNewsletterForm />
+
+
+export default function Layout({ children, pageContext, location }) {
+  return (
+    <DefaultLayout pageContext={pageContext} location={location}>
+      <>
+        <SEO title="Google Analytics 360" />
+        <div className="container-fluid au-body">{children}</div>
+      </>
+    </DefaultLayout>
+  );
+}
