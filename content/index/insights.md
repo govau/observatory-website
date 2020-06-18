@@ -2,7 +2,7 @@
 id: insights
 imgUrl: ../../mis.png
 imgAlt: Man holding a key walking into a key hole shaped door
-swapOrder: true
+swapOrder: false
 ---
 
 ### Unlock insights into how people use your site with an Observatory subscription

@@ -64,7 +64,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
         >
           <div dangerouslySetInnerHTML={{ __html: insights.html! }} />
         </Hero>
-        <Section>
+        <Section alt={subscribe.frontmatter.alt}>
           <>
             <div dangerouslySetInnerHTML={{ __html: subscribe.html }} />
             <SubscribeNewsletterForm />
