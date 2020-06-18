@@ -1,11 +1,12 @@
 // Dark theme overrides
 // $AU-colordark-foreground-text: #ffffff;
-// $AU-colordark-foreground-action: #45c2f0;
+$AU-colordark-foreground-action: #0bd9b6;
 // $AU-colordark-foreground-focus: #e48ffc;
-// $AU-colordark-background: #3c4858;
+$AU-colordark-background: #212121;
 
 // Light theme overrides
-// $AU-color-foreground-action: #3c4858;
+$AU-color-foreground-action: #067f6b;
+$AU-color-foreground-text: #212121;
 // $AU-color-foreground-focus: #e48ffc;
 //Main nav, set project specific breakpoint
 
@@ -139,12 +140,11 @@ h1 {
 
 .header-wrapper,
 .footer-wrapper {
-  background: rgb(19, 94, 112);
+  background: rgb(33, 33, 33);
   background: linear-gradient(
-    43deg,
-    rgba(19, 94, 112, 1) 6%,
-    rgba(20, 100, 120, 1) 55%,
-    rgba(34, 130, 153, 1) 95%
+    45deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(48, 47, 47, 1) 100%
   );
   .ie9 & {
     background: $AU-colordark-background;
@@ -170,7 +170,7 @@ h1 {
   list-style-type: none;
 
   > li > div {
-    @include AU-space(padding, 2unit 0);
+    @include AU-space(padding, 1unit 0);
     border-bottom: 4px solid #e0e0e0;
     border-bottom: 0.25rem solid #e0e0e0;
   }
@@ -195,4 +195,40 @@ h1 {
 
 .au-responsive-media {
   @include AU-space(margin-top, 1unit);
+}
+
+.au-btn {
+  background-color: #00cfff !important;
+  color: $AU-color-foreground-text !important;
+  border-color: #00cfff !important;
+  font-weight: 480;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+  .au-search__btn & {
+    box-shadow: none;
+  }
+}
+
+#homepage-callout {
+  display: block;
+
+  ul + div {
+    @include AU-space(margin-top, 2unit);
+  }
+
+  @include AU-media(md) {
+    display: flex;
+
+    ul + div {
+      margin-top: 0;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  align-self: center;
 }
