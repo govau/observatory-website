@@ -161,7 +161,11 @@ h1 {
 }
 
 .intro {
-  @include AU-fontgrid(md);
+  @include AU-fontgrid(sm);
+
+  @include AU-media(sm) {
+    @include AU-fontgrid(md);
+  }
   line-height: 1.6;
 }
 
