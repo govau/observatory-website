@@ -239,4 +239,18 @@ h1 {
 
 .au-search {
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  .au-btn {
+    background-color: $AU-color-foreground-action !important;
+    color: $AU-colordark-foreground-text !important;
+    border-color: $AU-color-foreground-action !important;
+  }
+}
+
+.yellow-pink-lg {
+  background: rgb(255, 255, 243) !important;
+  background: linear-gradient(
+    133deg,
+    rgba(255, 255, 243, 1) 0%,
+    rgba(253, 241, 255, 1) 100%
+  ) !important;
 }

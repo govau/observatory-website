@@ -54,7 +54,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
         <Hero imgAlt={hero.frontmatter.imgAlt} imgUrl={hero.frontmatter.imgUrl}>
           <div dangerouslySetInnerHTML={{ __html: hero.html! }} />
         </Hero>
-        <Section alt={tech.frontmatter.alt}>
+        <Section className="yellow-pink-lg">
           <div dangerouslySetInnerHTML={{ __html: tech.html }} />
         </Section>
         <Hero
