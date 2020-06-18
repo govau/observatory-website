@@ -60,7 +60,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
         >
           <div dangerouslySetInnerHTML={{ __html: insights.html! }} />
         </Hero>
-        <Section alt={subscribe.frontmatter.alt}>
+        <Section alt={true}>
           <>
             <div className="row">
               <div className="col-md-6">
