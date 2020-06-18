@@ -29,7 +29,7 @@ alt: true
 	</ul>
 	<div class="col-md-7 col-md-offset-1 text-center align-center">
 		<h3>
-		There’s never been a better time to enhance your agency with Observatory analytics.
+		There’s never been a better time to enhance your agency with Observatory analytics
 		</h3>
 		<a href="/get-started" class="au-btn mt-1">Get started now</a>
 	</div>
