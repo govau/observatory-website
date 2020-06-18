@@ -1,6 +1,6 @@
 ---
 path: /google-analytics-360/features
-title: Products
+title: GA360 Features
 type: standard
 ---
 
@@ -9,8 +9,8 @@ type: standard
 1. Easier and cheaper to analyse website data
 2. Only one agreement between your organisation and the DTA for your websites
 
-Google Analytics has a free version and a paid-for version.
-DTA offer paid-for version with much lowered cost and following benefits
+Google Analytics has a free version and a paid-for version. DTA offer paid-for
+version with much lowered cost and following benefits
 
 <br/>
 <div>
@@ -81,10 +81,14 @@ DTA offer paid-for version with much lowered cost and following benefits
 
 ## Pricing Model
 
-Observatory has a whole-of-government contract, each new agency that joins unlocks more savings for everyone subscribed. The free tier of service we offer means that smaller agencies can save time and money.
-Note: Google makes Google Analytics free of charge up to a maximum of 10 million Hits per month per account.
+Observatory has a whole-of-government contract, each new agency that joins
+unlocks more savings for everyone subscribed. The free tier of service we offer
+means that smaller agencies can save time and money. Note: Google makes Google
+Analytics free of charge up to a maximum of 10 million Hits per month per
+account.
 
-Our contract fees are calculated on a cost recovery basis, based on the number of billable hits per month across all of a subscribed agencies websites.
+Our contract fees are calculated on a cost recovery basis, based on the number
+of billable hits per month across all of a subscribed agencies websites.
 
 <br/>
 
@@ -132,8 +136,15 @@ Our contract fees are calculated on a cost recovery basis, based on the number o
     </table>
 </div>
 
-Notes: A hit is an interaction that results in data being sent to Google Analytics, such as page view, event, e-Commerce or social interaction tracking hits. [Billable Hits as defined by Google](https://support.google.com/analytics/answer/6086082?hl=en), and we use the Billable Hit Volume listed in an agency’s existing Google Suite Administration (if available) to estimate the appropriate pricing tier.
+Notes: A hit is an interaction that results in data being sent to Google
+Analytics, such as page view, event, e-Commerce or social interaction tracking
+hits.
+[Billable Hits as defined by Google](https://support.google.com/analytics/answer/6086082?hl=en),
+and we use the Billable Hit Volume listed in an agency’s existing Google Suite
+Administration (if available) to estimate the appropriate pricing tier.
 
-More information about our invoicing and payment arrangements can be found in our [Terms of Service](/get-started/google-analytics-360/terms-of-service).
+More information about our invoicing and payment arrangements can be found in
+our [Terms of Service](/google-analytics-360/terms-of-service).
 
-<a href="/get-started/google-analytics-360/sign-up" class="au-btn">Get Google Analytics 360 now</a>
+<a href="/get-started/google-analytics-360/sign-up" class="au-btn">Get Google
+Analytics 360 now</a>
