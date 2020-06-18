@@ -1,12 +1,13 @@
 // Dark theme overrides
 // $AU-colordark-foreground-text: #ffffff;
-$AU-colordark-foreground-action: #0bd9b6;
+$AU-colordark-foreground-action: #bdf4ff;
 // $AU-colordark-foreground-focus: #e48ffc;
-$AU-colordark-background: #212121;
+$AU-colordark-background: #1c304a;
 
 // Light theme overrides
-$AU-color-foreground-action: #067f6b;
+$AU-color-foreground-action: #046b99;
 $AU-color-foreground-text: #212121;
+// $AU-color-background: #fcfcfc;
 // $AU-color-foreground-focus: #e48ffc;
 //Main nav, set project specific breakpoint
 
@@ -140,11 +141,11 @@ h1 {
 
 .header-wrapper,
 .footer-wrapper {
-  background: rgb(33, 33, 33);
+  background: rgb(28, 48, 74);
   background: linear-gradient(
     45deg,
-    rgba(33, 33, 33, 1) 0%,
-    rgba(48, 47, 47, 1) 100%
+    rgba(28, 48, 74, 1) 0%,
+    rgba(25, 52, 88, 1) 100%
   );
   .ie9 & {
     background: $AU-colordark-background;
@@ -231,4 +232,11 @@ h1 {
 
 .align-center {
   align-self: center;
+}
+.au-header__subline {
+  color: $AU-colordark-foreground-text !important;
+}
+
+.au-search {
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
 }
