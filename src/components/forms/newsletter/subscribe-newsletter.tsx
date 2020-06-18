@@ -16,9 +16,7 @@ interface Props {
   dark?: boolean;
 }
 
-const SubscribeNewsletterForm: React.FC<Props> = ({
-  dark = false,
-}) => {
+const SubscribeNewsletterForm: React.FC<Props> = ({ dark = false }) => {
   const [state, setState] = useState({
     isErrors: false,
     isSubmitting: false,
@@ -91,9 +89,9 @@ const SubscribeNewsletterForm: React.FC<Props> = ({
                 />
                 <div className="au-search__btn">
                   <Aubtn
-                    dark={dark}
                     type="submit"
                     disabled={state.isSubmitting}
+                    className="au-btn--medium"
                   >
                     {state.isSubmitting ? "Submitting" : "Subscribe"}
                   </Aubtn>

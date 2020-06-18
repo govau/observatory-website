@@ -85,6 +85,7 @@ const GAform: React.FC = () => {
     >
       {({ values, errors, touched, handleSubmit }) => (
         <Form
+          noValidate
           onSubmit={(e) => {
             handleSubmit(e);
             if (Object.keys(errors).length < 1) return;

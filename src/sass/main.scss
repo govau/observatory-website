@@ -202,7 +202,7 @@ h1 {
   background-color: #00cfff !important;
   color: $AU-color-foreground-text !important;
   border-color: #00cfff !important;
-  font-weight: 480;
+  font-weight: 500;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
   .au-search__btn & {
@@ -241,11 +241,12 @@ h1 {
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
   background-color: transparent;
   border-radius: $AU-border-radius;
-  .au-btn {
-    background-color: $AU-color-foreground-action !important;
-    color: $AU-colordark-foreground-text !important;
-    border-color: $AU-color-foreground-action !important;
-  }
+}
+
+.au-btn--medium {
+  background-color: $AU-color-foreground-action !important;
+  color: $AU-colordark-foreground-text !important;
+  border-color: $AU-color-foreground-action !important;
 }
 
 .yellow-pink-lg {

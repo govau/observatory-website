@@ -43,10 +43,6 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
     (page: any) => page.frontmatter.id === "hero"
   );
 
-  const subscribe = allMarkdownRemark.nodes.find(
-    (page: any) => page.frontmatter.id === "join"
-  );
-
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
@@ -66,8 +62,18 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
         </Hero>
         <Section alt={subscribe.frontmatter.alt}>
           <>
-            <div dangerouslySetInnerHTML={{ __html: subscribe.html }} />
-            <SubscribeNewsletterForm />
+            <div className="row">
+              <div className="col-md-6">
+                <h3>Monthly newsletter</h3>
+                <p>
+                  We interview smart people, organise great events, preview new
+                  tools, and deliver it all straight into your inbox!
+                </p>
+              </div>
+              <div className="col-md-6">
+                <SubscribeNewsletterForm dark={true} />
+              </div>
+            </div>
           </>
         </Section>
       </>
