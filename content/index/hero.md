@@ -1,6 +1,6 @@
 ---
 id: hero
-imgUrl: ../../hero.svg
+imgUrl: ../../hero.png
 imgAlt: A young lady connecting the dots of a line graph.
 ---
 
