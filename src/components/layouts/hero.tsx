@@ -26,7 +26,9 @@ const Hero: React.FC<Props> = ({
           </div>
 
           <div
-            className={`col-md-6 col-xs-12 ${swapOrder ? "col-md-pull-6" : ""}`}
+            className={`col-md-5 col-md-offset-1 col-xs-12 ${
+              swapOrder ? "col-md-pull-6" : ""
+            }`}
           >
             <figure className="hero-image">
               <img
