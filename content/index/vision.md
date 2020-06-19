@@ -31,6 +31,6 @@ alt: true
 		<h3>
 		There’s never been a better time to enhance your agency with Observatory analytics
 		</h3>
-		<a href="/get-started" class="au-btn mt-1">Get started now</a>
+		<a href="/get-started" class="au-btn au-btn--bright mt-1">Get started now</a>
 	</div>
 </div>

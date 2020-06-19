@@ -11,6 +11,8 @@ $AU-color-foreground-text: #212121;
 // $AU-color-foreground-focus: #e48ffc;
 //Main nav, set project specific breakpoint
 
+$AU-color-bright: #00cfff;
+
 $AU-media-xs: 0px;
 $AU-media-sm: 576px;
 $AU-media-md: 768px;
@@ -203,14 +205,24 @@ h1 {
 }
 
 .au-btn {
-  background-color: #00cfff !important;
-  color: $AU-color-foreground-text !important;
-  border-color: #00cfff !important;
+  background-color: $AU-color-foreground-action !important;
+  color: $AU-colordark-foreground-text !important;
+  border-color: $AU-color-foreground-action !important;
   font-weight: 500;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
-  .au-search__btn & {
-    box-shadow: none;
+  &:hover:not(:disabled) {
+    background-color: #313131 !important;
+    border-color: #313131 !important;
+    text-decoration: underline !important;
+    color: $AU-colordark-foreground-text !important;
+  }
+
+  .ie8 &:hover {
+    background-color: $AU-color-foreground-text !important;
+    border-color: $AU-color-foreground-text !important;
+    color: $AU-color-background !important;
+    text-decoration: underline;
   }
 }
 
@@ -247,10 +259,28 @@ h1 {
   border-radius: $AU-border-radius;
 }
 
-.au-btn--medium {
-  background-color: $AU-color-foreground-action !important;
-  color: $AU-colordark-foreground-text !important;
-  border-color: $AU-color-foreground-action !important;
+.au-btn--bright {
+  background-color: $AU-color-bright !important;
+  color: $AU-color-foreground-text !important;
+  border-color: $AU-color-bright !important;
+
+  .au-search__btn & {
+    box-shadow: none;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: #313131 !important;
+    border-color: #313131 !important;
+    text-decoration: underline !important;
+    color: $AU-color-bright !important;
+  }
+
+  .ie8 &:hover {
+    background-color: $AU-color-foreground-text !important;
+    border-color: $AU-color-foreground-text !important;
+    color: $AU-color-background !important;
+    text-decoration: underline;
+  }
 }
 
 .yellow-pink-lg {

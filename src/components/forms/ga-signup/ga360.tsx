@@ -5,7 +5,7 @@ import { Formik, Form } from "formik";
 import TextField from "../text-field";
 import SelectField from "../drop-down";
 import CheckBoxField from "../checkbox";
-import { Aubtn, AuFormGroup } from "../../helpers/auds";
+import { Aubtn, AuFormGroup, AuFieldset, AuLegend } from "../../helpers/auds";
 import PageAlert from "../../blocks/page-alert";
 import addToMailchimp from "gatsby-plugin-mailchimp";
 import { navigate } from "@reach/router";
@@ -130,63 +130,90 @@ const GAform: React.FC = () => {
           ) : (
             ""
           )}
-
-          <TextField id="preferredName" label="Your name" width="lg" />
-          <TextField
-            id="email"
-            hint={`Shared email addresses are preferred, since they
+          <AuFieldset className="fieldset-group">
+            <span>
+              <AuLegend>
+                <h3>Account details</h3>
+              </AuLegend>
+            </span>
+            <TextField id="preferredName" label="Your name" width="lg" />
+            <TextField
+              id="email"
+              hint={`Shared email addresses are preferred, since they
              allow your agency to be contacted regardless of possible staff changes.`}
-            label="Contact email"
-            width="lg"
-            required
-          />
-          <TextField
-            id="accounts"
-            label="Your accounts"
-            hint="Tell us which of your existing analytics accounts you would like to link to our subscription, and upgrade to Google Analytics 360 (e.g. UA-XXXXXXXX). If you do not have an existing Google Analytics account, please contact our team at analytics@digital.gov.au. "
-            width="xl"
-            as="textarea"
-            required
-          />
-          <SelectField
-            id="tier"
-            label="Estimated billable hits per month"
-            hint="Please note, this would be the total hits expected for all of your accounts listed above."
-            options={[
-              { value: "", text: "Choose one" },
-              { value: "0 - 1 million", text: "0 - 1 million (free)" },
-              { value: "1m - 10 million", text: "1 - 10 million" },
-              { value: "10m - 100 million", text: "10 - 100 million" },
-              { value: "100m - 500 million", text: " 100 - 500 million" },
-              { value: "500m - 1 billion", text: "500 million to 1 billion" },
-              { value: "Over 1 billion", text: "Over 1 billion" },
-            ]}
-          />
-          <TextField id="agencyName" label="Agency name" required width="xl" />
-          <TextField
-            id="abn"
-            label="Agency Australian Business Number (ABN)"
-            width="lg"
-            required
-          />
-          <TextField
-            id="financeEmail"
-            label="Accounts payable email"
-            hint="So we know who to invoice (if required)"
-            required
-            width="lg"
-          />
+              label="Contact email"
+              width="lg"
+              required
+            />
+            <TextField
+              id="accounts"
+              label="Your accounts"
+              hint="Tell us which of your existing analytics accounts you would like to link to our subscription, and upgrade to Google Analytics 360 (e.g. UA-XXXXXXXX). If you do not have an existing Google Analytics account, please contact our team at analytics@digital.gov.au. "
+              width="xl"
+              as="textarea"
+              required
+            />
+            <SelectField
+              id="tier"
+              label="Estimated billable hits per month"
+              hint="Please note, this would be the total hits expected for all of your accounts listed above."
+              options={[
+                { value: "", text: "Choose one" },
+                { value: "0 - 1 million", text: "0 - 1 million (free)" },
+                { value: "1m - 10 million", text: "1 - 10 million" },
+                { value: "10m - 100 million", text: "10 - 100 million" },
+                { value: "100m - 500 million", text: " 100 - 500 million" },
+                { value: "500m - 1 billion", text: "500 million to 1 billion" },
+                { value: "Over 1 billion", text: "Over 1 billion" },
+              ]}
+            />
+          </AuFieldset>
 
-          <CheckBoxField
-            id="cbagree"
-            label="I agree"
-            legend={`I agree to the <a href="/get-started/google-analytics-360/terms-of-service">Terms of Service</a> and have the financial delegation to spend the required amount for this subscription`}
-          />
-          <CheckBoxField
-            id="cbnewsletter"
-            label="Yes"
-            legend="I would like to receive product updates from the Observatory team"
-          />
+          <AuFieldset className="fieldset-group">
+            <span>
+              <AuLegend>
+                <h3>Finance details</h3>
+              </AuLegend>
+            </span>
+            <TextField
+              id="agencyName"
+              label="Agency name"
+              required
+              width="xl"
+            />
+            <TextField
+              id="abn"
+              label="Agency Australian Business Number (ABN)"
+              width="lg"
+              required
+            />
+            <TextField
+              id="financeEmail"
+              label="Accounts payable email"
+              hint="So we know who to invoice (if required)"
+              required
+              width="lg"
+            />
+          </AuFieldset>
+
+          <AuFieldset className="fieldset-group">
+            <span>
+              <AuLegend>
+                <h3>Terms and conditions</h3>
+              </AuLegend>
+            </span>
+
+            <CheckBoxField
+              id="cbagree"
+              label="I agree"
+              legend={`I agree to the <a href="/get-started/google-analytics-360/terms-of-service">Terms of Service</a> and have the financial delegation to spend the required amount for this subscription`}
+            />
+            <CheckBoxField
+              id="cbnewsletter"
+              label="Yes"
+              legend="I would like to receive product updates from the Observatory team"
+            />
+          </AuFieldset>
           <h3 className="au-display-md">
             When you submit this form, your details will be recorded.
           </h3>
