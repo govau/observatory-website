@@ -219,18 +219,21 @@ const GAform: React.FC = () => {
               legend="I would like to receive product updates from the Observatory team"
             />
           </AuFieldset>
-          <h3 className="au-display-md">
-            When you submit this form, your details will be recorded.
-          </h3>
-          <p>
-            A member of the DTA&apos;s analytics team will contact you within 5
-            business days with confirmation of your subscription.
-          </p>
-          <AuFormGroup>
-            <Aubtn type="submit" disabled={saving}>
-              {saving ? "Submitting" : "Submit"}
-            </Aubtn>
-          </AuFormGroup>
+          <AuFieldset className="fieldset-group">
+            <h3>
+              <AuLegend>4. Lets go!</AuLegend>
+            </h3>
+            <p>
+              When you submit this form, your details will be recorded. A member
+              of the DTA&apos;s analytics team will contact you within 5
+              business days with confirmation of your subscription.
+            </p>
+            <AuFormGroup>
+              <Aubtn type="submit" disabled={saving}>
+                {saving ? "Submitting" : "Submit"}
+              </Aubtn>
+            </AuFormGroup>
+          </AuFieldset>
         </Form>
       )}
     </Formik>
