@@ -133,7 +133,7 @@ const GAform: React.FC = () => {
           <AuFieldset className="fieldset-group">
             <span>
               <AuLegend>
-                <h3>Account details</h3>
+                <h3>1. Account details</h3>
               </AuLegend>
             </span>
             <TextField
@@ -177,7 +177,7 @@ const GAform: React.FC = () => {
           <AuFieldset className="fieldset-group">
             <span>
               <AuLegend>
-                <h3>Finance details</h3>
+                <h3>2. Finance details</h3>
               </AuLegend>
             </span>
             <TextField
@@ -204,7 +204,7 @@ const GAform: React.FC = () => {
           <AuFieldset className="fieldset-group">
             <span>
               <AuLegend>
-                <h3>Terms and conditions</h3>
+                <h3>3. Terms and conditions</h3>
               </AuLegend>
             </span>
 
