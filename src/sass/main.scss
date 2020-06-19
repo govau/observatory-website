@@ -260,25 +260,24 @@ h1 {
 }
 
 .au-btn--bright {
-  background-color: $AU-color-bright !important;
+  background-color: lighten($AU-color-bright, 5) !important;
   color: $AU-color-foreground-text !important;
-  border-color: $AU-color-bright !important;
+  border-color: lighten($AU-color-bright, 5) !important;
 
   .au-search__btn & {
     box-shadow: none;
   }
 
   &:hover:not(:disabled) {
-    background-color: #313131 !important;
-    border-color: #313131 !important;
+    background-color: lighten($AU-color-bright, 15) !important;
     text-decoration: underline !important;
-    color: $AU-color-bright !important;
+    border-color: lighten($AU-color-bright, 15) !important;
+    color: $AU-color-foreground-text !important;
   }
 
   .ie8 &:hover {
-    background-color: $AU-color-foreground-text !important;
-    border-color: $AU-color-foreground-text !important;
-    color: $AU-color-background !important;
+    background-color: lighten($AU-color-bright, 2) !important;
+    border-color: lighten($AU-color-bright, 15) !important;
     text-decoration: underline;
   }
 }
