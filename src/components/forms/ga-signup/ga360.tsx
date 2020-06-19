@@ -136,7 +136,12 @@ const GAform: React.FC = () => {
                 <h3>Account details</h3>
               </AuLegend>
             </span>
-            <TextField id="preferredName" label="Your name" width="lg" />
+            <TextField
+              id="preferredName"
+              label="Your name"
+              width="lg"
+              required
+            />
             <TextField
               id="email"
               hint={`Shared email addresses are preferred, since they
