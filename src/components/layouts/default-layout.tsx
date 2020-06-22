@@ -8,7 +8,7 @@ import MainNav from "../navigation/main-nav";
 import SEO from "../seo";
 import { Location } from "@reach/router";
 import Breadcrumbs from "../navigation/breadcrumb";
-
+import _ from "lodash";
 
 interface Props {
   children: React.ReactElement;
@@ -21,10 +21,9 @@ const DefaultLayout: React.FC<Props> = ({
   location,
   children,
 }) => {
+  let crumbs = [];
 
-  let crumbs = {};
-
-  if( pageContext && pageContext.breadcrumb){
+  if (pageContext && pageContext.breadcrumb) {
     crumbs = pageContext.breadcrumb.crumbs;
   }
 
@@ -49,14 +48,14 @@ const DefaultLayout: React.FC<Props> = ({
         </Location>
       </div>
       <main>
-        {crumbs && crumbs.length > 2 && (
+        {!_.isEmpty(crumbs) && crumbs.length > 2 && (
           <div className="container-fluid">
             <Breadcrumbs crumbs={crumbs} />
           </div>
         )}
         {children}
       </main>
-      <Footer />
+      <Footer path={location.pathname} />
     </>
   );
 };

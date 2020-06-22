@@ -146,5 +146,5 @@ Administration (if available) to estimate the appropriate pricing tier.
 More information about our invoicing and payment arrangements can be found in
 our [Terms of Service](/google-analytics-360/terms-of-service).
 
-<a href="/get-started/google-analytics-360/sign-up" class="au-btn">Get Google
-Analytics 360 now</a>
+<a href="/google-analytics-360/sign-up" class="au-btn">Get Google Analytics 360
+now</a>
