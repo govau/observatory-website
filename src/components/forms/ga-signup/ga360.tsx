@@ -225,8 +225,8 @@ const GAform: React.FC = () => {
             </h3>
             <p>
               When you submit this form, your details will be recorded. A member
-              of the DTA&apos;s analytics team will contact you within 5
-              business days with confirmation of your subscription.
+              of the DTA&apos;s analytics team will contact you within 1
+              business day with confirmation of your subscription.
             </p>
             <AuFormGroup>
               <Aubtn type="submit" disabled={saving}>
