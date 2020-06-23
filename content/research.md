@@ -2,19 +2,8 @@
 path: /research
 title: Research
 type: standard
+metaDesc: Research of Observatory
 ---
-
-## Best Practice
-
-How might I best use website analytics
-
-I want to:
-
-- Integrate Google Analytics and search console
-- Get the best out of Big Query and Google Tag Manager
-- Creating an analytics strategy (another spot for the WAGA)
-- Ensure the privacy of my visitors while knowing using demographic data
-- Training documentation
 
 ## Research Roadmap
 
@@ -27,7 +16,13 @@ Right now the Observatory is focusing on
 
 ## Publications
 
-posters go here
+- Functional Behaviour diagram
+
+How people access government services
+
+- Structural Behaviour diagram
+
+How government has built their services
 
 ## Partner
 
