@@ -16,6 +16,13 @@ metaDesc: Research of Observatory
 
 ## Publications
 
+### [Discovery Findings](../../gov-au-observatory_discovery research_findings-report.pdf)
+
+**How our subscribers use our service**
+
+A report of our findings in the Discovery phase of our users, who they are and
+what they are hoping to achive
+
 ### [Functional Behaviour diagram](../../gov-au_observatory-funtional-behaviour.pdf)
 
 **How people access government services**
