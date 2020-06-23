@@ -40,7 +40,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
       <div className="container-fluid au-body">
         <SEO
           title="Events"
-          description="Check out the latest whole of government analytics events, training and webinars. Run by the Observatory team"
+          description="Check out the latest service analytics events, training and webinars. Run by the Observatory team"
         />
         <h1>Events</h1>
         {SortedEvents.length > 0 ? (
@@ -68,9 +68,9 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             <>
               <h3>No upcoming events</h3>
               <p>
-                Due to COVID-19 we are rethinking how we can deliver training.
-                Please sign up to our mailing list to be notified of when
-                training recommences.
+                Due to COVID-19 we are rethinking how we deliver training.
+                <br/>
+                Sign up to our mailing list to be notified when new events are available.
               </p>
             </>
           </PageAlert>
