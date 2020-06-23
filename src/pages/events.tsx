@@ -8,6 +8,8 @@ import { PageContext } from "../components/helpers/types";
 import { SortContent, FormatDate } from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
 import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
+import SubscribeBlock from "../components/blocks/subscribe-newsletter-block";
+import Section from "../components/layouts/section";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -73,11 +75,14 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             </>
           </PageAlert>
         )}
-        <p>
-          To be notified about upcoming training, subscribe to our mailing list{" "}
-        </p>
-        <SubscribeNewsletterForm />
       </div>
+      <Section alt={true}>
+        <SubscribeBlock
+          heading="Interested in events?"
+          body="To be notified about upcoming training, subscribe to our mailing list"
+          darkTextInput={true}
+        />
+      </Section>
     </DefaultLayout>
   );
 };
