@@ -52,7 +52,7 @@ Gephi software package
 
 ### [Sunburst Diagram](../../gov-au-observatory_webcrawl-sunburst.pdf)
 
-Visual Analysis of webpages per Portfolio
+**Visual Analysis of webpages per Portfolio**
 
 <p>
 This ‘Nightingale diagram’ provides a birds-eye view of over 9M URLs gathered
@@ -73,5 +73,5 @@ her works as a nurse in the Crimean War.
 
 ## Partner
 
-Partner with the Observatory to on policy specific insights please contact us at
+Partner with the Observatory to on policy specific insights please contact us
 [observatory@dta.gov.au](mailto:observatory@dta.gov.au)
