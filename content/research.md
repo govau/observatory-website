@@ -71,7 +71,6 @@ her works as a nurse in the Crimean War.
 
 </p>
 
-## Partner
+## Partnerships
 
-Partner with the Observatory to on policy specific insights please contact us at
-[observatory@dta.gov.au](mailto:observatory@dta.gov.au)
+If you have a problem sitting at the crossroads of analytics data and government policy, the Observatory can help you find answers. To contact us about partnerships, email [observatory@dta.gov.au](mailto:observatory@dta.gov.au).
