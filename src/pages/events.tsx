@@ -7,6 +7,9 @@ import { useStaticQuery, graphql } from "gatsby";
 import { PageContext } from "../components/helpers/types";
 import { SortContent, FormatDate } from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
+import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
+import SubscribeBlock from "../components/blocks/subscribe-newsletter-block";
+import Section from "../components/layouts/section";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -35,7 +38,10 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
-        <SEO title="Events" />
+        <SEO
+          title="Events"
+          description="Check out the latest service analytics events, training and webinars. Run by the Observatory team"
+        />
         <h1>Events</h1>
         {SortedEvents.length > 0 ? (
           SortedEvents.map((event: any, i: number) => {
@@ -62,14 +68,21 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             <>
               <h3>No upcoming events</h3>
               <p>
-                There are no upcoming events scheduled. Please try again later.
+                Due to COVID-19 we are rethinking how we deliver training.
+                <br/>
+                Sign up to our mailing list to be notified when new events are available.
               </p>
             </>
           </PageAlert>
         )}
-
-        <div className="row"></div>
       </div>
+      <Section alt={true}>
+        <SubscribeBlock
+          heading="Interested in events?"
+          body="To be notified about upcoming training, subscribe to our mailing list"
+          darkTextInput={true}
+        />
+      </Section>
     </DefaultLayout>
   );
 };

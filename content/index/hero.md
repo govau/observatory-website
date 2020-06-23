@@ -1,14 +1,9 @@
 ---
 id: hero
-alt: true
-imgUrl: ../../hero.svg
+imgUrl: ../../hero.png
 imgAlt: A young lady connecting the dots of a line graph.
 ---
 
-## Welcome!
+# We empower data practitioners to improve government services
 
-<p class = "intro">The gov.au Observatory provides a range of data products, tools, resources and practitioner community events to help bring informed, evidence-based decision making to the heart of APS agencies.</p>
-
-We use data science to learn how people interact with government services. We create and share insights from a unified view of government services. We provide training, tools and advice to help analysts make sense of how people use their services.
-
-We do all of this without identifying people, or creating identifiable information about people.
+<p class="intro">User research and data creates a richer, more complete view of how customers use and interact with government services. The Observatory gives you that data picture.</p>

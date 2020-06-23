@@ -237,3 +237,19 @@ $AU-grid-12-gutter-width: 24px !default; //gutter space
 .mt-1 {
   @include AU-space(margin-top, 1unit);
 }
+
+.mt-half {
+  @include AU-space(margin-top, 0.5unit);
+}
+
+.pt-1 {
+  @include AU-space(padding-top, 1unit);
+}
+
+.pb-1 {
+  @include AU-space(padding-bottom, 1unit);
+}
+
+.block {
+  display: block;
+}

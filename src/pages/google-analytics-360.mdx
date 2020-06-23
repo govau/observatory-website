@@ -1,0 +1,74 @@
+import SEO from "../components/seo";
+import DefaultLayout from "../components/layouts/default-layout";
+import { Link } from "gatsby";
+
+<!-- This default export overrides the default layout ensuring -->
+<!--  that the FAQ component isn't wrapped by other elements -->
+
+# Google Analytics 360
+
+## Before you start
+
+**To sign up you will need**
+
+- To work for a federal government agency, Commonwealth entity or company listed
+  on the
+  [PGPA Flipchart](https://www.finance.gov.au/government/managing-commonwealth-resources/structure-australian-government-public-sector/pgpa-act-flipchart-list).
+- A Google Analytics Account, paid or free.
+- Approval from an Executive Level 1 or higher officer.
+- To read the [terms of service](/google-analytics-360/terms-of-service).
+- To know why [Google Analytics 360 is right for you](/google-analytics-360/features).
+
+**You will not need**
+- To make any changes to your site or Google Analytics code.
+
+## Steps
+
+### 1. Sign up - 5 minutes
+
+<div className="mt-1">
+  <Link to="/google-analytics-360/sign-up" className="au-btn">
+    Sign up for Google Analytics 360
+  </Link>
+</div>
+
+### 2. Confirm eligibility - 24 hours
+
+Our team will confirm your eligibility and send you an email response
+within 24 hours.
+
+The email will include:
+- next steps to finalise setup
+- information about invoicing and payment (if you're on a paid plan)
+- useful resources you can explore while we’re setting things up for you
+
+### 3. Set up Google Analytics 360 - 1-2 days
+
+The steps to complete setup are:
+- Link your Google Analytics Account to the Commonwealth of Australia
+- Upgrade your Google Analytics Properties to Google Analytics 360 status
+- Link your Google Analytics Account to BigQuery
+- Link your Google Search Console account to the Commonwealth of Australia
+
+These steps are performed by the DTA, requiring only your verification.
+
+### 4. Complete!
+
+Once connected you’ll be able to access a variety of Google Analytics tools
+straight away. You’ll also have access to the Observatory and our
+whole-of-government data insights.
+
+export default function Layout({ children, pageContext, location }) {
+  return (
+    <DefaultLayout pageContext={pageContext} location={location}>
+      <>
+        <SEO
+          title="Google Analytics 360"
+          description="Google Analytics has a free version and a paid-for version. Digital Transformation Agency offer a
+  paid-for version with much lower cost and the same benefits."
+        />
+        <div className="container-fluid au-body">{children}</div>
+      </>
+    </DefaultLayout>
+  );
+}

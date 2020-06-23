@@ -18,7 +18,7 @@ const EventLayout: React.FC<Props> = ({ pageContext, location, data }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
-        <SEO title={frontmatter.title} />
+        <SEO title={frontmatter.title} description={frontmatter.metaDesc} />
         <div className="container-fluid au-body">
           <h1 className="blog-heading">{frontmatter.title}</h1>
           <p>
@@ -41,11 +41,12 @@ export const pageQuery = graphql`
       html
       timeToRead
       frontmatter {
+        author
+        date
+        description
+        metaDesc
         path
         title
-        description
-        date
-        author
       }
     }
   }

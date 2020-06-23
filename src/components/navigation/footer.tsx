@@ -4,14 +4,16 @@ import { AuFooter, FooterNav, FooterEnd } from "../helpers/auds";
 import SubscribeNewsletterForm from "../forms/newsletter/subscribe-newsletter";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface Props {}
+interface Props {
+  path: string;
+}
 
 interface FooterLinks {
   map(arg0: (item: any, i: number) => JSX.Element): React.ReactNode;
   items: Array<any>;
 }
 
-const Footer: React.FC<Props> = () => {
+const Footer: React.FC<Props> = ({ path }) => {
   const data = useStaticQuery(graphql`
     query footerLinks {
       site {
@@ -52,8 +54,17 @@ const Footer: React.FC<Props> = () => {
                           href="https://github.com/govau/ursa-major/blob/master/LICENSE"
                           rel="external license"
                         >
-                          MIT licensed
+                          MIT licensed.
                         </a>
+                        {path === "/" && (
+                          <span>
+                            {" "}
+                            Illusatrations sourced from{" "}
+                            <a href="https://icons8.com/ouch/style/marginalia/">
+                              icons8
+                            </a>
+                          </span>
+                        )}
                       </small>
                     </p>
                   </FooterEnd>

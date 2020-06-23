@@ -12,7 +12,9 @@ import {
   AuCardTitle,
   AuCardLink,
 } from "../components/helpers/auds";
-import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
+
+import SubscribeBlock from "../components/blocks/subscribe-newsletter-block";
+import Section from "../components/layouts/section";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -42,7 +44,10 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
-        <SEO title="Blogs" />
+        <SEO
+          title="Blogs"
+          description="We regularly share what we are working on and things we learn in our journey on our blogs page."
+        />
         <h1>Blogs</h1>
 
         {SortedBlogs.length > 0 && (
@@ -91,14 +96,15 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
             </ul>
           </div>
         )}
-
-        <h3>Want the latest?</h3>
-        <p>
-          We regularly share what we are working on and things we learn in our
-          journey. Subscribe so you don&apos;t miss out our updates!
-        </p>
-        <SubscribeNewsletterForm />
       </div>
+      <Section alt={true}>
+        <SubscribeBlock
+          heading="Want the latest?"
+          body="We regularly share what we are working on and things we learn in our
+            journey. Subscribe so you don't miss out our updates!"
+          darkTextInput={true}
+        />
+      </Section>
     </DefaultLayout>
   );
 };

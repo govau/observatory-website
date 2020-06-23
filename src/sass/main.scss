@@ -1,13 +1,17 @@
 // Dark theme overrides
 // $AU-colordark-foreground-text: #ffffff;
-// $AU-colordark-foreground-action: #45c2f0;
+$AU-colordark-foreground-action: #bdf4ff;
 // $AU-colordark-foreground-focus: #e48ffc;
-// $AU-colordark-background: #3c4858;
+$AU-colordark-background: #1c304a;
 
 // Light theme overrides
-// $AU-color-foreground-action: #3c4858;
+$AU-color-foreground-action: #046b99;
+$AU-color-foreground-text: #212121;
+// $AU-color-background: #fcfcfc;
 // $AU-color-foreground-focus: #e48ffc;
 //Main nav, set project specific breakpoint
+
+$AU-color-bright: #00cfff;
 
 $AU-media-xs: 0px;
 $AU-media-sm: 576px;
@@ -63,11 +67,11 @@ h1 {
 
 @media only screen and (max-width: $AU-media-xs) {
   .au-body h1 {
-    @include AU-space(font-size, 2.25unit);
+    @include AU-space(font-size, 2.45unit);
   }
 
   .au-body h2 {
-    @include AU-space(font-size, 1.75unit);
+    @include AU-space(font-size, 2unit);
   }
 }
 
@@ -139,12 +143,11 @@ h1 {
 
 .header-wrapper,
 .footer-wrapper {
-  background: rgb(19, 94, 112);
+  background: rgb(28, 48, 74);
   background: linear-gradient(
-    43deg,
-    rgba(19, 94, 112, 1) 6%,
-    rgba(20, 100, 120, 1) 55%,
-    rgba(34, 130, 153, 1) 95%
+    45deg,
+    rgba(28, 48, 74, 1) 0%,
+    rgba(25, 52, 88, 1) 100%
   );
   .ie9 & {
     background: $AU-colordark-background;
@@ -160,7 +163,11 @@ h1 {
 }
 
 .intro {
-  @include AU-fontgrid(md);
+  @include AU-fontgrid(sm);
+
+  @include AU-media(sm) {
+    @include AU-fontgrid(md);
+  }
   line-height: 1.6;
 }
 
@@ -170,7 +177,7 @@ h1 {
   list-style-type: none;
 
   > li > div {
-    @include AU-space(padding, 2unit 0);
+    @include AU-space(padding, 1unit 0);
     border-bottom: 4px solid #e0e0e0;
     border-bottom: 0.25rem solid #e0e0e0;
   }
@@ -195,4 +202,91 @@ h1 {
 
 .au-responsive-media {
   @include AU-space(margin-top, 1unit);
+}
+
+.au-btn {
+  background-color: $AU-color-foreground-action !important;
+  color: $AU-colordark-foreground-text !important;
+  border-color: $AU-color-foreground-action !important;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+  &:hover:not(:disabled) {
+    background-color: #313131 !important;
+    border-color: #313131 !important;
+    text-decoration: underline !important;
+    color: $AU-colordark-foreground-text !important;
+  }
+
+  .ie8 &:hover {
+    background-color: $AU-color-foreground-text !important;
+    border-color: $AU-color-foreground-text !important;
+    color: $AU-color-background !important;
+    text-decoration: underline;
+  }
+}
+
+#homepage-callout {
+  display: block;
+
+  ul + div {
+    @include AU-space(margin-top, 2unit);
+  }
+
+  @include AU-media(md) {
+    display: flex;
+
+    ul + div {
+      margin-top: 0;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.align-center {
+  align-self: center;
+}
+.au-header__subline {
+  color: $AU-colordark-foreground-text !important;
+}
+
+.au-search {
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: $AU-border-radius;
+}
+
+.au-btn--bright {
+  background-color: lighten($AU-color-bright, 5) !important;
+  color: $AU-color-foreground-text !important;
+  border-color: lighten($AU-color-bright, 5) !important;
+
+  .au-search__btn & {
+    box-shadow: none;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: lighten($AU-color-bright, 15) !important;
+    text-decoration: underline !important;
+    border-color: lighten($AU-color-bright, 15) !important;
+    color: $AU-color-foreground-text !important;
+  }
+
+  .ie8 &:hover {
+    background-color: lighten($AU-color-bright, 2) !important;
+    border-color: lighten($AU-color-bright, 15) !important;
+    text-decoration: underline;
+  }
+}
+
+.yellow-pink-lg {
+  background: rgb(255, 255, 243) !important;
+  background: linear-gradient(
+    133deg,
+    rgba(255, 255, 243, 1) 0%,
+    rgba(253, 241, 255, 1) 100%
+  ) !important;
 }
