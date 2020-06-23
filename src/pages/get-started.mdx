@@ -3,7 +3,6 @@ import DefaultLayout from "../components/layouts/default-layout";
 import { Link } from "gatsby";
 import SubscribeNewsletterForm from "../components/forms/newsletter/subscribe-newsletter";
 
-
 <!-- This default export overrides the default layout ensuring -->
 <!--  that the FAQ component isn't wrapped by other elements -->
 
@@ -26,7 +25,8 @@ I want to:
 - Learn more about how to use Google Analytics.
 - Find creative ways to report and share insights with stakeholders.
 - Start a discussion about user centred design in my organisation.
-- Better understand how people interact with my website, and what that means for service delivery.
+- Better understand how people interact with my website, and what that means for
+  service delivery.
 
 #### How to achieve this
 
@@ -82,12 +82,14 @@ I want to:
 
 <SubscribeNewsletterForm />
 
-
 export default function Layout({ children, pageContext, location }) {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
-        <SEO title="Google Analytics 360" />
+        <SEO
+          title="Google Analytics 360"
+          description="Get your team and agency up and running on their analytics journey. Or take a step further with deeper insights."
+        />
         <div className="container-fluid au-body">{children}</div>
       </>
     </DefaultLayout>

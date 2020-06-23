@@ -42,7 +42,10 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
-        <SEO title="Blogs" />
+        <SEO
+          title="Blogs"
+          description="We regularly share what we are working on and things we learn in our journey on our blogs page."
+        />
         <h1>Blogs</h1>
 
         {SortedBlogs.length > 0 && (

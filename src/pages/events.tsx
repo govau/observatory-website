@@ -36,7 +36,10 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="container-fluid au-body">
-        <SEO title="Events" />
+        <SEO
+          title="Events"
+          description="Check out the latest whole of government analytics events, training and webinars. Run by the Observatory team"
+        />
         <h1>Events</h1>
         {SortedEvents.length > 0 ? (
           SortedEvents.map((event: any, i: number) => {

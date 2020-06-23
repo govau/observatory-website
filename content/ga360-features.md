@@ -1,6 +1,9 @@
 ---
 path: /google-analytics-360/features
 title: GA360 Features
+metaDesc:
+  Google Analytics has a free version and a paid-for version. DTA offer a
+  paid-for version with much lower cost and the same benefits.
 type: standard
 ---
 

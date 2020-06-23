@@ -19,7 +19,11 @@ const BlogLayout: React.FC<Props> = ({ pageContext, location, data }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <div className="au-body">
-        <SEO title={frontmatter.title} canonical={frontmatter.canonical} />
+        <SEO
+          title={frontmatter.title}
+          canonical={frontmatter.canonical}
+          description={frontmatter.metaDesc}
+        />
         <div className="container-fluid">
           <h1 className="blog-heading">{frontmatter.title}</h1>
           <p>
@@ -51,12 +55,13 @@ export const pageQuery = graphql`
       html
       timeToRead
       frontmatter {
-        path
-        title
-        description
-        date
         author
         canonical
+        description
+        date
+        metaDesc
+        path
+        title
       }
     }
   }
