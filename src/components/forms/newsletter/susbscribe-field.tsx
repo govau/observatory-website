@@ -26,9 +26,7 @@ const SubscribeField: React.FC<TextFieldProps> = (props: TextFieldProps) => {
     <>
       <label
         htmlFor={props.id}
-        className={`inherit-bg au-body ${props.dark ? "au-body--dark" : ""} ${
-          props.alt ? "au-body--alt" : ""
-        }`}
+        className={`inherit-bg au-body} ${props.alt ? "au-body--alt" : ""}`}
       >
         {props.label}
       </label>

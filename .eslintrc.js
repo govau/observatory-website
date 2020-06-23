@@ -6,6 +6,7 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
     "plugin:jsx-a11y/recommended",
+    "plugin:mdx/recommended",
     "prettier",
   ],
   settings: {
@@ -25,5 +26,6 @@ module.exports = {
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "react/display-name": "off",
+    "mdx/no-unused-expressions": "off"
   },
 };

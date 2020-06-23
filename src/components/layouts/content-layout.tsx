@@ -16,7 +16,7 @@ const PageLayout: React.FC<Props> = ({ pageContext, location, data }) => {
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
-        <SEO title={frontmatter.title} />
+        <SEO title={frontmatter.title} description={frontmatter.metaDesc} />
         <div
           className="container-fluid au-body"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -33,6 +33,7 @@ export const pageQuery = graphql`
       frontmatter {
         path
         title
+        metaDesc
       }
     }
   }

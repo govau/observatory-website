@@ -13,20 +13,28 @@ module.exports = {
         link: "/",
       },
       {
+        text: "Get started",
+        link: "/get-started",
+      },
+      {
+        text: "Google Analytics 360",
+        link: "/google-analytics-360",
+      },
+      {
         text: "Blogs",
         link: "/blogs",
       },
       {
-        text: "Terms of Service",
-        link: "/terms-of-service",
+        text: "Research",
+        link: "/research",
       },
       {
         text: "Events",
         link: "/events",
       },
       {
-        text: "Contact us",
-        link: "/contact-us",
+        text: "Source code",
+        link: "/tools",
       },
     ],
     footerLinks: [
@@ -42,6 +50,14 @@ module.exports = {
         text: "Our code",
         link: "/tools",
       },
+      {
+        text: "Events",
+        link: "/events",
+      },
+      {
+        text: "Contact us",
+        link: "/contact-us",
+      },
     ],
   },
   plugins: [
@@ -49,6 +65,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
+    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
@@ -87,7 +104,20 @@ module.exports = {
         timeout: 3500, // number; the amount of time, in milliseconds, that you want to allow mailchimp to respond to your request before timing out. defaults to 3500
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              isIconAfterHeader: true,
+              elements: [`h2`, `h3`, `h3`],
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -105,7 +135,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
-        id: "######",
+        id: "GTM-KCC7M5F",
 
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.

@@ -9,7 +9,9 @@ jobs:
       - restore_cache:
           name: Restore node_modules from cache
           keys:
-            - v3-dependency-cache-{{ checksum "package.json" }}
+            - v1-npm-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
+            - v1-npm-deps-{{ .Branch }}-
+            - v1-npm-deps-
       - run:
           name: Install dependencies
           command: |
@@ -17,9 +19,9 @@ jobs:
             npm run pancake
       - save_cache:
           name: Save node_modules to cache
-          key: v3-dependency-cache-{{ checksum "package.json" }}
+          key: v1-npm-deps-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - node_modules/
+            - ~/observatory/node_modules/
       - run:
           name: Set envs, test and build
           command: |
