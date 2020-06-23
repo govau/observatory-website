@@ -16,7 +16,7 @@ Right now the Observatory is focusing on
 
 ## Publications
 
-- [Functional Behaviour diagram](#)
+### [Functional Behaviour diagram](../../gov-au_observatory-funtional-behaviour.pdf)
 
 How people access government services
 
@@ -36,7 +36,7 @@ PageRank algorithm is a variant of Eigenvector Centrality
 
 </p>
 
-- [Structural Behaviour diagram](#)
+### [Structural Behaviour diagram](../../gov-au_observatory-structural-behaviour.pdf)
 
 How government has built their services
 
@@ -50,7 +50,7 @@ layout uses the Yifan Hu proportional algorithm and was generated using the
 Gephi software package
 </p>
 
-- [Sunburst Diagram](#)
+### [Sunburst Diagram](../../gov-au-observatory_webcrawl-sunburst.pdf)
 
 Visual Analysis of webpages per Portfolio
 
