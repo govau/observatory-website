@@ -7,7 +7,7 @@ metaDesc: Research of Observatory
 
 ## Research Roadmap
 
-Right now the Observatory is focusing on
+**Right now the Observatory is focusing on**
 
 - understanding the intent, behaviour and outcomes of our users as they navigate
   specific life events
@@ -18,7 +18,7 @@ Right now the Observatory is focusing on
 
 ### [Functional Behaviour diagram](../../gov-au_observatory-funtional-behaviour.pdf)
 
-How people access government services
+**How people access government services**
 
 <p>
 This graph represents two weeks of user traffic across 38 .gov.au websites. 
@@ -38,7 +38,7 @@ PageRank algorithm is a variant of Eigenvector Centrality
 
 ### [Structural Behaviour diagram](../../gov-au_observatory-structural-behaviour.pdf)
 
-How government has built their services
+**How government has built their services**
 
 <p>
 This was created using website links from the DTA's Australian Government Web
