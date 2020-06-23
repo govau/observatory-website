@@ -16,13 +16,17 @@ Right now the Observatory is focusing on
 
 ## Publications
 
-- Functional Behaviour diagram
+- [Functional Behaviour diagram](#)
 
 How people access government services
 
-- Structural Behaviour diagram
+- [Structural Behaviour diagram](#)
 
 How government has built their services
+
+- [Sunburst Diagram](#)
+
+Visual Analysis of webpages per Portfolio
 
 ## Partner
 
