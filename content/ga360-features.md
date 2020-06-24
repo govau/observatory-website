@@ -1,5 +1,5 @@
 ---
-path: /google-analytics-360/features
+path: /analytics-360/features
 title: GA360 Features
 metaDesc:
   Google Analytics has a free version and a paid-for version. DTA offer a
@@ -147,7 +147,6 @@ and we use the Billable Hit Volume listed in an agency’s existing Google Suite
 Administration (if available) to estimate the appropriate pricing tier.
 
 More information about our invoicing and payment arrangements can be found in
-our [Terms of Service](/google-analytics-360/terms-of-service).
+our [Terms of Service](/analytics-360/terms-of-service).
 
-<a href="/google-analytics-360/sign-up" class="au-btn">Get Google Analytics 360
-now</a>
+<a href="/analytics-360/sign-up" class="au-btn">Get Google Analytics 360 now</a>
