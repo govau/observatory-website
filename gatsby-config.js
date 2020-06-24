@@ -18,7 +18,7 @@ module.exports = {
       },
       {
         text: "Google Analytics 360",
-        link: "/google-analytics-360",
+        link: "/analytics-360",
       },
       {
         text: "Blogs",

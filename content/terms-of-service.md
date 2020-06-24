@@ -1,5 +1,5 @@
 ---
-path: /google-analytics-360/terms-of-service
+path: /analytics-360/terms-of-service
 title: Subscription Terms of Service
 metaDesc:
   Read the terms of service before signing up to a Google analytics 360 package.
