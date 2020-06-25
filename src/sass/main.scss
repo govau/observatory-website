@@ -205,23 +205,23 @@ h1 {
 }
 
 .au-btn {
-  background-color: $AU-color-foreground-action !important;
-  color: $AU-colordark-foreground-text !important;
-  border-color: $AU-color-foreground-action !important;
+  background-color: $AU-color-foreground-action;
+  color: $AU-colordark-foreground-text;
+  border-color: $AU-color-foreground-action;
   font-weight: 500;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 
   &:hover:not(:disabled) {
-    background-color: #313131 !important;
-    border-color: #313131 !important;
-    text-decoration: underline !important;
-    color: $AU-colordark-foreground-text !important;
+    background-color: #313131;
+    border-color: #313131;
+    text-decoration: underline;
+    color: $AU-colordark-foreground-text;
   }
 
   .ie8 &:hover {
-    background-color: $AU-color-foreground-text !important;
-    border-color: $AU-color-foreground-text !important;
-    color: $AU-color-background !important;
+    background-color: $AU-color-foreground-text;
+    border-color: $AU-color-foreground-text;
+    color: $AU-color-background;
     text-decoration: underline;
   }
 }
@@ -249,30 +249,31 @@ h1 {
 .align-center {
   align-self: center;
 }
-.au-header__subline {
-  color: $AU-colordark-foreground-text !important;
+.au-header--dark .au-header__subline {
+  color: $AU-colordark-foreground-text;
 }
 
 .au-search {
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
   background-color: transparent;
   border-radius: $AU-border-radius;
 }
 
-.au-btn--bright {
-  background-color: lighten($AU-color-bright, 5) !important;
+.au-btn.au-btn--bright {
+  background-color: lighten($AU-color-bright, 10);
+  border-color: lighten($AU-color-bright, 10);
   color: $AU-color-foreground-text !important;
-  border-color: lighten($AU-color-bright, 5) !important;
+  @include AU-space("font-size", 1.1rem);
 
   .au-search__btn & {
     box-shadow: none;
   }
 
   &:hover:not(:disabled) {
-    background-color: lighten($AU-color-bright, 15) !important;
-    text-decoration: underline !important;
-    border-color: lighten($AU-color-bright, 15) !important;
-    color: $AU-color-foreground-text !important;
+    background-color: lighten($AU-color-bright, 15);
+    text-decoration: underline;
+    border-color: lighten($AU-color-bright, 15);
+    color: $AU-color-foreground-text;
   }
 
   .ie8 &:hover {
@@ -283,10 +284,10 @@ h1 {
 }
 
 .yellow-pink-lg {
-  background: rgb(255, 255, 243) !important;
+  background: rgb(255, 255, 243);
   background: linear-gradient(
     133deg,
     rgba(255, 255, 243, 1) 0%,
     rgba(253, 241, 255, 1) 100%
-  ) !important;
+  );
 }
