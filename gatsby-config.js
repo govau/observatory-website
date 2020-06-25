@@ -21,16 +21,16 @@ module.exports = {
         link: "/analytics-360",
       },
       {
+        text: "Events",
+        link: "/events",
+      },
+      {
         text: "Blogs",
         link: "/blogs",
       },
       {
         text: "Research",
         link: "/research",
-      },
-      {
-        text: "Events",
-        link: "/events",
       },
       {
         text: "Source code",
@@ -47,12 +47,12 @@ module.exports = {
         link: "/blogs",
       },
       {
-        text: "Our code",
-        link: "/tools",
-      },
-      {
         text: "Events",
         link: "/events",
+      },
+      {
+        text: "Source code",
+        link: "/tools",
       },
       {
         text: "Contact us",
