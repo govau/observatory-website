@@ -68,7 +68,7 @@ const IndexPage: React.FC<PageContext> = ({ pageContext, location }) => {
                   heading="We make Tools"
                   body="Enhance your data practice and impact with these useful tools."
                   ctaText="Browse tools"
-                  ctaLink="/source-code"
+                  ctaLink="/tools"
                 />
               </div>
             </div>
