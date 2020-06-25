@@ -27,7 +27,7 @@ alt: true
 			</div>
 		</li>
 	</ul>
-	<div class="col-md-7 col-md-offset-1 text-center align-center">
+	<div class="col-md-6 col-md-offset-2 text-center align-center">
 		<h3>
 		There’s never been a better time to enhance your agency with Observatory analytics
 		</h3>
