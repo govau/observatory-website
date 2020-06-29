@@ -213,11 +213,11 @@ const GAform: React.FC = () => {
               label="I agree"
               legend={`I agree to the <a href="/analytics-360/terms-of-service">Terms of Service</a> and have the financial delegation to spend the required amount for this subscription`}
             />
-            <CheckBoxField
+            {/* <CheckBoxField
               id="cbnewsletter"
               label="Yes"
               legend="I would like to receive product updates from the Observatory team"
-            />
+            /> */}
           </AuFieldset>
           <AuFieldset className="fieldset-group">
             <h3>
