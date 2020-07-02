@@ -1,19 +1,29 @@
 ---
 path: /welcome-ga360
-title: Welcome to the gov.au Observatory GA360 subscription
+title: Google Analytics 360 service
 type: standard
 ---
 
-## Thank you for confirming your subscription to the gov.au Observatory Google Analytics 360
+## Thank you for applying for Google Analytics 360
 
-2. Confirm eligibility - 24 hours Our team will confirm your eligibility and
-   send you an email response within 24 hours.
+#### 2. Verify eligibility - Our team will confirm your eligibility
 
-The email will include:
+Thank you for applying for Google Analytics 360 with the DTA gov.au Observatory
+Team. We will verify your eligibility\* and respond within 24 hours to the email
+address you signed up with.
 
-next steps to finalise setup information about invoicing and payment (if you're
-on a paid plan) useful resources you can explore while we’re setting things up
-for you
+Our response will include:
 
-Welcome, and
-[let's get started measuring success](https://www.dta.gov.au/our-projects/google-analytics-government/web-analytics-agile)!
+- next steps to finalise setup
+- information about invoicing and payment (if you're on a paid plan)
+- useful resources you can explore while we’re setting things up for you
+  </br></br>
+
+#### Eligiblity\*
+
+- To work for a federal government agency, Commonwealth entity or company listed
+  on the
+  [PGPA Flipchart](https://www.finance.gov.au/government/managing-commonwealth-resources/structure-australian-government-public-sector/pgpa-act-flipchart-list).
+- A Google Analytics Account, paid or free.
+- Approval from an Executive Level 1 or higher officer.
+- To read and agreed to the [terms of service](/analytics-360/terms-of-service).
