@@ -1,6 +1,6 @@
 ---
 path: /welcome-ga360
-title: Google Analytics 360 service
+title: Google Analytics 360 subscription
 type: standard
 ---
 
