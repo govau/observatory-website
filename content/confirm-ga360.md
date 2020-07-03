@@ -1,5 +1,5 @@
 ---
-path: /welcome-ga360
+path: /confirm-ga360
 title: Google Analytics 360 subscription
 type: standard
 ---
