@@ -6,7 +6,7 @@ type: standard
 
 ## Thank you for applying for Google Analytics 360
 
-#### 2. Verify eligibility - Our team will confirm your eligibility
+#### Verify eligibility - Our team will confirm your eligibility
 
 Thank you for applying for Google Analytics 360 with the DTA gov.au Observatory
 Team. We will verify your eligibility\* and respond within 24 hours to the email
