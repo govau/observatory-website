@@ -291,3 +291,10 @@ h1 {
     rgba(253, 241, 255, 1) 100%
   );
 }
+
+figure {
+  margin: 0;
+  figcaption {
+    font-style: italic;
+  }
+}
