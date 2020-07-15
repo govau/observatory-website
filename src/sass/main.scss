@@ -264,6 +264,7 @@ h1 {
   border-color: lighten($AU-color-bright, 10);
   color: $AU-color-foreground-text !important;
   @include AU-space("font-size", 1.1rem);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 
   .au-search__btn & {
     box-shadow: none;
