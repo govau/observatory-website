@@ -62,6 +62,8 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                   date,
                 } = blog.frontmatter;
 
+                const descLength: number = description.length;
+
                 return (
                   <li className="col-md-4 col-sm-6 col-xs-12" key={i}>
                     <AuCard className="au-body" clickable shadow>
@@ -78,7 +80,10 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                         <AuCardTitle level="3" className="au-display-md">
                           <AuCardLink link={path} text={title} />
                         </AuCardTitle>
-                        <p>{description.substring(0, 150)}</p>
+                        <p>
+                          {description.substring(0, 150)}
+                          {descLength > 150 && <span>...</span>}
+                        </p>
                         <div className="card-footer">
                           <p className="card-footer__text">
                             {FormatDate(date)}

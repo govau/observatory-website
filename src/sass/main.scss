@@ -264,6 +264,7 @@ h1 {
   border-color: lighten($AU-color-bright, 10);
   color: $AU-color-foreground-text !important;
   @include AU-space("font-size", 1.1rem);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
 
   .au-search__btn & {
     box-shadow: none;
@@ -297,4 +298,38 @@ figure {
   figcaption {
     font-style: italic;
   }
+}
+
+.blog-content {
+  border-right: none;
+  @include AU-media(md) {
+    border-right: solid 1px lightgrey;
+  }
+}
+
+.blog-metadata {
+  @include AU-space(padding-bottom, 1unit);
+  @include AU-space(margin-bottom, 1unit);
+
+  ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  @include AU-media(md) {
+    border-bottom: none;
+    padding: none;
+
+    ::before {
+      display: none;
+    }
+  }
+}
+
+dl dd {
+  border-left: none !important;
 }
