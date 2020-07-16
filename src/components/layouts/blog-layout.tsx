@@ -18,6 +18,23 @@ const BlogLayout: React.FC<Props> = ({ pageContext, location, data }) => {
   const { frontmatter, html, timeToRead } = markdownRemark;
   const date = FormatDate(frontmatter.date);
 
+  const returnAttachment = () => {
+    if (!frontmatter.attachments) {
+      return "";
+    }
+
+    return (
+      <>
+        <dt>Attachments</dt>
+        {frontmatter.attachments.map((attachment: any, i: number) => (
+          <dd key={i}>
+            <a href={attachment.src}>{attachment.attachmentTitle}</a>
+          </dd>
+        ))}
+      </>
+    );
+  };
+
   return (
     <DefaultLayout pageContext={pageContext} location={location}>
       <>
@@ -27,17 +44,32 @@ const BlogLayout: React.FC<Props> = ({ pageContext, location, data }) => {
             canonical={frontmatter.canonical}
             description={frontmatter.metaDesc}
           />
-          <div className="container-fluid">
-            <h1 className="blog-heading">{frontmatter.title}</h1>
-            <p>
-              {date} | {timeToRead} min read time
-            </p>
-            <p className="intro-text">{frontmatter.description}</p>
+          <div className="container-fluid" id="blog-content">
+            <div className="row">
+              <div className="col-md-3 col-md-push-9 blog-metadata">
+                <dl>
+                  <dt>
+                    <strong>Time to read</strong>
+                  </dt>
+                  <dd>
+                    <span>{timeToRead} mins</span>
+                  </dd>
+                  <dt>Date</dt>
+                  <dd>
+                    <span>{date}</span>
+                  </dd>
+                  <dt>Author</dt>
+                  <dd>{frontmatter.author}</dd>
+                  {returnAttachment()}
+                </dl>
+              </div>
+              <div className="col-md-9 col-md-pull-3 blog-content">
+                <h1 className="blog-heading">{frontmatter.title}</h1>
+                <p className="intro-text">{frontmatter.description}</p>
+                <div dangerouslySetInnerHTML={{ __html: html }}></div>
+              </div>
+            </div>
           </div>
-          <div
-            className="container-fluid"
-            dangerouslySetInnerHTML={{ __html: html }}
-          ></div>
         </div>
         <Section alt={true}>
           <SubscribeBlock
@@ -65,6 +97,10 @@ export const pageQuery = graphql`
         metaDesc
         path
         title
+        attachments {
+          src
+          attachmentTitle
+        }
       }
     }
   }

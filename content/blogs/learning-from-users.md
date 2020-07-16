@@ -15,6 +15,9 @@ date: "2020-07-08"
 author: Observatory team
 imgUrl: ../../learning-from-users.png
 canonical: https://www.dta.gov.au/blogs/learning-users-through-discovery-research
+attachments:
+  - src: ../../gov-au-observatory_discovery_research_findings-report.pdf
+    attachmentTitle: Full discovery report
 ---
 
 <figure>
