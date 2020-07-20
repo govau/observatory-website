@@ -58,7 +58,7 @@
     "gatsby-source-graphql": "^2.4.1",
     "gatsby-transformer-remark": "^2.7.3",
     "gatsby-transformer-sharp": "^2.4.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
