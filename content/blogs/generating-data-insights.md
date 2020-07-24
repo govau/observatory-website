@@ -20,6 +20,7 @@ canonical: https://www.dta.gov.au/blogs/generating-data-and-ideas-analysts
 <img class="au-responsive-media img-shadow" src="../../generating-data-insights.png" alt="A team of analysts working together at laptops in an office"/>
 <figcaption class="max-42">Caption: Analysts discuss the experience of receiving and responding to requests for analytics.</figcaption>
 </figure>
+
 Participants included:
 
 - data scientists
