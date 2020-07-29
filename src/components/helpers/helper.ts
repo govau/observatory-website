@@ -13,11 +13,27 @@ const months: Array<string> = [
   "Dec",
 ];
 
+const weekday: Array<string> = new Array(7);
+weekday[0] = "Sunday";
+weekday[1] = "Monday";
+weekday[2] = "Tuesday";
+weekday[3] = "Wednesday";
+weekday[4] = "Thursday";
+weekday[5] = "Friday";
+weekday[6] = "Saturday";
 const FormatDate: (date: string) => string = (date) => {
   const date_obj: Date = new Date(date);
   const month: any = date_obj.getMonth();
   const year: any = date_obj.getFullYear();
   return `${date_obj.getDate()} ${months[month]} ${year}`;
+};
+
+const FormatDateDay: (date: string) => string = (date) => {
+  const date_obj: Date = new Date(date);
+  const month: any = date_obj.getMonth();
+  const year: any = date_obj.getFullYear();
+  const day: any = weekday[date_obj.getDay()];
+  return `${day}, ${date_obj.getDate()} ${months[month]} ${year}`;
 };
 
 const SortContent = (PageOne: any, PageTwo: any) => {
@@ -48,4 +64,10 @@ const ABNValidation: (abn: string) => boolean = (abn) => {
   return sum % 89 == 0;
 };
 
-export { FormatDate, SortContent, CapitiliseAndRemoveDash, ABNValidation };
+export {
+  FormatDate,
+  SortContent,
+  CapitiliseAndRemoveDash,
+  ABNValidation,
+  FormatDateDay,
+};
