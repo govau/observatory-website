@@ -5,7 +5,10 @@ import DefaultLayout from "../components/layouts/default-layout";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { PageContext } from "../components/helpers/types";
-import { SortContent, FormatDateDay } from "../components/helpers/helper";
+import {
+  SortContentReverse,
+  FormatDateDay,
+} from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
 
 import SubscribeBlock from "../components/blocks/subscribe-newsletter-block";
@@ -36,7 +39,7 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   );
 
   const EventList = allMarkdownRemark.nodes;
-  const SortedEvents: Array<any> = EventList.sort(SortContent);
+  const SortedEvents: Array<any> = EventList.sort(SortContentReverse);
 
   return (
     <DefaultLayout pageContext={pageContext} location={location}>

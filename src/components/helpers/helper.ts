@@ -43,6 +43,13 @@ const SortContent = (PageOne: any, PageTwo: any) => {
   );
 };
 
+const SortContentReverse = (PageOne: any, PageTwo: any) => {
+  return (
+    new Date(PageOne.frontmatter.date).getTime() -
+    new Date(PageTwo.frontmatter.date).getTime()
+  );
+};
+
 const CapitiliseAndRemoveDash: (word: string) => string = (word) => {
   const capitialised = word.charAt(0).toUpperCase() + word.slice(1);
   return capitialised.replace(/-/g, " ");
@@ -67,6 +74,7 @@ const ABNValidation: (abn: string) => boolean = (abn) => {
 export {
   FormatDate,
   SortContent,
+  SortContentReverse,
   CapitiliseAndRemoveDash,
   ABNValidation,
   FormatDateDay,
