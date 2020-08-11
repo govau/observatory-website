@@ -3,9 +3,11 @@ path: /events/dropin-ga-training
 title: Google Analytics for Government - Drop in sessions
 type: event
 description:
-  In the world of agile product development, the metaphor that it is smarter to
-  build a skateboard than it is to build a car is well-known.
-metaDesc: insert meta description here
+  Talk to the experts at Data Runs deep and the DTA Observatory about all things
+  Web Analytics, Google Analytics, Tag Manager, Data Studio and Big Query.
+metaDesc:
+  Talk to the experts at Dara runs deep and the DTA Observatory about all things
+  Web Analytics, Google Analytics, Tag Manager, Data Studio and Big Query.
 date: "2020-08-28"
 time: 10am-12pm
 locations: Online - Via Zoom
