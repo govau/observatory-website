@@ -33,6 +33,10 @@ module.exports = {
         link: "/research",
       },
       {
+        text: "Resources",
+        link: "/resources",
+      },
+      {
         text: "Source code",
         link: "/tools",
       },
