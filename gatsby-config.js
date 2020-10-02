@@ -25,7 +25,7 @@ module.exports = {
         link: "/events",
       },
       {
-        text: "Blogs",
+        text: "Blog",
         link: "/blogs",
       },
       {
@@ -33,8 +33,8 @@ module.exports = {
         link: "/research",
       },
       {
-        text: "Source code",
-        link: "/tools",
+        text: "Resources",
+        link: "/resources",
       },
     ],
     footerLinks: [
@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         text: "Source code",
-        link: "/tools",
+        link: "/resources#source-code",
       },
       {
         text: "Contact us",
