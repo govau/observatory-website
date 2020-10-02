@@ -9,9 +9,7 @@ type: standard
 
 # Resources
 
-## Video Content
-
-### Google Analytics for Government Dropin sessions:
+## Google Analytics for Government Dropin sessions
 
 Our Q&A drop-in sessions for data practioners across the APS. This list will be
 continually updated with Questions that have been asked in previous sessions.
