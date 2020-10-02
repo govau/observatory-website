@@ -1,18 +1,37 @@
 ---
-path: /tools
-title: Tools
+path: /resources
+title: Resources
 metaDesc:
   Source code of all of gov.au Observatories projects. This includes BigQuery
   scripts, Airflow scripts, SQL scripts, GraphQL server code and much more.
 type: standard
 ---
 
-# Source code
+# Resources
+
+## Google Analytics for Government Dropin sessions
+
+Our Q&A drop-in sessions for data practioners across the APS. This list will be
+continually updated with Questions that have been asked in previous sessions.
+
+These sessions are run fortnighly Friday's from 10am to 12pm. You can find the
+signup at our
+[eventbrite page.](https://www.eventbrite.com.au/o/digital-transformation-agency-8025584572)
+
+- [Video 1: Getting started with segments in Google Analytics.](https://youtu.be/NVXRBhb_IcY)
+- [Video 2: What is the best approach to tracking pages using views?](https://youtu.be/UngFpyjCxs0)
+- [Video 3: How do I validate the correct HTML elements when using Google Tag Manager?](https://youtu.be/j4FE_Il6zSY)
+- [Video 4: GA360 Analysis Beta Feautres](https://youtu.be/oP4TU9by47M)
+- [Video 5: How Fresh is the data coming into GA?](https://youtu.be/ux_C2RdiiY8)
+- [Video 6: What are the common mistakes when starting in GA?](https://youtu.be/2h1FVxTPNnY)
+- [Video 7: Do you prefer Google Analytics dashboard or Datastudio for visualising data?](https://youtu.be/I2P6aTcc8n8)
+
+## Source code
 
 The source code for our work is hosted on GitHub and is open by default. Feel
 free to use this for any of your projects.
 
-## [Galileo](https://github.com/govau/GAlileo)
+### [Galileo](https://github.com/govau/GAlileo)
 
 This repository contains our scripts that we run for our data, including on
 <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>. We’ve
@@ -36,7 +55,7 @@ for more detailed information around our scripts/queries.
 </ul>
 <hr class="divider"/>
 
-<h2 class="mt-0"><a href="https://github.com/govau/ursa-major">Ursa Major</a></h2>
+<h3 class="mt-0"><a href="https://github.com/govau/ursa-major">Ursa Major</a></h2>
 
 This is the source code behind
 <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>,
@@ -55,7 +74,7 @@ as fetching data from google cloud storage.
 
 <hr class="divider" />
 
-<h2 class="mt-0"><a href="https://github.com/govau/observatory-website">Observatory website</a></h2>
+<h3 class="mt-0"><a href="https://github.com/govau/observatory-website">Observatory website</a></h2>
 
 The repository for this current website.
 
