@@ -9,7 +9,7 @@ type: standard
 
 # Resources
 
-## Google Analytics for Government Dropin sessions
+## Google Analytics for Government Drop-in sessions
 
 Our Q&A drop-in sessions for data practioners across the APS. This list will be
 continually updated with Questions that have been asked in previous sessions.
@@ -21,7 +21,7 @@ signup at our
 - [Video 1: Getting started with segments in Google Analytics.](https://youtu.be/NVXRBhb_IcY)
 - [Video 2: What is the best approach to tracking pages using views?](https://youtu.be/UngFpyjCxs0)
 - [Video 3: How do I validate the correct HTML elements when using Google Tag Manager?](https://youtu.be/j4FE_Il6zSY)
-- [Video 4: GA360 Analysis Beta Feautres](https://youtu.be/oP4TU9by47M)
+- [Video 4: GA360 Analysis Beta Features](https://youtu.be/oP4TU9by47M)
 - [Video 5: How Fresh is the data coming into GA?](https://youtu.be/ux_C2RdiiY8)
 - [Video 6: What are the common mistakes when starting in GA?](https://youtu.be/2h1FVxTPNnY)
 - [Video 7: Do you prefer Google Analytics dashboard or Datastudio for visualising data?](https://youtu.be/I2P6aTcc8n8)
