@@ -7,7 +7,7 @@ metaDesc:
 type: standard
 ---
 
-# Contact Us
+# Contact 
 
 Observatory.gov.au is currently in the Discovery Phase. If you are interested in
 what we are doing, please email us:
