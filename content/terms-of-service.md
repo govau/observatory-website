@@ -40,7 +40,7 @@ product, service or material used/provided in relation to Analytics Services.
 
 This means that your agency’s use of the Google Analytics is subject to the
 terms and conditions set out in the
-[Google Analytics Terms of Service](https://www.google.com/analytics/terms/us.html).
+[Google Analytics Terms of Service](https://static.googleusercontent.com/media/www.google.com/en//analytics/premium/reseller-cmt-apac.pdf).
 
 Account and Property have the same meaning as in the Google Analytics Terms of
 Service.
