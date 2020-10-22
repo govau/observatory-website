@@ -1,5 +1,5 @@
 ---
-path: /blogs/designing-an-anlytics-product-with-analysts
+path: /blogs/designing-an-analytics-product-with-analysts
 title: Designing an analytics product with analysts at the heart of it
 type: blog
 description:
