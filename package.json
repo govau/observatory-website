@@ -39,7 +39,7 @@
     "@types/react-responsive": "^8.0.2",
     "axios": "^0.19.2",
     "formik": "^2.1.4",
-    "gatsby": "^2.24.66",
+    "gatsby": "^2.24.84",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-breadcrumb": "^9.0.3",
     "gatsby-plugin-google-tagmanager": "^2.2.3",
