@@ -17,7 +17,7 @@ canonical: https://www.dta.gov.au/blogs/designing-analytics-product-analysts-hea
 ---
 
 <figure>
-<img class="au-responsive-media img-shadow" src="../../designing-an-analytics-product-with-analysts.png" alt="A black screen with green and red computer code"/>
+<img class="au-responsive-media img-shadow" src="../../designing-an-analytics-product-with-analysts.png"/>
 </figure>
 
 ## How insights shaped the concept direction
