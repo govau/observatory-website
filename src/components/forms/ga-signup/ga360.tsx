@@ -83,7 +83,7 @@ const GAform: React.FC = () => {
       }}
       validationSchema={SignUpSchema}
     >
-      {({ values, errors, touched, handleSubmit }) => (
+      {({ values, errors, touched, handleSubmit, submitForm }) => (
         <Form
           noValidate
           onSubmit={(e) => {
@@ -229,7 +229,7 @@ const GAform: React.FC = () => {
               business day with confirmation of your subscription.
             </p>
             <AuFormGroup>
-              <Aubtn type="submit" disabled={saving}>
+              <Aubtn type="submit" disabled={saving} onClick={submitForm}>
                 {saving ? "Submitting" : "Submit"}
               </Aubtn>
             </AuFormGroup>
