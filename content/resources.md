@@ -55,7 +55,7 @@ for more detailed information around our scripts/queries.
 </ul>
 <hr class="divider"/>
 
-<h3 class="mt-0"><a href="https://github.com/govau/ursa-major">Ursa Major</a></h2>
+<h3 class="mt-0"><a href="https://github.com/govau/ursa-major">Ursa Major</a></h3>
 
 This is the source code behind
 <a href="https://analytics.service.gov.au">analytics.service.gov.au</a>,
@@ -74,7 +74,7 @@ as fetching data from google cloud storage.
 
 <hr class="divider" />
 
-<h3 class="mt-0"><a href="https://github.com/govau/observatory-website">Observatory website</a></h2>
+<h3 class="mt-0"><a href="https://github.com/govau/observatory-website">Observatory website</a></h3>
 
 The repository for this current website.
 
@@ -83,4 +83,18 @@ The repository for this current website.
 <ul class="au-tag-list au-tag-list--inline">
   <li><span class="au-tag">Node</span></li>
   <li><span class="au-tag">Gatsby</span></li>
+</ul>
+
+<hr class="divider" />
+
+<h3 class="mt-0"><a href="https://www.dta.gov.au/our-projects/google-analytics-government/web-analytics-agile">Web analytics guide</a></h3>
+
+This guide helps product or service teams develop their web analytics capability
+in a build, integration and improve cycle.
+
+<p class="inline">Tags:</p>
+
+<ul class="au-tag-list au-tag-list--inline">
+  <li><span class="au-tag">Agile</span></li>
+  <li><span class="au-tag">Capability</span></li>
 </ul>
