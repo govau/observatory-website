@@ -1,7 +1,7 @@
 ---
 path: /events/accelerated-ga-training
 title: Accelerated Google Analytics for Government - Alpha
-type: event
+# type: event
 description:
   Receive training from our trainers Data Runs Deep about developing web
   analytics capability in a build, integrate and improve cycle.

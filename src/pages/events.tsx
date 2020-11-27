@@ -89,8 +89,6 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
               <>
                 <h3>No upcoming events</h3>
                 <p>
-                  Due to COVID-19 we are rethinking how we deliver training.
-                  <br />
                   Sign up to our mailing list to be notified when new events are
                   available.
                 </p>
