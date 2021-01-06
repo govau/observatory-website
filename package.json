@@ -37,7 +37,7 @@
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "@types/react-responsive": "^8.0.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "formik": "^2.1.4",
     "gatsby": "^2.24.84",
     "gatsby-image": "^2.3.1",
