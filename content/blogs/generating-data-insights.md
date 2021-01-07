@@ -62,23 +62,31 @@ help solve the problems or deliver bigger value.
 
 Key themes from this research included:
 
-- A need for more streamlining, speeding up, and prioritisation of requests.
-- Helping people make better requests that explain the business problems they
-  are trying to solve.
-- There are benefits to anything that provides answers quickly and simply, with
-  minimal effort from analysts.
-- More help for those asking for insights, such as prompts for insights and
-  action in response to data, so they know what to do next.
+<div class="max-42">
+  <ul>
+    <li>A need for more streamlining, speeding up, and prioritisation of requests.</li>
+    <li>Helping people make better requests that explain the business problems they
+      are trying to solve.</li>
+    <li>There are benefits to anything that provides answers quickly and simply, with
+      minimal effort from analysts.</li>
+    <li>More help for those asking for insights, such as prompts for insights and
+      action in response to data, so they know what to do next.</li>
+  </ul>
+</div>
 
 ## What we came up with
 
 Some of the co-designed solutions shared some common factors:
 
-- Increasing data literacy within organisations.
-- Improving organisational self-service capability to make data easier to find
-  and interpret, so analysts can focus on deeper insights.
-- Using templates and frameworks to streamline and improve information going
-  into and coming out of analytics requests.
+<div class="max-42">
+  <ul>
+    <li>Increasing data literacy within organisations.</li>
+    <li>Improving organisational self-service capability to make data easier to find
+      and interpret, so analysts can focus on deeper insights.</li>
+    <li>Using templates and frameworks to streamline and improve information going
+      into and coming out of analytics requests.</li>
+  </ul>
+</div>
 
 ## Our next challenge
 

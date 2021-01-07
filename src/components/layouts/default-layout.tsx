@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
-import Header from "../navigation/header";
-import Footer from "../navigation/footer";
-import "../../sass/main.scss";
-import { useStaticQuery, graphql } from "gatsby";
-import MainNav from "../navigation/main-nav";
-import SEO from "../seo";
 import { Location } from "@reach/router";
-import Breadcrumbs from "../navigation/breadcrumb";
+import { graphql, useStaticQuery } from "gatsby";
 import _ from "lodash";
+import React from "react";
+import "../../sass/main.scss";
+import Breadcrumbs from "../navigation/breadcrumb";
+import Footer from "../navigation/footer";
+import Header from "../navigation/header";
+import MainNav from "../navigation/main-nav";
 
 interface Props {
   children: React.ReactElement;
