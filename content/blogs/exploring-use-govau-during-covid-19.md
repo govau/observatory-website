@@ -131,11 +131,9 @@ address or had it bookmarked. We noted the following:
 
 ## Traffic sources and percentage of traffic
 
-### Table 1. Traffic Sources to Australia.gov.au over the year
-
-<div class="max-30 mt-1">
-
+<div class="max-42 mt-1">
 <table class="au-table au-table--striped">
+    <caption class="au-table__caption">Table 1. Traffic Sources to Australia.gov.au over the year</caption>
     <thead class="au-table__head">
         <tr class="au-table__row">
             <th scope="col" class="au-table__header">Traffic Sources</th>
@@ -168,6 +166,7 @@ address or had it bookmarked. We noted the following:
             <td class="au-table__cell au-table__cell--numeric">1.2%</td>
         </tr>
     </tbody>
+
 </table>
 </div>
 
@@ -184,12 +183,9 @@ address or had it bookmarked. We noted the following:
   </ol>
 </div>
 
-### Table 2. Percentage of traffic to each jurisdiction for the Coronavirus app
-
-This data is collected from early May to mid-November 2020.
-
-<div class="max-30 mt-1">
+<div class="max-42 mt-2">
 <table class="au-table au-table--striped">
+    <caption class="au-table__caption">Table 2. Percentage of traffic to each jurisdiction for the Coronavirus app</caption>
     <thead class="au-table__head">
         <tr class="au-table__row">
             <th scope="col" class="au-table__header">Jurisdictions</th>
@@ -236,6 +232,7 @@ This data is collected from early May to mid-November 2020.
     </tbody>
 </table>
 </div>
+This data is collected from early May to mid-November 2020.
 
 Don’t forget to check if your organisation is signed up to the
 [Google Analytics 360 (GA360) program](https://www.dta.gov.au/our-projects/google-analytics-government)
