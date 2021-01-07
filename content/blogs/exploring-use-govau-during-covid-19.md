@@ -133,9 +133,9 @@ address or had it bookmarked. We noted the following:
 
 ### Table 1. Traffic Sources to Australia.gov.au over the year
 
-<div class="max-42 mt-1">
+<div class="max-30 mt-1">
 
-<table class="au-table">
+<table class="au-table au-table--striped">
     <thead class="au-table__head">
         <tr class="au-table__row">
             <th scope="col" class="au-table__header">Traffic Sources</th>
@@ -188,8 +188,8 @@ address or had it bookmarked. We noted the following:
 
 This data is collected from early May to mid-November 2020.
 
-<div class="max-42 mt-1">
-<table class="au-table">
+<div class="max-30 mt-1">
+<table class="au-table au-table--striped">
     <thead class="au-table__head">
         <tr class="au-table__row">
             <th scope="col" class="au-table__header">Jurisdictions</th>
