@@ -19,8 +19,7 @@ With the upcoming
 [refresh of the Digital Transformation Strategy](https://www.dta.gov.au/digital-transformation-strategy/digital-transformation-strategy-refresh),
 we looked back and explored how this disruption highlighted 3 key insights:
 
-<p></p>
-<div class="max-42">
+<div class="max-42 mt-1">
 <ul>
 <li> the importance of centralised information, especially during a crisis</li>
 <li>once people understand the issue, there is an ongoing need for local
@@ -107,8 +106,7 @@ Australia.gov.au’s main user type was smartphone users across the country, who
 returned regularly seeking localised information. They also knew the site’s
 address or had it bookmarked. We noted the following:
 
-<p></p>
-<div class="max-42">
+<div class="max-42 mt-1">
   <ul>
     <li>with a perceived user need for a ‘one-stop shop’, Australia.gov.au could
   fulfill that purpose</li>
@@ -135,9 +133,7 @@ address or had it bookmarked. We noted the following:
 
 ### Table 1. Traffic Sources to Australia.gov.au over the year
 
-<br />
-
-<div class="max-42">
+<div class="max-42 mt-1">
 
 <table class="au-table">
     <thead class="au-table__head">
@@ -177,8 +173,7 @@ address or had it bookmarked. We noted the following:
 
 **Definitions for Table 1 - Traffic Sources**
 
-<p></p>
-<div class="max-42">
+<div class="max-42 mt-1">
   <ol>
     <li>None/direct refers to the users who typed in the URL directly or had it
     bookmarked and went directly onto the site</li>
@@ -193,8 +188,7 @@ address or had it bookmarked. We noted the following:
 
 This data is collected from early May to mid-November 2020.
 
-<p></p>
-<div class="max-42">
+<div class="max-42 mt-1">
 <table class="au-table">
     <thead class="au-table__head">
         <tr class="au-table__row">
