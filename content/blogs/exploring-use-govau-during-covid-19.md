@@ -96,7 +96,7 @@ to stay informed in a way they are comfortable with. The positive response to
 this service shows the power of mobile technology to reach more people.
 
 <figure>
-<img class="au-responsive-media img-shadow" src="../../device-use-covid-19.png"/>
+<img class="au-responsive-media img-shadow" src="../../device-use-covid-19.png" alt="This graph shows how people used devices to access government websites during the COVID-19 pandemic. There was increased use of mobile devices, compared to desktop and tablets. The main increase was between April to June, with smaller increases in late July and August."/>
 <figcaption class="max-42">Caption: Users by device used for Australia.gov.au</figcaption>
 </figure>
 

@@ -17,7 +17,7 @@ canonical: https://www.dta.gov.au/blogs/designing-analytics-product-analysts-hea
 ---
 
 <figure>
-<img class="au-responsive-media img-shadow" src="../../designing-an-analytics-product-with-analysts.png"/>
+<img class="au-responsive-media img-shadow" src="../../designing-an-analytics-product-with-analysts.png" alt="Designing a data product for users, informed by user research"/>
 </figure>
 
 ## How insights shaped the concept direction
@@ -94,14 +94,18 @@ When data practitioners used analytics to understand user behaviours and improve
 a website, the questions they asked to guide the data stretched across different
 nested levels, which are:
 
-- objectives – these are the broad guiding principles which the website is
-  designed to achieve.
-- abstract questions – questions that can give insight into whether the website
-  is achieving its objectives.
-- specific questions – sub-questions about specific features of a website or
-  user activities which are necessary components to answer abstract questions.
-- individual metrics – the micro-level data which can give insight into specific
-  questions.
+<div class="max-42">
+  <ul>
+    <li>objectives – these are the broad guiding principles which the website is
+      designed to achieve.</li>
+    <li>abstract questions – questions that can give insight into whether the website
+      is achieving its objectives.</li>
+    <li>specific questions – sub-questions about specific features of a website or
+      user activities which are necessary components to answer abstract questions.</li>
+    <li>individual metrics – the micro-level data which can give insight into specific
+      questions.</li>
+  </ul>
+</div>
 
 Analysts were using individual metrics, such as pageviews and time on page, to
 answer more abstract questions, and this allowed them to measure whether their

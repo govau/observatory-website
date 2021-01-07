@@ -128,10 +128,14 @@ their ability to work with Google Analytics.
 
 3 ways the Observatory can respond to user needs includes:
 
-- analytics leadership through best practice guidelines, standards and advice
-- the creation of practical tools and templates to support users which are
-  aligned to best practice
-- facilitation of sharing and learning relationships across government
+<div class="max-42">
+<ul> <li>
+analytics leadership through best practice guidelines, standards and advice</li>
+<li>the creation of practical tools and templates to support users which are
+  aligned to best practice</li>
+<li>facilitation of sharing and learning relationships across government</li>
+</ul>
+</div>
 
 A deeper exploration of these insights can be found in our
 [Discovery Insights Report](../../gov-au-observatory_discovery_research_findings-report.pdf).
