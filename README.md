@@ -60,7 +60,9 @@ This is the blog text
 This process is very similar to creating a new blog.
 Firstly create a new markdown file in the `content/events` folder.
 
-Then add frontmatter to the top of this newly created file. Something like below.
+Then add frontmatter to the top of this newly created file. Something like
+below. Make sure the path text is comparable to the event title for the purposes
+of consistency and accessibility.
 
 ```
 ---
