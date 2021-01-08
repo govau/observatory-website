@@ -17,7 +17,7 @@ imgUrl: ../../observatory-blog-hero.png
 canonical: https://www.dta.gov.au/blogs/govau-observatory-digital-constellations-user-journeys
 ---
 
-<img class="au-responsive-media img-shadow" src="../../observatory-blog-hero.png">
+<img class="au-responsive-media img-shadow" src="../../observatory-blog-hero.png" alt="A complex graphical representation of the linkages between sites on the .gov.au domain. It shows many, many small dots of different colours connected together to show how the sites in the domain are connected. In total, it looks like a jellyfish.">
 
 The gov.au Observatory is a new product supporting government product and policy
 owners. The Observatory uses data from Google Analytics, Google Search Console
@@ -64,10 +64,12 @@ government services. We can then compare how agencies design services with how
 people use them. We can also identify where pain points exist or where they
 might develop.
 
-<img class="au-responsive-media img-shadow" src="../../observatory-zoomed-small.png">
-
-Caption: A section of Observatory data to show the level of detail the service
+<figure class="mt-1">
+<a data-entity-type="" data-entity-uuid="" href="https://dta-www-drupal-20180130215411153400000001.s3.ap-southeast-2.amazonaws.com/s3fs-public/images/content/observatory-zoomed.png"><img alt="" data-entity-type="" data-entity-uuid="" src="https://dta-www-drupal-20180130215411153400000001.s3.ap-southeast-2.amazonaws.com/s3fs-public/images/content/observatory-zoomed-small.png"></a>
+<figcaption class="max-42">Caption: A section of Observatory data to show the level of detail the service
 deals with. Select to view a a larger version.
+</figcaption>
+</figure>
 
 By taking a holistic view of government as a single-service provider, the
 Observatory maps where users are going — or not going — to meet their needs. We

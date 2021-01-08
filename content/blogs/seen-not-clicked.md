@@ -15,7 +15,7 @@ imgUrl: ../../clicked-not-seen.png
 canonical: https://www.dta.gov.au/blogs/seen-not-clicked-lowering-rankings-improve-search
 ---
 
-<img class="au-responsive-media img-shadow" src="../../clicked-not-seen.png" alt="A line drawing to demonstrate one search result moving up and another moving down.">
+<img class="au-responsive-media img-shadow" src="../../clicked-not-seen.png" alt="A line drawing to demonstrate one search result moving up and another moving down."></img>
 
 The simple answer is they are already telling you, however services like Google,
 Bing and Baidu store this information. Observatory analysis of .gov.au shows
@@ -38,7 +38,7 @@ Their reports provide:
 - the click-through rate — the percentage of users who clicked though from an
   impression
 
-<img class="au-responsive-media img-shadow" src="../../seen-but-not-clicked-1.png">
+<img class="au-responsive-media img-shadow" src="../../seen-but-not-clicked-1.png" alt="A screenshot of Google Search Console demonstrating the sort of data it can display. This shows the Performance report for the top 4 queries for Australia.gov.au in the form of a line graph with a data table underneath."></img>
 
 ## Why use them?
 
@@ -70,7 +70,12 @@ whole-of-government Google Analytics 360 contract to find out why.
 This diagram showed how users flowed through Australia.gov.au to their final
 destination.
 
-<img class="au-responsive-media img-shadow" src="../../seen-but-not-clicked-2.png">
+<figure class="max-42">
+<a href="https://dta-www-drupal-20180130215411153400000001.s3.ap-southeast-2.amazonaws.com/s3fs-public/images/content/blog-post-seen-but-not-clicked-2.png">
+  <img class="au-responsive-media img-shadow" src="../../seen-but-not-clicked-2.png" alt="A complex diagram showing how traffic flows between a selection of nodes on the .gov.au environment. Flows begin from australia.gov.au, and shows the various points users land at on their way to their goals.">
+  </a>
+  <figcaption>Caption: This diagram shows the flow of traffic from left to right, starting at Australia.gov.au, moving through deeper content, or nodes, and finally various endpoints. Green nodes are Australia.gov.au webpages, blue nodes are homeaffairs.gov.au webpages and red nodes are other pages. Select it to see a larger version.</figcaption>
+</figure>
 
 ## Our results
 
@@ -90,11 +95,15 @@ affect search results.
 
 We also noticed that:
 
-- many users went to Home Affairs’ general visa page, but others were looking
-  for specific visa and immigration information
-- people also looked for migration information on state and territory sites
-- some users were looking for investment information, such as the Foreign
-  Investment Review board’s information on buying real estate.
+<div class="max-42">
+<ul>
+<li>many users went to Home Affairs’ general visa page, but others were looking
+  for specific visa and immigration information</li>
+<li>people also looked for migration information on state and territory sites</li>
+<li>some users were looking for investment information, such as the Foreign
+  Investment Review board’s information on buying real estate.</li>
+</ul>
+</div>
 
 Our analysis showed users searched for very sparse phrases, such as “Australia
 Visa” or “Australia Immigration”. This makes it challenging for search
@@ -114,6 +123,6 @@ interactions each month, and over 14 billion data points in the past year. We
 run free Google Analytics 360 training for agencies to help them get the most
 out of the whole-of-government Google Analytics 360 subscription. If you run a
 government service and want to know how the Observatory can help you improve it,
-email us at observatory@dta.gov.au.
+email us at <a href="mailto:observatory@dta.gov.au">observatory@dta.gov.au</a>.
 
 Brendan is in the .gov.au Observatory Team at the DTA.

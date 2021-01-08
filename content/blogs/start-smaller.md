@@ -14,7 +14,7 @@ imgUrl: ../../skateboard-socials.png
 canonical: https://www.dta.gov.au/blogs/start-smaller-build-better
 ---
 
-<img class="au-responsive-media img-shadow" src="../../skateboard-socials.png" alt="">
+<img class="au-responsive-media img-shadow" src="../../skateboard-socials.png" alt="4 people looking at the design of a scooter into a bike then a car">
 
 Building a car requires a lot of time and energy. Even if you have 4 wheels, a
 chassis, seats, exterior, and all the parts, the user can’t drive the car until
@@ -61,10 +61,12 @@ also shows whether more could be done to better support and improve the user
 experience, and how to adapt to emerging technology trends. analytics graph
 shows mobile users have increased from 36% to 54% for the first time.
 
-<img class="au-responsive-media img-shadow" src="../../graph-vis.png" alt="">
-
-Analytics shows mobile users now outrank desktop users since COVID-19 emerged.
+<figure class="max-42">
+<img class="au-responsive-media img-shadow" src="../../graph-vis.png" alt="analytics graph shows mobile users have increased from 36% to 54% for the first time."></img>
+<figcaption> Analytics shows mobile users now outrank desktop users since COVID-19 emerged.
 Mobile users have increased from 36% to 54% for the first time.
+</figcaption>
+</figure>
 
 The prototype dashboard is limited. Users can view data but not interact with
 it. There is no way to filter or refine the data, and it cannot easily be
