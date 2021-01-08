@@ -1,5 +1,5 @@
 ---
-path: /blogs/generating-data-and-ideas-analysts
+path: /blogs/generating-data-and-ideas-with-analysts
 title: Generating data and ideas with analysts
 type: blog
 description:

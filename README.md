@@ -38,6 +38,8 @@ The `path` attribute is the URL and the `title` attribute is for the [title](htt
 In the blogs folder create a new markdown file as before.
 
 Blogs require frontmatter to sit at the top of the page. Below is an example.
+Make sure the path text is comparable to the blog title for the purposes of
+consistency and accessibility.
 
 ```
 ---
@@ -58,7 +60,9 @@ This is the blog text
 This process is very similar to creating a new blog.
 Firstly create a new markdown file in the `content/events` folder.
 
-Then add frontmatter to the top of this newly created file. Something like below.
+Then add frontmatter to the top of this newly created file. Something like
+below. Make sure the path text is comparable to the event title for the purposes
+of consistency and accessibility.
 
 ```
 ---

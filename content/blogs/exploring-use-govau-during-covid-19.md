@@ -1,5 +1,5 @@
 ---
-path: /blogs/exploring-use-govau-during-covid-19
+path: /blogs/exploring-the-use-of-govau-during-COVID-19
 title: Exploring the use of .gov.au during COVID-19
 type: blog
 description:
