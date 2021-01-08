@@ -7,6 +7,7 @@ module.exports = {
     title: `Observatory`,
     description: `The Observatory’s goal is to measure how people interact with government services. It empowers and supports teams to provide better services and outcomes for everyone.`,
     author: `Digital Transformation Agency`,
+    siteUrl: `https://observatory.service.gov.au/`,
     menuLinks: [
       {
         text: "Home",
@@ -66,6 +67,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-mdx`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
