@@ -1,5 +1,5 @@
 ---
-path: /blogs/using-raw-data-meet-user-needs-during-covid-19
+path: /blogs/using-raw-data-to-meet-user-needs
 title: Using raw data to meet user needs during COVID-19
 type: blog
 description:

@@ -1,5 +1,5 @@
 ---
-path: /blogs/Seen-but-not-clicked
+path: /blogs/seen-but-not-clicked
 title: Seen but not clicked – lowering rankings to improve search
 type: blog
 description:

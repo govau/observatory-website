@@ -1,5 +1,5 @@
 ---
-path: /blogs/Digital-constellations-from-user-journeys
+path: /blogs/Digital-Constellations-from-user-journeys
 title: Digital Constellations from user journeys
 type: blog
 description:
