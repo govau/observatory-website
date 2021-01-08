@@ -12,7 +12,7 @@ date: "2021-01-28"
 time: 9:45pm-12pm
 locations: Online - Via Zoom
 tags:
-  - Training
+  - training
   - google analytics
   - data studio
 imgUrl: ../../skateboard-socials.png
