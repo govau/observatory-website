@@ -1,5 +1,5 @@
 ---
-path: /blogs/learning-users-through-discovery-research
+path: /blogs/learning-from-users-through-Discovery-research
 title: Learning from users through Discovery research
 type: blog
 description:
