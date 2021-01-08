@@ -1,7 +1,7 @@
 ---
 path: /events/dropin-ga-training
 title: Google Analytics for Government - Drop in sessions
-type: event
+# type: event
 description:
   Talk to the experts at Data Runs deep and the DTA Observatory about all things
   Web Analytics, Google Analytics, Tag Manager, Data Studio and Big Query.
