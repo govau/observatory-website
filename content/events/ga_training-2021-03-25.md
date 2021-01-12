@@ -51,9 +51,9 @@ Syllabus and learning outcomes are based on the
 
 ### Structure
 
-This course 3-weeks long and is delivered over 2 x 90-minute sessions per week
-(Tuesday and Thursday) with a focus on developing web analytics capability in a
-build, integrate and improve cycle.
+This course is 3-weeks long and is delivered over 2 x 90-minute sessions per
+week (Tuesday and Thursday) with a focus on developing web analytics capability
+in a build, integrate and improve cycle.
 
 #### Week 0: Thursday 25th March 10:00am to 11:30am AEDT
 
