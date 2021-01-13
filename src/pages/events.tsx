@@ -1,19 +1,16 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
-import SEO from "../components/seo";
-import DefaultLayout from "../components/layouts/default-layout";
-import { useStaticQuery, graphql } from "gatsby";
-
-import { PageContext } from "../components/helpers/types";
-import {
-  SortContentReverse,
-  FormatDateDay,
-} from "../components/helpers/helper";
 import PageAlert from "../components/blocks/page-alert";
-
 import SubscribeBlock from "../components/blocks/subscribe-newsletter-block";
+import {
+  FormatDateDay,
+  SortContentReverse,
+} from "../components/helpers/helper";
+import { PageContext } from "../components/helpers/types";
+import DefaultLayout from "../components/layouts/default-layout";
 import Section from "../components/layouts/section";
-import { AuTagList } from "../components/helpers/auds";
+import SEO from "../components/seo";
 
 const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
   //get MD content
@@ -72,14 +69,20 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                     <strong>When: </strong>
                     {FormatDateDay(date)}: {time}
                   </p>
-                  <strong>Tags</strong>
+                  <strong>Tags: </strong>
                   {
-                    <AuTagList
-                      className="inline ml-1"
-                      tags={tags.map((tag: string) => ({
-                        text: tag,
-                      }))}
-                    />
+                    // <AuTagList
+                    //   className="inline ml-1"
+                    //   tags={tags.map((tag: string) => ({
+                    //     text: tag,
+                    //   }))}
+                    // />
+                    tags.map((tag: string, i: number) => (
+                      <span key={i}>
+                        {tag}
+                        {tag === tags[tags.length - 1] ? "" : ", "}{" "}
+                      </span>
+                    ))
                   }
                 </div>
               );
