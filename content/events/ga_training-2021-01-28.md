@@ -62,8 +62,9 @@ indicate if you are unable to attend and we can organise alternate arrangements.
 
 #### Week 1: Tuesday 2nd February 09:45am to 12pm AEDT
 
-Session 1A Measurement strategy – identifying your department’s objectives and
-tactics.
+Session 1A
+
+Measurement strategy – identifying your department’s objectives and tactics.
 
 #### Week 1: Thursday 4th February 09:45am to 12pm AEDT
 
