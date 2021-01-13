@@ -77,8 +77,8 @@ const BlogsPage: React.FC<PageContext> = ({ pageContext, location }) => {
                     //     text: tag,
                     //   }))}
                     // />
-                    tags.map((tag: string) => (
-                      <span>
+                    tags.map((tag: string, i: number) => (
+                      <span key={i}>
                         {tag}
                         {tag === tags[tags.length - 1] ? "" : ", "}{" "}
                       </span>
