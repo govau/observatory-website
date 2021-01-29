@@ -22,8 +22,8 @@ imgUrl: ../../skateboard-socials.png
 
 <!-- TODO: Keep link up to date -->
 
-**To register, sign up at Eventbrite
-[here](https://www.eventbrite.com.au/e/accelerated-google-analytics-for-government-tickets-135926085581).**
+**To register,
+[sign up at Eventbrite](https://www.eventbrite.com.au/e/accelerated-google-analytics-for-government-tickets-135926085581).**
 
 ## About this Event
 
