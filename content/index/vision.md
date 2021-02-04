@@ -22,7 +22,7 @@ alt: true
 		</li>
 		<li>
 			<div>
-				<span class = "au-display-xl mt-hero"> 3.16 million </span>
+				<span class = "au-display-xl mt-hero"> 1.87 million </span>
 				daily active users
 			</div>
 		</li>
