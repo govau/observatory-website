@@ -74,7 +74,7 @@ following section.
 Observatory has a whole-of-government contract that leverages economies of scale
 to deliver better pricing for subscribers. The free tier of service that we
 offer helps smaller agencies save time and money. _Note: Google Analytics is
-free of charge up to a maximum of 10 million hits per month per account._
+free of charge up to a maximum of 1 million hits per month per account._
 
 Our contract fees are calculated on a cost-recovery basis, based on the number
 of billable hits per month across all of the websites owned by a subscribed
