@@ -14,8 +14,7 @@ type: standard
 Our Q&A drop-in sessions for data practioners across the APS. This list will be
 continually updated with Questions that have been asked in previous sessions.
 
-These sessions are run fortnighly Friday's from 10am to 12pm. You can find the
-signup at our
+You can find the signup at our
 [eventbrite page.](https://www.eventbrite.com.au/o/digital-transformation-agency-8025584572)
 
 - [Video 1: Getting started with segments in Google Analytics.](https://youtu.be/NVXRBhb_IcY)
