@@ -239,7 +239,8 @@ $AU-grid-12-gutter-width: 24px !default; //gutter space
 }
 
 .mt-2 {
-  @include AU-space(margin-top, 2unit);
+  margin-top: 16px i !important;
+  margin-top: 2rem !important;
 }
 
 .mt-half {
