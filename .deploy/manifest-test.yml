@@ -1,11 +1,8 @@
 ---
-buildpack: staticfile_buildpack
-memory: 128M
-instances: 1
 applications:
   - name: observatory-test
-    path: ./public
-status_codes:
-  404: /404.html
+    buildpack: staticfile_buildpack
+    memory: 64M
+    instances: 1
 ---
 
