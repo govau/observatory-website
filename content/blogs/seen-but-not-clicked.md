@@ -71,7 +71,7 @@ This diagram showed how users flowed through Australia.gov.au to their final
 destination.
 
 <figure class="max-42">
-<a href="https://dta-www-drupal-20180130215411153400000001.s3.ap-southeast-2.amazonaws.com/s3fs-public/images/content/blog-post-seen-but-not-clicked-2.png">
+<a href="../../seen-but-not-clicked-2.png">
   <img class="au-responsive-media img-shadow" src="../../seen-but-not-clicked-2.png" alt="A complex diagram showing how traffic flows between a selection of nodes on the .gov.au environment. Flows begin from australia.gov.au, and shows the various points users land at on their way to their goals.">
   </a>
   <figcaption>Caption: This diagram shows the flow of traffic from left to right, starting at Australia.gov.au, moving through deeper content, or nodes, and finally various endpoints. Green nodes are Australia.gov.au webpages, blue nodes are homeaffairs.gov.au webpages and red nodes are other pages. Select it to see a larger version.</figcaption>
