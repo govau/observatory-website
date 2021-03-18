@@ -33,7 +33,7 @@ const FormatDateDay: (date: string) => string = (date) => {
   const month: any = date_obj.getMonth();
   const year: any = date_obj.getFullYear();
   const day: any = weekday[date_obj.getDay()];
-  return `${day}, ${date_obj.getDate()} ${months[month]} ${year}`;
+  return `${day} ${date_obj.getDate()} ${months[month]} ${year}`;
 };
 
 const SortContent = (PageOne: any, PageTwo: any) => {
