@@ -9,7 +9,7 @@ metaDesc:
   Receive training from our trainers Data Runs Deep about developing web
   analytics capability in a build, integrate and improve cycle.
 date: "2021-06-03"
-time: 9:45pm-12pm
+time: AEDT 9:45 am to noon
 locations: Online - Via Zoom
 tags:
   - training
@@ -27,7 +27,7 @@ imgUrl: ../../skateboard-socials.png
 
 ## About this Event
 
-**Registration closes:** Monday 31st May COB
+**Registration closes:** Monday 31 May 2021, AEDT 5:00 pm
 
 You will need:
 
@@ -55,39 +55,39 @@ This course is 3-weeks long and is delivered over 2 x 90-minute sessions per
 week (Tuesday and Thursday) with a focus on developing web analytics capability
 in a build, integrate and improve cycle.
 
-#### Week 0: Thursday 3rd June 10:00am to 11:30am AEDT
+#### Week 0: Thursday 3 June, AEDT 10:00 am to 11:30 am
 
 This is a pre-training health check and introduction to the course. Please
 indicate if you are unable to attend and we can organise alternate arrangements.
 
-#### Week 1: Tuesday 8th June 09:45am to 12pm AEDT
+#### Week 1: Tuesday 8 June, AEDT 9:45 am to noon
 
 Session 1A
 
 Measurement strategy – identifying your department’s objectives and tactics.
 
-#### Week 1: Thursday 10th June 09:45am to 12pm AEDT
+#### Week 1: Thursday 10 June, AEDT 9:45 am to noon
 
 Session 1B
 
 Measurement strategy - Identifying tracking solutions to measure success of
 objectives and tactics.
 
-#### Week 2: Tuesday 15th June 09:45am to 12pm AEDT
+#### Week 2: Tuesday 15 June, AEDT 9:45 am to noon
 
 Session 2A
 
 Using Google Analytics to report on performance against your measurement
 strategy.
 
-#### Week 2: Thursday 17th June 09:45am to 12pm AEDT
+#### Week 2: Thursday 17 June, AEDT 9:45 am to noon
 
 Session 2B
 
 Using Google Analytics to identify areas for improvement and comparing the
 success of different tactics.
 
-#### Week 3: Tuesday 22nd June 09:45am to 12pm AEDT
+#### Week 3: Tuesday 22 June, AEDT 9:45 am to noon
 
 Session 3A
 
@@ -95,7 +95,7 @@ Data visualisation and report automation - Making data accessible within your
 organisation. An introduction to enabling self service analytics within your
 organisation.
 
-#### Week 3: Thursday 24th June 09:45am to 12pm AEDT
+#### Week 3: Thursday 24 June, AEDT 9:45 am to noon
 
 Session 3B
 
