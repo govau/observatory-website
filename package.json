@@ -42,6 +42,7 @@
     "gatsby": "^2.30.1",
     "gatsby-image": "^2.3.1",
     "gatsby-plugin-breadcrumb": "^9.0.3",
+    "gatsby-plugin-google-analytics": "^3.3.0",
     "gatsby-plugin-google-tagmanager": "^2.2.3",
     "gatsby-plugin-lodash": "^3.3.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
