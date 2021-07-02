@@ -106,7 +106,7 @@ The inner, middle and outer rings refer to volume of websites for each portfolio
 contained in the webcrawl dataset. On the left is a close up of the apex,
 showing the smallest minority of webpages per portfolio.
 
-### [Understanding Common Pain Points using Google Analytics Report](../../understanding-the-common-pain-points-using-web-analytics)
+### [Understanding Common Pain Points using Google Analytics Report](../../understanding-the-common-pain-points-using-web-analytics.pdf)
 
 A common pain point people face when interacting with government is difficulty
 finding the information they need. The DTA’s
