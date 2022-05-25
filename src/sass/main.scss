@@ -333,3 +333,11 @@ figure {
 dl dd {
   border-left: none !important;
 }
+
+.decommission-banner {
+  margin-top: 0;
+  margin-bottom: 2em;
+  p {
+    max-width: none;
+  }
+}
